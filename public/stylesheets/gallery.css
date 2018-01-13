@@ -103,7 +103,6 @@ height: 310px;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
-
 /* Button on photostack container */
 .js .photostack::after {
 	content: 'view oyr Gallery';

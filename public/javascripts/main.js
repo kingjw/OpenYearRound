@@ -20,7 +20,7 @@ function div2Resize() {
 }
 window.onload = function() {
   div2Resize();
-  // 브라우저 크기가 변할 시 동적으로 사이즈를 조절해야 하는경우 호출
+  // 브라우저 크기가 변할 시 동적으로 사이즈를 조절해야 하는경우 
   window.addEventListener('resize', div2Resize);
 }
 applySubmit.onclick=function(){
