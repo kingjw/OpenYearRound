@@ -4,11 +4,31 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+
+var MySQLStore = require('express-mysql-session')(session);
+var options={
+  host: 'localhost',
+  port: 3306,
+  user: 'root',
+  password: '324423',
+  database: 'apply'
+};
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var apply = require('./routes/apply');
+var admin = require('./routes/applyadmin');
 
 var app = express();
+
+app.use(session({
+ secret:'simpson',
+ resave: false,
+ saveUninitialized: true,
+ store:new MySQLStore(options)
+}));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +44,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+app.use('/apply',apply);
+app.use('/apply',admin);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
