@@ -75,8 +75,8 @@
               5.연락가능한 핸드폰 번호를 적어주세요</br><input class="info" id="phone_number"type="text" placeholder="-없이 적어주세요"></input></br>
               6.이메일을 적어주세요.</br><input class="info" id="email"type="text" placeholder="example@naver.com"></input></br>
               7.현재 거주지를 적어주세요.</br><input class="info" id="home"type="text" placeholder="ex서울 광진구"></input></br>
-              8.성별을 체크해주시고, 남자분이시면 군필 여부도 체크해주세요.<br>남<input class="nonBoxInfo" id="gender"type="radio" checked="checked" name="radio" value="남">
-              &nbsp;여<input id="gender"type="radio" name="radio" value="여">&nbsp;군필<input type="checkbox" id="milcheck">
+              8.성별을 체크해주시고, 남자분이시면 군필 여부도 체크해주세요.<br>남<input class="nonBoxInfo" id="gender"type="radio" checked="checked" name="gender" value="남">
+              &nbsp;여<input id="gender"type="radio" name="gender" value="여">&nbsp;군필<input type="checkbox" id="milcheck">
             </br>
           </form>
         </div>
@@ -87,7 +87,8 @@
           10.자신의 프로젝트 경험에 대해 적어주세요. (500자 내외)</br>(큰 프로젝트가 아니라 수업시간을 통한 사소하고 작은 경험도 괜찮습니다. 프로젝트 경험이 없으면 없다고 적어주세요)
         </br><textarea class="nonBoxInfo" id="project"rows="7" cols="100"></textarea></br>
         11.자신이 개발하고 싶은 서비스를 적어주세요. (500자 내외)</br><textarea class="nonBoxInfo" id="want_service"rows="7" cols="100"></textarea></br>
-        <input id="applyButton"type="submit" value="지원"></input>
+        <!-- <input id="applyButton"type="submit" value="지원"></input> -->
+        <button id='applyButton' type='button'>지원</button>
       </form>
     </div>
     <div id="moveTopDiv">
@@ -216,6 +217,7 @@
   </div>
 </div>
 
+</div>
 <script src="/javascripts/main.js"></script>
 <script src="/javascripts/classie.js"></script>
 <script src="/javascripts/photostack.js"></script>

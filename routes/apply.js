@@ -7,7 +7,7 @@ var conn = mysql.createConnection(dbconfig);
 
 // 지원 사이트(동아리 메인 사이트)로 들어가는 부분입니다.
 router.get('/', function(req, res, next) {
-  res.render('applyform',{title:'apply page'});
+  res.render('index',{title:'apply page'});
 });
 
 router.post('/goApply',function(req,res,next){//접수 버튼 클릭 시 ajax 통신하는 부분입니다.
