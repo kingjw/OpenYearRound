@@ -189,7 +189,7 @@ section4.onclick=function(){
 
 $(moveTop1).click(function() {
   $(this).hide(400);
-  $(moveTop3).hide(400);
+  $(moveTop4).hide(400);
   content1.style.display="block";
   $('html, body').animate({
     scrollTop : 0
@@ -199,7 +199,7 @@ $(moveTop1).click(function() {
 
 $(moveTop2).click(function() {
   $(this).hide(400);
-  $(moveTop3).hide(400);
+  $(moveTop4).hide(400);
   $('html, body').animate({
     scrollTop : 0
   }, 500);
@@ -213,6 +213,7 @@ $(moveTop2).click(function() {
 
 $(moveTop3).click(function() {
   $(this).hide(400);
+  $(moveTop4).hide(400);
   $('html, body').animate({
     scrollTop : 0
   }, 500);
