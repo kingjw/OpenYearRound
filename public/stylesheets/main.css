@@ -269,6 +269,29 @@ background-repeat: no-repeat;
     height:20%;
     background-color: red;
 }
-#board{
-
+#main_area{
+  height : 90%;
+}
+table.board{
+  margin-left: 15%;
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 1.5;
+  width: 70%;
+}
+table.board thead td {
+    vertical-align: top;
+    color: white;
+    background-color: #153238;
+    text-align: center;
+    padding: 7px;
+}
+#first_td{
+  width: 20%;
+}
+#second_td{
+  width:60%;
+}
+#third_td{
+  width: 20%;
 }
