@@ -140,3 +140,54 @@ opacity: 0.7;
     font-size:22px;
   }
 }
+
+#first_area{
+    width: 100%;
+    height:12%;
+    background-color: red;
+}
+#main_area{
+  height : 88%;
+}
+table.board{
+  margin-left: 15%;
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 1.5;
+  width: 70%;
+}
+table.board thead td {
+    vertical-align: top;
+    color: white;
+    background-color: #153238;
+    text-align: center;
+    padding: 7px;
+}
+table .board tbody{
+  width : 90%;
+  height : 300px;
+  background-color : blue;
+}
+#first_td{
+  width: 20%;
+}
+#second_td{
+  width:60%;
+}
+#third_td{
+  width: 20%;
+}
+#writeButton
+{
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  color: rgb(255, 255, 255);
+  background-color: rgb(58, 74, 88);
+  width: 10%;
+  height:5%;
+  margin-top:10%;
+  left:80%;
+  position: relative;
+  z-index: 11;
+}
