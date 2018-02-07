@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css"></link>
+    <link rel="stylesheet" href="/stylesheets/applyform.css"></link>
     <!-- [if It IE 9]>
     <script src="html5shiv.js"></script>
     <script src="respond.js"></script>
@@ -12,6 +13,8 @@
     미만일시 부트스트랩을 사용할수 있게 해주는 js파일들을 연결 -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='/javascripts/apply_javascript.js'></script>
+    <title><%= title %></title>
   </head>
   <body>
     <div class="header">
@@ -63,6 +66,105 @@
       <div class="introBox"><img src="/images/rec.jpg" width="100%" height="auto"></img></div>
     </div>
     <div class="apply_Container container"><!--지원 div-->
+      <div id='body_container'>
+        <div class="container">
+          <form class="form-horizontal" role="form">
+            <h2>지원서</h2>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">이름</label>
+              <div class="col-sm-9">
+                <input type="text" id="name" placeholder="ex) 홍길동" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">학과</label>
+              <div class="col-sm-9">
+                <input type="text" id="major" placeholder="ex) 컴퓨터공학과" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">학번</label>
+              <div class="col-sm-9">
+                <input type="text" id="student_number" placeholder="ex) 18011234" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">학년-학기</label>
+              <div class="col-sm-9">
+                <input type="text" id="grade" placeholder="ex) 3-2" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">연락처</label>
+              <div class="col-sm-9">
+                <input type="text" id="phone_number" placeholder="ex) 010 1111 1111" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">이메일</label>
+              <div class="col-sm-9">
+                <input type="text" id="email" placeholder="ex) abcd@naver.com" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstName" class="col-sm-3 control-label">거주지</label>
+              <div class="col-sm-9">
+                <input type="text" id="home" placeholder="ex) 서울시 광진구" class="form-control" autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-3">성별</label>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <label class="radio-inline">
+                      <input type="radio" name='gender' value="남">남
+                    </label>
+                  </div>
+                  <div class="col-sm-3">
+                    <label class="radio-inline">
+                      <input type="radio" name='gender'value="여">여
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+              <label class="control-label col-sm-9">군필여부 (해당사항이 없으신 분들은 체크 안해주시면 됩니다.)</label>
+              <div class="col-sm-9">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id="milcheck" value="Low calorie">군필
+                  </label>
+                </div>
+              </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+              <label class="control-label col-sm-3">지원 동기</label>
+              <div class="col-sm-12">
+                <textarea class='form-control' rows='7' id='apply_reason' placeholder="200자 내외로 작성해주세요."></textarea>
+              </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+              <label class="control-label col-sm-3">프로젝트 경험</label>
+              <div class="col-sm-12">
+                <textarea class='form-control' rows='7' id='project' placeholder="큰 프로젝트가 아니라 수업시간을 통한 사소하고 작은 경험도 괜찮습니다. 프로젝트 경험이 없으면 없다고 적어주세요."></textarea>
+              </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+              <label class="control-label col-sm-5">만들고 싶은 서비스</label>
+              <div class="col-sm-12">
+                <textarea class='form-control' rows='7' id='want_service' placeholder="200자 내외로 작성해주세요."></textarea>
+              </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+              <div class="col-sm-12 col-sm-offset-3">
+                <button type="button" class="btn btn-primary btn-block" id='applyButton'>지원하기</button>
+              </div>
+            </div>
+          </form> <!-- /form -->
+        </div> <!-- ./container -->
+      </div>
     </div>
     <div class="notice_Container container"><!--게시판 div-->
       <div class="box" id="note1">
