@@ -14,199 +14,218 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type='text/javascript' src='/javascripts/apply_javascript.js'></script>
+    <script src="/javascripts/color.js"></script>
     <title><%= title %></title>
   </head>
   <body>
     <div class="header">
       <div class="header_Container container-fluit">
         <div class="introduce">
-          <div class="row">
-            <div class="mente col-md-12">
-              <p id="mente"><small>내가 만들고 싶은 </small>웹사이트<small>를 만드는</br> </small>웹 스터디<small> 동아리 </small></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="logo col-md-12 hidden-xs">
-              <img id="logo" src="/images/logo.png" width="20%" height="auto"></img>
-            </div>
-          </div>
+          <nav>
+            <div class="menu"><b>동아리 소개</b></div>
+            <div class="menu"><b>주요 활동</b></div>
+            <div class="menu"><b>게시판</b></div>
+            <div class="menu"><b>지원 하기</b></div>
+          </nav>
+          <!-- <div class="row">
+          <div class="mente col-md-12">
+          <p id="mente"><small>내가 만들고 싶은 </small>웹사이트<small>를 만드는</br> </small>웹 스터디<small> 동아리 </small></p>
         </div>
       </div>
-      <div class="container">
-        <div class="header_Button">
-          <div class="button_Row row">
-            <div class="button col-md-3" id="button1">
-              <h4 class="header_Text">동아리</br>활동</h4>
-            </div>
-            <div class="button col-md-3" id="button2">
-              <h4 class="header_Text">동아리</br>소개</h4>
-            </div>
-            <div class="button col-md-3" id="button3">
-              <h4 class="header_Text">동아리</br>지원</h4>
-            </div>
-            <div class="button col-md-3" id="button4">
-              <h4 class="header_Text">동아리</br>게시판</h4>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row">
+      <div class="logo col-md-12 hidden-xs">
+      <img id="logo" src="/images/logo.png" width="20%" height="auto"></img>
+    </div>
+  </div> -->
+</div>
+</div>
+<div class="container-fluit">
+  <div class="header_Button">
+    <div class="button_Row row">
+    <div class="button" id="introButton">
+      <p id="aboutOYR">About OYR</p>
+      <p id="aboutOYR_content">Open Year Round는 자신이 원하는 웹서비스를 개발하는 목표를 갖는 동아리입니다.</p>
+      <!-- <p class="buttonMobile">동아리 소개</p> -->
+    </div>
+    <div class="button" id="actButtonM">
+    <p class="buttonMobile">주요 활동</p>
+  </div>
+    <div class="button" id="noticeButton">
+      <p id="notice_Board">Notice Board</p>
+      <ul id="board_content">
+        <li>동아리 회비 사용 내역</li>
+        <li>2018 신입기수 선발 공지사항</li>
+        <li>2018 동아리 mt 공지(2018.5.12~2018.5.13)</li>
+      </ul>
+      <p class="buttonMobile">게시판</p>
     </div>
 
-    <div class="act_Container container-fluit" id="act_Container_Id">
-      <img src="/images/award.jpg" width="100%" height="auto"></img>
-      <img src="/images/record.jpg" width="100%" height="auto"></img>
-      <img src="/images/website.jpg" width="100%" height="auto"></img>
+    <div class="button" id="supportButton">
+      <p class="applyText">2018년도</br>신입부원</br>지원하기</p>
+      <!-- <p class="buttonMobile">지원</p> -->
     </div>
-    <div class="introduce_Container container-fluit">
-      <div class="introBox"><img src="/images/ssn.jpg" width="100%" height="auto"></img></div>
-      <div class="introBox"><img src="/images/intro.jpg" width="100%" height="auto"></img></div>
-      <div class="introBox"><img src="/images/cir.jpg" width="100%" height="auto"></img></div>
-      <div class="introBox"><img src="/images/mem.jpg" width="100%" height="auto"></img></div>
-      <div class="introBox"><img src="/images/loca.jpg" width="100%" height="auto"></img></div>
-      <div class="introBox"><img src="/images/rec.jpg" width="100%" height="auto"></img></div>
-    </div>
-    <div class="apply_Container container"><!--지원 div-->
-      <div id='body_container'>
-        <div class="container">
-          <form class="form-horizontal" role="form">
-            <h2>지원서</h2>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">이름</label>
-              <div class="col-sm-9">
-                <input type="text" id="name" placeholder="ex) 홍길동" class="form-control" autofocus>
+  </div>
+</div>
+</div>
+<div id="moveTopDiv">
+  <img class="moveTop" src="/images/doubleup.png"></img>
+</div>
+</div>
+
+<div class="act_Container container-fluit" id="act_Container_Id">
+  <img src="/images/award.jpg" width="100%" height="auto"></img>
+  <img src="/images/record.jpg" width="100%" height="auto"></img>
+  <img src="/images/website.jpg" width="100%" height="auto"></img>
+</div>
+<div class="introduce_Container container-fluit">
+  <div class="introBox"><img src="/images/ssn.jpg" width="100%" height="auto"></img></div>
+  <div class="introBox"><img src="/images/cir.jpg" width="100%" height="auto"></img></div>
+  <div class="introBox"><img src="/images/mem.jpg" width="100%" height="auto"></img></div>
+  <div class="introBox"><img src="/images/loca.jpg" width="100%" height="auto"></img></div>
+  <div class="introBox"><img src="/images/rec.jpg" width="100%" height="auto"></img></div>
+</div>
+<div class="apply_Container container"><!--지원 div-->
+  <div id='body_container'>
+    <div class="container">
+      <form class="form-horizontal" role="form">
+        <h2>지원서</h2>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">이름</label>
+          <div class="col-sm-9">
+            <input type="text" id="name" placeholder="ex) 홍길동" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">학과</label>
+          <div class="col-sm-9">
+            <input type="text" id="major" placeholder="ex) 컴퓨터공학과" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">학번</label>
+          <div class="col-sm-9">
+            <input type="text" id="student_number" placeholder="ex) 18011234" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">학년-학기</label>
+          <div class="col-sm-9">
+            <input type="text" id="grade" placeholder="ex) 3-2" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">연락처</label>
+          <div class="col-sm-9">
+            <input type="text" id="phone_number" placeholder="ex) 010 1111 1111" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">이메일</label>
+          <div class="col-sm-9">
+            <input type="text" id="email" placeholder="ex) abcd@naver.com" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-3 control-label">거주지</label>
+          <div class="col-sm-9">
+            <input type="text" id="home" placeholder="ex) 서울시 광진구" class="supportForm form-control" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3">성별</label>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-3">
+                <label class="radio-inline">
+                  <input type="radio" name='gender' value="남">남
+                </label>
+              </div>
+              <div class="col-sm-3">
+                <label class="radio-inline">
+                  <input type="radio" name='gender'value="여">여
+                </label>
               </div>
             </div>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">학과</label>
-              <div class="col-sm-9">
-                <input type="text" id="major" placeholder="ex) 컴퓨터공학과" class="form-control" autofocus>
-              </div>
+          </div>
+        </div> <!-- /.form-group -->
+        <div class="form-group">
+          <label class="control-label col-sm-9">군필여부 (해당사항이 없으신 분들은 체크 안해주시면 됩니다.)</label>
+          <div class="col-sm-9">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="milcheck" value="Low calorie">군필
+              </label>
             </div>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">학번</label>
-              <div class="col-sm-9">
-                <input type="text" id="student_number" placeholder="ex) 18011234" class="form-control" autofocus>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">학년-학기</label>
-              <div class="col-sm-9">
-                <input type="text" id="grade" placeholder="ex) 3-2" class="form-control" autofocus>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">연락처</label>
-              <div class="col-sm-9">
-                <input type="text" id="phone_number" placeholder="ex) 010 1111 1111" class="form-control" autofocus>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">이메일</label>
-              <div class="col-sm-9">
-                <input type="text" id="email" placeholder="ex) abcd@naver.com" class="form-control" autofocus>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="firstName" class="col-sm-3 control-label">거주지</label>
-              <div class="col-sm-9">
-                <input type="text" id="home" placeholder="ex) 서울시 광진구" class="form-control" autofocus>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-sm-3">성별</label>
-              <div class="col-sm-6">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <label class="radio-inline">
-                      <input type="radio" name='gender' value="남">남
-                    </label>
-                  </div>
-                  <div class="col-sm-3">
-                    <label class="radio-inline">
-                      <input type="radio" name='gender'value="여">여
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- /.form-group -->
-            <div class="form-group">
-              <label class="control-label col-sm-9">군필여부 (해당사항이 없으신 분들은 체크 안해주시면 됩니다.)</label>
-              <div class="col-sm-9">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" id="milcheck" value="Low calorie">군필
-                  </label>
-                </div>
-              </div>
-            </div> <!-- /.form-group -->
-            <div class="form-group">
-              <label class="control-label col-sm-3">지원 동기</label>
-              <div class="col-sm-12">
-                <textarea class='form-control' rows='7' id='apply_reason' placeholder="200자 내외로 작성해주세요."></textarea>
-              </div>
-            </div> <!-- /.form-group -->
-            <div class="form-group">
-              <label class="control-label col-sm-3">프로젝트 경험</label>
-              <div class="col-sm-12">
-                <textarea class='form-control' rows='7' id='project' placeholder="큰 프로젝트가 아니라 수업시간을 통한 사소하고 작은 경험도 괜찮습니다. 프로젝트 경험이 없으면 없다고 적어주세요."></textarea>
-              </div>
-            </div> <!-- /.form-group -->
-            <div class="form-group">
-              <label class="control-label col-sm-5">만들고 싶은 서비스</label>
-              <div class="col-sm-12">
-                <textarea class='form-control' rows='7' id='want_service' placeholder="200자 내외로 작성해주세요."></textarea>
-              </div>
-            </div> <!-- /.form-group -->
-            <div class="form-group">
-              <div class="col-sm-12 col-sm-offset-3">
-                <button type="button" class="btn btn-primary btn-block" id='applyButton'>지원하기</button>
-              </div>
-            </div>
-          </form> <!-- /form -->
-        </div> <!-- ./container -->
-      </div>
-    </div>
-    <div class="notice_Container container"><!--게시판 div-->
-      <div class="box" id="note1">
+          </div>
+        </div> <!-- /.form-group -->
+        <div class="form-group">
+          <label class="control-label col-sm-3">지원 동기</label>
+          <div class="col-sm-12">
+            <textarea class='form-control' rows='7' id='apply_reason' placeholder="200자 내외로 작성해주세요."></textarea>
+          </div>
+        </div> <!-- /.form-group -->
+        <div class="form-group">
+          <label class="control-label col-sm-3">프로젝트 경험</label>
+          <div class="col-sm-12">
+            <textarea class='form-control' rows='7' id='project' placeholder="큰 프로젝트가 아니라 수업시간을 통한 사소하고 작은 경험도 괜찮습니다. 프로젝트 경험이 없으면 없다고 적어주세요."></textarea>
+          </div>
+        </div> <!-- /.form-group -->
+        <div class="form-group">
+          <label class="control-label col-sm-5">만들고 싶은 서비스</label>
+          <div class="col-sm-12">
+            <textarea class='form-control' rows='7' id='want_service' placeholder="200자 내외로 작성해주세요."></textarea>
+          </div>
+        </div> <!-- /.form-group -->
+        <div class="form-group">
+          <div class="col-sm-12 col-sm-offset-3">
+            <button type="button" class="btn btn-primary btn-block" id='applyButton'>지원하기</button>
+          </div>
+        </div>
+      </form> <!-- /form -->
+    </div> <!-- ./container -->
+  </div>
+</div>
+<div class="notice_Container container"><!--게시판 div-->
+  <div class="box" id="note1">
     <div id="first_area"></div>
     <div id="main_area">
       <table class="board">
         <thead>
-              <tr>
-                <td id="first_td">게시글번호</td>
-                <td id="second_td">글제목</td>
-                <td id="third_td">작성일자</td>
-             </tr>
-            </thead>
-            <tbody>
-              <div id="myModal" class="modal">
+          <tr>
+            <td id="first_td">게시글번호</td>
+            <td id="second_td">글제목</td>
+            <td id="third_td">작성일자</td>
+          </tr>
+        </thead>
+        <tbody>
+          <div id="myModal" class="modal">
 
-                  <!-- Modal content -->
-                  <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div class="form-group">
-                      <label class="control-label col-sm-3">제목</label>
-                      <div class="col-sm-12">
-                        <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
-                      </div>
-                    </div> <!-- /.form-group -->
-                    <div class="form-group">
-                      <label class="control-label col-sm-5">내용</label>
-                      <div class="col-sm-12">
-                        <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
-                      </div>
-                    </div> <!-- /.form-group -->
-                    <button type="button" class="btn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
-                  </div>
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="form-group">
+                <label class="control-label col-sm-3">제목</label>
+                <div class="col-sm-12">
+                  <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
                 </div>
-            </tbody>
+              </div> <!-- /.form-group -->
+              <div class="form-group">
+                <label class="control-label col-sm-5">내용</label>
+                <div class="col-sm-12">
+                  <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
+                </div>
+              </div> <!-- /.form-group -->
+              <button type="button" class="btn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
+            </div>
+          </div>
+        </tbody>
       </table>
       <input type='button' name='write' value='글쓰기' id='writeButton'>
     </div>
   </div>
 
-    </div>
+</div>
 
 <script src="/javascripts/main.js"></script>
-  </body>
-  </html>
+</body>
+</html>
