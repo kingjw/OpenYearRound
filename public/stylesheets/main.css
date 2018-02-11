@@ -1,4 +1,9 @@
+@font-face{
+  font-family:'yungodic';
+  src:url('/stylesheets/yungodic550.ttf')
+}
 html,body{
+  font-family:'yungodic';
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -6,144 +11,137 @@ html,body{
   width: 100%;
   height: 100%;
 }
+.menu{
+  color: black;
+  width: 25%;
+  font-size: 12px;
+}
+nav{
+  width: 50%;
+  float: right;
+  margin-right: 5%;
+  margin-top: 1.5%;
+  display: inline-flex;
+}
+.menu:hover{
+  cursor: pointer;
+  color: gray;
+}
 .introduce{
   width: 100%;
-  height: 65%;
-  background-image: url("/images/apply10.png");
+  height: 70%;
+  background-image: url("/images/main.png");
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
-  text-align: center;
 }
 
- .act_Container{
+.act_Container{
   display:none;
 }
 .introduce_Container{
- display:none;
+  display:none;
 }
 .apply_Container{
- display:none;
+  display:none;
 }
 .notice_Container{
-display:none;
+  display:none;
 }
 ::-webkit-scrollbar {
-display: none;
-}
-.mente{
-  height: 30%;
-  display: table;
-  font-size: 30px;
+  display: none;
 }
 .logo{
   height: 70%;
   display: table;
 }
 .button{
-  margin-top: 2%;
-  height: 27%;
-  text-align: center;
+  height: 30%;
   color: white;
-  background-color:blue;
-  display: table;
-}
-#mente{
-  display:table-cell;
-  vertical-align: middle;
-  font-size:30px;
 }
 #button1:hover{
-cursor: pointer;
-background-color: black;
-opacity: 0.7;
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
 }
-#button2:hover{
-cursor: pointer;
-background-color: black;
-opacity: 0.7;
+#introButton:hover{
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
 }
-#button3:hover{
-cursor: pointer;
-background-color: black;
-opacity: 0.7;
+#supportButton:hover{
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
 }
-#button4:hover{
-cursor: pointer;
-background-color: black;
-opacity: 0.7;
+#noticeButton:hover{
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
 }
-#button1{
-  background-color:#0071a6;
+
+#actButtonM{
+  display: none;
 }
-#button2{
+#introButton{
+  width: 38%;
+  padding: 2%;
   background-color:#008bcc;
 }
-#button3{
+#supportButton{
+  text-align: center;
+  width: 31%;
+  height: 30.065%;
+  display: table;
   background-color:#009ce6;
 }
-#button4{
+#noticeButton{
+  width: 31%;
+  padding: 2%;
   background-color:#5eb7f2;
 }
-.header_Text{
+#aboutOYR{
+  font-size: 12px;
+  margin-left: 5%;
+  height: 20%;
+}
+#aboutOYR_content{
+  margin-left: 5%;
+  height: 65%;
+  font-size: 7px;
+}
+#notice_Board{
+  font-size: 12px;
+  margin-left: 3%;
+  height: 20%;
+}
+#board_content{
+  font-size: 6px;
+}
+.applyText{
+  font-size: 15px;
   display:table-cell;
   vertical-align:middle;
+  line-height:150%;
 }
-
-@media screen and (max-width:991px){
-  .mente{
-    height: 40%;
-    display: table;
-    font-size: 30px;
-  }
-
-  #logo{
-    width: 25%;
-    height: auto;
-  }
-  #mente{
-    display:table-cell;
-    vertical-align: middle;
-    font-size:28px;
-  }
+.buttonMobile{
+  display: none;
 }
-@media screen and (max-width:767px){
-  .button{
-    height: 15%;
-    width: 45%;
-    position: relative;
-    left: 5%;
-    right: 5%;
-  }
-  #logo{
-    width: 60%;
-    height: auto;
-  }
-  #mente{
-    font-size:25px;
-  }
+.moveTop:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
 }
-
-
-@media screen and (max-width:450px){
-  .mente{
-    height: 40%;
-    display: table;
-    font-size: 30px;
-  }
-  #logo{
-    width: 50%;
-    height: auto;
-  }
-  #mente{
-    vertical-align: middle;
-    font-size:22px;
-  }
+.moveTop {
+  position: fixed;
+  top: 85%;
+  right: 3%;
+  width: 5%;
+  display: none;
 }
 
 #first_area{
-    width: 100%;
-    height:8%;
+  width: 100%;
+  height:8%;
 }
 #main_area{
   height : 92%;
@@ -159,11 +157,11 @@ table.board{
   width: 100%;
 }
 table.board thead td {
-    vertical-align: top;
-    color: white;
-    background-color: #153238;
-    text-align: center;
-    padding: 7px;
+  vertical-align: top;
+  color: white;
+  background-color: #153238;
+  text-align: center;
+  padding: 7px;
 }
 #first_td{
   width: 20%;
@@ -190,40 +188,221 @@ table.board thead td {
   color: rgb(255, 255, 255);
   background-color: #153238;
 }
+.supportForm{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+}
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
-    margin-left: 95%;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaaaaa;
+  margin-left: 95%;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media all and (orientation:portrait){
+  nav{
+    display: none;
+  }
+  .introduce{
+    height: 65%;
+    text-align: center;
+    background-image: url("/images/mainMobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .button{
+    height: 17.5%;
+  }
+  #actButtonM{
+    display: block;
+    width: 50%;
+    text-align: center;
+    display: table;
+    background-color:#008bcc;
+  }
+  .buttonMobile{
+    display: block;
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 18px;
+  }
+  #aboutOYR{
+    /* display: none; */
+    margin-left: 7%;
+  }
+  #aboutOYR_content{
+    /* display: none; */
+    margin-left: 7%;
+  }
+  #notice_Board{
+    display: none;
+  }
+  #board_content{
+    display: none;
+  }
+  /* .applyText{
+  display: none;
+  } */
+  #introButton{
+    width: 50%;
+    background-color: #0071a6;
+  }
+  #supportButton{
+    text-align: center;
+    width: 50%;
+    height: 17.5%;
+    background-color:#5eb7f2;
+  }
+  #noticeButton{
+    display: table;
+    text-align: center;
+    padding: 0%;
+    width: 50%;
+    background-color: #009ce6
+  }
+}
+
+@media screen and (min-width:750px) and (max-width:1080px){
+  #aboutOYR{
+    font-size: 20px;
+  }
+  #aboutOYR_content{
+    font-size: 12px;
+  }
+  #notice_Board{
+    font-size: 21px;
+  }
+  #board_content{
+    font-size: 10px;
+  }
+  .applyText{
+    font-size: 23px;
+  }
+  .buttonMobile{
+    font-size: 28px;
+  }
+  .menu{
+    font-size: 16px;
+  }
+}
+@media screen and (min-width:1081px) and (max-width:1600px){
+  #aboutOYR{
+    font-size: 23px;
+  }
+  #aboutOYR_content{
+    font-size: 14px;
+  }
+  #notice_Board{
+    font-size: 23px;
+  }
+  #board_content{
+    font-size: 12px;
+  }
+  .applyText{
+    font-size: 25px;
+  }
+  .buttonMobile{
+    font-size: 32px;
+  }
+  .menu{
+    font-size: 16px;
+  }
+}
+@media screen and (min-width:1601px) and (max-width:1920px){
+  #aboutOYR{
+    font-size: 27px;
+  }
+  #aboutOYR_content{
+    font-size: 22px;
+  }
+  #notice_Board{
+    font-size: 27px;
+  }
+  #board_content{
+    font-size: 20px;
+  }
+  .applyText{
+    font-size: 40px;
+  }
+  .buttonMobile{
+    font-size: 50px;
+  }
+  .menu{
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width:1921px) and (max-width:2560px){
+  #aboutOYR{
+    font-size: 35px;
+  }
+  #aboutOYR_content{
+    font-size: 28px;
+  }
+  #notice_Board{
+    font-size: 35px;
+  }
+  #board_content{
+    font-size: 26px;
+  }
+  .applyText{
+    font-size: 50px;
+  }
+  .menu{
+    font-size: 23px;
+  }
+}
+@media screen and (min-width:2561px){
+  #aboutOYR{
+    font-size: 50px;
+  }
+  #aboutOYR_content{
+    font-size: 40px;
+  }
+  #notice_Board{
+    font-size: 50px;
+  }
+  #board_content{
+    font-size: 38px;
+  }
+  .applyText{
+    font-size: 60px;
+  }
+  .menu{
+    font-size: 26px;
+  }
 }
