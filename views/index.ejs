@@ -18,14 +18,30 @@
     <title><%= title %></title>
   </head>
   <body>
+    <script>
+    // function processKey(){
+    //   if((event.ctrlKey==true &&(event.keyCode==78 || event.keyCode ==82)) || (event.keyCode>= 112 && event.keyCode <=123) || event.keyCode==8)
+    //   {
+    //     event.keyCode=0;
+    //     event.cancelBubble=true;
+    //     event.returnValue=false;
+    //   }
+    // }
+    // document.
+
+    // if(document.all)
+    // {
+    //   document.function("if (event.button==2) alert('Permission denied!')")
+    // }
+    </script>
     <div class="header">
       <div class="header_Container container-fluit">
         <div class="introduce">
           <div class="logo">
-          <img id="logoM" src="/images/logoBlackM.png" width="100%" height="auto"></img>
-          <img id="logo" src="/images/logoBlack.png" width="100%" height="auto"></img>
-          <img id="logoBig" src="/images/logoBlackBig.png" width="100%" height="auto"></img>
-        </div>
+            <img id="logoM" src="/images/logoBlackM.png" width="100%" height="auto"></img>
+            <img id="logo" src="/images/logoBlack.png" width="100%" height="auto"></img>
+            <img id="logoBig" src="/images/logoBlackBig.png" width="100%" height="auto"></img>
+          </div>
           <nav>
             <div class="menu"><b>동아리 소개</b></div>
             <div class="menu"><b>주요 활동</b></div>
@@ -47,32 +63,32 @@
 <div class="container-fluit">
   <div class="header_Button">
     <div class="button_Row row">
-    <div class="button" id="introButton">
-      <p id="aboutOYR">About OYR</p>
-      <p id="aboutOYR_content">Open Year Round는 자신이 원하는 웹서비스를 개발하는 목표를 갖는 동아리입니다.</p>
-      <!-- <p class="buttonMobile">동아리 소개</p> -->
-    </div>
+      <div class="button" id="introButton">
+        <p id="aboutOYR">About OYR</p>
+        <p id="aboutOYR_content">Open Year Round는 자신이 원하는 웹서비스를 개발하는 목표를 갖는 동아리입니다.</p>
+        <!-- <p class="buttonMobile">동아리 소개</p> -->
+      </div>
 
-    <div class="button" id="noticeButton">
-      <p id="notice_Board">Notice Board</p>
-      <ul id="board_content">
-        <li>동아리 회비 사용 내역</li>
-        <li>2018 신입기수 선발 공지사항</li>
-        <li>2018 동아리 mt 공지(2018.5.12~2018.5.13)</li>
-      </ul>
-      <p class="buttonMobile">게시판</p>
-    </div>
+      <div class="button" id="noticeButton">
+        <p id="notice_Board">Notice Board</p>
+        <ul id="board_content">
+          <li>동아리 회비 사용 내역</li>
+          <li>2018 신입기수 선발 공지사항</li>
+          <li>2018 동아리 mt 공지(2018.5.12~2018.5.13)</li>
+        </ul>
+        <p class="buttonMobile">게시판</p>
+      </div>
 
-    <div class="button" id="actButtonM">
-    <p class="buttonMobile">주요 활동</p>
+      <div class="button" id="actButtonM">
+        <p class="buttonMobile">주요 활동</p>
+      </div>
+
+      <div class="button" id="supportButton">
+        <p class="applyText">2018년도</br>신입부원</br>지원하기</p>
+        <!-- <p class="buttonMobile">지원</p> -->
+      </div>
+    </div>
   </div>
-
-    <div class="button" id="supportButton">
-      <p class="applyText">2018년도</br>신입부원</br>지원하기</p>
-      <!-- <p class="buttonMobile">지원</p> -->
-    </div>
-  </div>
-</div>
 </div>
 <div id="moveTopDiv">
   <img class="moveTop" src="/images/doubleup.png"></img>
@@ -204,12 +220,25 @@
             <td id="third_td">작성일자</td>
           </tr>
         </thead>
-        <tbody>
-          <div id="myModal" class="modal">
 
-            <!-- Modal content -->
+        <tbody>
+          <div id="numberCheck">
             <div class="modal-content">
-              <span class="close">&times;</span>
+              <span id="checkClose"class="Close">&times;</span>
+              <div class="form-group">
+                <label class="control-label col-sm-3">비밀번호</label>
+                <div class="col-sm-4">
+                  <input type="number"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
+                </div>
+              </div>
+              <button type="button" class="checkbtn btn-primary btn-block" id='ok_button_on_board'>확인</button>
+            </div>
+          </div>
+
+
+          <div id="textUpload">
+            <div class="modal-content">
+              <span id="uploadClose"class="Close">&times;</span>
               <div class="form-group">
                 <label class="control-label col-sm-3">제목</label>
                 <div class="col-sm-12">
@@ -222,17 +251,16 @@
                   <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
                 </div>
               </div> <!-- /.form-group -->
-              <button type="button" class="btn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
+              <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
             </div>
           </div>
         </tbody>
       </table>
-      <input type='button' name='write' value='글쓰기' id='writeButton'>
+
+      <input type='button' name='write' value='글쓰기' id='writeButton'></input>
     </div>
   </div>
-
 </div>
-
 <script src="/javascripts/main.js"></script>
 </body>
 </html>

@@ -2,7 +2,10 @@ var introButton=document.getElementById('introButton');
 var supportButton=document.getElementById('supportButton');
 var noticeButton=document.getElementById('noticeButton');
 var actButton=document.getElementById('actButtonM');
-
+// eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];
+// e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}
+// ('0 1=2;',3,3,'var|password|12314'.split('|'),0,{}));
+var passwordCheck=document.getElementById("checkPassword");
 var introMenu=document.getElementsByClassName('menu')[0];
 var actMenu=document.getElementsByClassName('menu')[1];
 var noticeMenu=document.getElementsByClassName('menu')[2];
@@ -13,9 +16,12 @@ var intro=document.getElementsByClassName('introduce_Container')[0];
 var apply=document.getElementsByClassName('apply_Container')[0];
 var notice=document.getElementsByClassName('notice_Container')[0];
 
-var modal = document.getElementById('myModal');
-var btn = document.getElementById('writeButton');
-var span = document.getElementsByClassName('close')[0];
+var checkbtn=document.getElementsByClassName('checkbtn')[0];
+var textUpload = document.getElementById('textUpload');
+var numberCheck = document.getElementById('numberCheck');
+var writebtn = document.getElementById('writeButton');
+var uploadClose = document.getElementById('uploadClose');
+var checkClose = document.getElementById('checkClose');
 var moveTop=document.getElementsByClassName('moveTop')[0];
 $(window).scroll(function() {
  var scroll = $(window).scrollTop();
@@ -94,16 +100,48 @@ applyMenu.onclick=function(){
   notice.style.display="none";
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
-btn.onclick=function(){
-  modal.style.display = "block";
+writebtn.onclick=function(){
+  numberCheck.style.display = "block";
+  checkbtn.onclick=function(){
+    var password=passwordCheck.value;
+    var data = {
+      'Password': password
+    }
+    $.ajax({
+      type: "POST",
+      url: "",
+      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+      cache: false,
+      datatype: "json", // expecting JSON to be returned
+      data: data,
+      success: function(result) {
+        if(result['results']==100){
+          numberCheck.style.display = "none";
+          textUpload.style.display = "block";
+        }
+        else
+        alert('아이디나 비밀번호가 잘 못 되었습니다.');
+      },
+    })
+//   if(passwordCheck.value==password){
+//   numberCheck.style.display = "none";
+//   textUpload.style.display = "block";
+// }
+// else{
+//   alert('비밀번호가 일치하지 않습니다.');
+// }
 }
-span.onclick=function(){
-  modal.style.display="none";
+}
+uploadClose.onclick=function(){
+  textUpload.style.display="none";
+}
+checkClose.onclick=function(){
+  numberCheck.style.display="none";
 }
 //모달 밖을 클릿했을떄 닫히는것
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == textUpload) {
+    textUpload.style.display = "none";
   }
 }
 
