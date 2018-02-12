@@ -37,4 +37,6 @@ router.post('/goApply',function(req,res,next){//접수 버튼 클릭 시 ajax �
     }
   });//query
 });//router post
+
+
 module.exports = router;
