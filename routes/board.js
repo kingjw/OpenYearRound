@@ -11,12 +11,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/goBoard',function(req,res,next){//올리기 버튼 클릭 시 ajax 통신하는 부분입니다.
-  var title = req.body.title_name;
+  var title = req.body.title;
   var contents = req.body.contents;
-
-  var sql = 'insert into `postboard` (`title`,`text`) values (?,?);';
+  var date = req.body.date;
+  var sql = 'insert into `postboard` (`title`,`text`,`date`) values (?,?,?);';
   //입력한 정보를 테이블에 저장하는 쿼리문
-  conn.query(sql,[title,text],function(error,results,fields){
+  conn.query(sql,[title,text,date],function(error,results,fields){
     if(error){
       console.log(error);
       console.log('postboard insert failed');

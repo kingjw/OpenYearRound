@@ -116,3 +116,45 @@ $("input").focusout(function(){
   $(this).animate({borderColor: '#EEEEEE'},'slow');
   this.placeholder = this._placeholder;
 });
+$('#ok_button_on_board').click(function(){
+  var title = $('#title_name').val();
+  var contents = $('#contents').val();
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+  if(title=='')
+    alert("제목을 입력하세요");
+  else if(contents == '')
+    alert("내용을 입력하세요");
+
+  var data={
+    'title' : title,
+    'contents' : contents,
+    'date' : date
+  }
+  console.log(data);
+  $.ajax({
+        type: 'post',
+        url: '/board/goBoard',
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        cache: false,
+        data: data,
+        datatype: 'json',
+        success: function(result) {
+          if (result['result']=='success')            {
+            console.log(result);
+            alert('등록완료');
+            location.reload();
+          }
+          else{
+            console.log(result);
+            alert('등록실패1');
+            location.reload();
+          }
+        },
+        error: function(error){
+        alert('등록실패2');
+        location.reload();
+        }
+    })
+});
