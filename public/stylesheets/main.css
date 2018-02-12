@@ -7,6 +7,9 @@ html,body{
   margin: 0 auto;
   overflow-x: hidden;
 }
+img {
+   max-width: 100%;
+}
 .header{
   width: 100%;
   height: 100%;
@@ -51,8 +54,13 @@ nav{
   display: none;
 }
 .logo{
-  height: 70%;
-  display: table;
+  position: absolute;
+}
+#logo{
+  display: none;
+}
+#logoBig{
+  display: none;
 }
 .button{
   height: 30%;
@@ -85,19 +93,19 @@ nav{
 #introButton{
   width: 38%;
   padding: 2%;
-  background-color:#008bcc;
+  background-color:#5a95b1;
 }
 #supportButton{
   text-align: center;
   width: 31%;
   height: 30.065%;
   display: table;
-  background-color:#009ce6;
+  background-color:#508bc5;
 }
 #noticeButton{
   width: 31%;
   padding: 2%;
-  background-color:#5eb7f2;
+  background-color:#469fbb;
 }
 #aboutOYR{
   font-size: 12px;
@@ -240,7 +248,7 @@ table.board thead td {
   .introduce{
     height: 65%;
     text-align: center;
-    background-image: url("/images/mainMobile.png");
+    background-image: url("/images/mainMobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -252,7 +260,7 @@ table.board thead td {
     width: 50%;
     text-align: center;
     display: table;
-    background-color:#008bcc;
+    background-color:#50a9a7;
   }
   .buttonMobile{
     display: block;
@@ -279,20 +287,17 @@ table.board thead td {
   } */
   #introButton{
     width: 50%;
-    background-color: #0071a6;
   }
   #supportButton{
     text-align: center;
     width: 50%;
     height: 17.5%;
-    background-color:#5eb7f2;
   }
   #noticeButton{
     display: table;
     text-align: center;
     padding: 0%;
     width: 50%;
-    background-color: #009ce6
   }
 }
 
@@ -318,6 +323,15 @@ table.board thead td {
   .menu{
     font-size: 16px;
   }
+  #logoM{
+    display: none;
+  }
+  #logo{
+    display: block;
+  }
+  #logoBig{
+    display: none;
+  }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   #aboutOYR{
@@ -340,6 +354,15 @@ table.board thead td {
   }
   .menu{
     font-size: 16px;
+  }
+  #logoM{
+    display: none;
+  }
+  #logo{
+    display: block;
+  }
+  #logoBig{
+    display: none;
   }
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
@@ -364,6 +387,15 @@ table.board thead td {
   .menu{
     font-size: 18px;
   }
+  #logoM{
+    display: none;
+  }
+  #logo{
+    display: none;
+  }
+  #logoBig{
+    display: block;
+  }
 }
 
 @media screen and (min-width:1921px) and (max-width:2560px){
@@ -385,6 +417,15 @@ table.board thead td {
   .menu{
     font-size: 23px;
   }
+  #logoM{
+    display: none;
+  }
+  #logo{
+    display: none;
+  }
+  #logoBig{
+    display: block;
+  }
 }
 @media screen and (min-width:2561px){
   #aboutOYR{
@@ -404,5 +445,14 @@ table.board thead td {
   }
   .menu{
     font-size: 26px;
+  }
+  #logoM{
+    display: none;
+  }
+  #logo{
+    display: none;
+  }
+  #logoBig{
+    display: block;
   }
 }
