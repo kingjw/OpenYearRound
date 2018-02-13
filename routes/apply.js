@@ -38,23 +38,4 @@ router.post('/goApply',function(req,res,next){//접수 버튼 클릭 시 ajax �
   });//query
 });//router post
 
-
-<<<<<<< HEAD
-
-router.post('/apply', function(req, res, next) {
-  password = req.body.Password;
-
-  var sql = "SELECT * FROM checkPW WHERE password=?";
-
-  conn.query(sql, [password], function(error, results, fields) {
-    if (error) {
-      console.log('fail!');
-    }
-    else {
-    res.send({results:100})
-    }
-  });
-});
-=======
->>>>>>> 142105d77b0533274a303a8623d220999e30b120
 module.exports = router;
