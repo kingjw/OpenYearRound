@@ -119,9 +119,11 @@ writebtn.onclick=function(){
         if(result['results']==100){
           numberCheck.style.display = "none";
           textUpload.style.display = "block";
+
         }
         else
         alert('비밀번호가 일치하지 않습니다.');
+        passwordCheck.value="";
       },
     })
   }
@@ -138,7 +140,11 @@ window.onclick = function(event) {
     textUpload.style.display = "none";
   }
 }
-
+window.onclick = function(event) {
+  if (event.target == numberCheck) {
+    numberCheck.style.display="none";
+  }
+}
 $("input").focus(function(){
   $(this).animate({borderColor: '#3899EC'},'slow');
   this._placeholder = this.placeholder;
