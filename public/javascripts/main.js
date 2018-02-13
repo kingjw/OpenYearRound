@@ -24,13 +24,13 @@ var uploadClose = document.getElementById('uploadClose');
 var checkClose = document.getElementById('checkClose');
 var moveTop=document.getElementsByClassName('moveTop')[0];
 $(window).scroll(function() {
- var scroll = $(window).scrollTop();
-if (scroll==0){
-  moveTop.style.display='none';
-}
-else{
-  moveTop.style.display='block';
-}
+  var scroll = $(window).scrollTop();
+  if (scroll==0){
+    moveTop.style.display='none';
+  }
+  else{
+    moveTop.style.display='block';
+  }
 });
 moveTop.onclick=function(){
   $('html,body').animate({'scrollTop':0}, 500);
@@ -124,7 +124,7 @@ writebtn.onclick=function(){
         alert('비밀번호가 일치하지 않습니다.');
       },
     })
-}
+  }
 }
 uploadClose.onclick=function(){
   textUpload.style.display="none";
