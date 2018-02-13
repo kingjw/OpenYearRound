@@ -222,7 +222,19 @@
         </thead>
 
         <tbody>
-
+          <tr>
+            <% for (var i=0;i<board.length;i++) {%>
+            <td>
+              <%= i+1 %>
+            </td>
+            <td>
+              <%=board[i].title%>
+            </td>
+            <td>
+              <%=board[i].date%>
+            </td>
+          </tr>
+          <% } %>
           </tbody>
           <div id="numberCheck">
             <div class="check_Content">
