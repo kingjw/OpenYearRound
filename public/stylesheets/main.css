@@ -251,12 +251,13 @@ table.board thead td {
 }
 
 .check_Content{
-  text-align: center;
-width: 30%;
+text-align: center;
+width: 40%;
 background-color: #fefefe;
 margin: auto;
-padding: 20px;
+padding: 1%;
 border: 1px solid #888;
+border-radius: 5px;
 }
 
 .modal-content {
@@ -265,6 +266,7 @@ border: 1px solid #888;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 5px;
 }
 
 /* The Close Button */
@@ -341,6 +343,9 @@ border: 1px solid #888;
     padding: 0%;
     width: 50%;
   }
+  .check_Content{
+  width: 70%;
+  }
 }
 
 @media screen and (min-width:750px) and (max-width:1080px){
@@ -378,6 +383,9 @@ border: 1px solid #888;
   #logoBig{
     display: none;
   }
+  .check_Content{
+  width: 35%;
+  }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   #aboutOYR{
@@ -413,6 +421,9 @@ border: 1px solid #888;
   }
   #logoBig{
     display: none;
+  }
+  .check_Content{
+  width: 30%;
   }
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
@@ -450,6 +461,9 @@ border: 1px solid #888;
   #logoBig{
     display: block;
   }
+  .check_Content{
+  width: 30%;
+  }
 }
 
 @media screen and (min-width:1921px) and (max-width:2560px){
@@ -480,6 +494,9 @@ border: 1px solid #888;
   #logoBig{
     display: block;
   }
+  .check_Content{
+  width: 20%;
+  }
 }
 @media screen and (min-width:2561px){
   #aboutOYR{
@@ -508,5 +525,8 @@ border: 1px solid #888;
   }
   #logoBig{
     display: block;
+  }
+  .check_Content{
+  width: 15%;
   }
 }
