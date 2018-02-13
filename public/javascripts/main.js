@@ -107,9 +107,10 @@ writebtn.onclick=function(){
     var data = {
       'Password': password
     }
+    console.log(data);
     $.ajax({
       type: "POST",
-      url: "",
+      url: "/check/goCheck",
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       cache: false,
       datatype: "json", // expecting JSON to be returned
@@ -120,16 +121,9 @@ writebtn.onclick=function(){
           textUpload.style.display = "block";
         }
         else
-        alert('아이디나 비밀번호가 잘 못 되었습니다.');
+        alert('비밀번호가 일치하지 않습니다.');
       },
     })
-//   if(passwordCheck.value==password){
-//   numberCheck.style.display = "none";
-//   textUpload.style.display = "block";
-// }
-// else{
-//   alert('비밀번호가 일치하지 않습니다.');
-// }
 }
 }
 uploadClose.onclick=function(){

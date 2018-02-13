@@ -197,6 +197,10 @@ table.board thead td {
   color: rgb(255, 255, 255);
   background-color: #153238;
 }
+.checkbtn{
+  color: rgb(255, 255, 255);
+  background-color: #153238;
+}
 .supportForm{
   border-left: none;
   border-top: none;
