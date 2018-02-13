@@ -168,7 +168,7 @@ table.board{
 table.board thead td {
   vertical-align: top;
   color: white;
-  background-color: #153238;
+  background-color:#5a95b1;
   text-align: center;
   padding: 7px;
 }
@@ -186,20 +186,35 @@ table.board thead td {
   border-radius: 5px;
   font-size: 8px;
   color: rgb(255, 255, 255);
-  background-color: #153238;
+  border-color: #5a95b1;
+  border-style: none;
+  background-color:#5a95b1;
   width: 12%;
   height:7%;
   margin-top:10%;
   left:90%;
   position: relative;
 }
+#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover{
+  cursor: pointer;
+}
 #ok_button_on_board{
   color: rgb(255, 255, 255);
-  background-color: #153238;
+  background-color:#5a95b1;
+  border-color: #5a95b1;
+  border-style: none;
 }
 .checkbtn{
   color: rgb(255, 255, 255);
-  background-color: #153238;
+  background-color:#5a95b1;
+  border-color: #5a95b1;
+  border-style: none;
+}
+.checkbtn:hover{
+  color: rgb(255, 255, 255);
+  background-color:#5a95b1;
+  border-color: #5a95b1;
+  border-style: none;
 }
 .supportForm{
   border-left: none;
@@ -235,7 +250,15 @@ table.board thead td {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+.check_Content{
+  text-align: center;
+width: 30%;
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+}
+
 .modal-content {
   background-color: #fefefe;
   margin: auto;
