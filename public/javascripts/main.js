@@ -24,13 +24,13 @@ var uploadClose = document.getElementById('uploadClose');
 var checkClose = document.getElementById('checkClose');
 var moveTop=document.getElementsByClassName('moveTop')[0];
 $(window).scroll(function() {
- var scroll = $(window).scrollTop();
-if (scroll==0){
-  moveTop.style.display='none';
-}
-else{
-  moveTop.style.display='block';
-}
+  var scroll = $(window).scrollTop();
+  if (scroll==0){
+    moveTop.style.display='none';
+  }
+  else{
+    moveTop.style.display='block';
+  }
 });
 moveTop.onclick=function(){
   $('html,body').animate({'scrollTop':0}, 500);
@@ -124,7 +124,7 @@ writebtn.onclick=function(){
         alert('비밀번호가 일치하지 않습니다.');
       },
     })
-}
+  }
 }
 uploadClose.onclick=function(){
   textUpload.style.display="none";
@@ -155,38 +155,38 @@ $('#ok_button_on_board').click(function(){
   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
   if(title=='')
-    alert("제목을 입력하세요");
+  alert("제목을 입력하세요");
   else if(contents == '')
-    alert("내용을 입력하세요");
-
+  alert("내용을 입력하세요");
+else{
   var data={
     'title' : title,
     'contents' : contents,
     'date' : date
   }
-  console.log(data);
+
   $.ajax({
-        type: 'post',
-        url: '/board/goBoard',
-        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-        cache: false,
-        data: data,
-        datatype: 'json',
-        success: function(result) {
-          if (result['result']=='success')            {
-            console.log(result);
-            alert('등록완료');
-            location.reload();
-          }
-          else{
-            console.log(result);
-            alert('등록실패1');
-            location.reload();
-          }
-        },
-        error: function(error){
-        alert('등록실패2');
+    type: 'post',
+    url: '/board/goBoard',
+    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+    cache: false,
+    data: data,
+    datatype: 'json',
+    success: function(result) {
+      if (result['result']=='success'){
+        console.log(result);
+        alert('등록완료');
         location.reload();
-        }
-    })
+      }
+      else{
+        console.log(result);
+        alert('등록실패1');
+      }
+    },
+    error: function(error){
+      alert('등록실패2');
+      location.reload();
+    }
+  })
+}
 });
