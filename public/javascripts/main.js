@@ -119,9 +119,11 @@ writebtn.onclick=function(){
         if(result['results']==100){
           numberCheck.style.display = "none";
           textUpload.style.display = "block";
+
         }
         else
         alert('비밀번호가 일치하지 않습니다.');
+        passwordCheck.value="";
       },
     })
   }
