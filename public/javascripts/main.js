@@ -36,7 +36,6 @@ actButton.onclick=function(){
   act.style.display="block";
   intro.style.display="none";
   apply.style.display="none";
-  // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(act).offset().top}, 500);
 }
 introButton.onclick=function(){
@@ -44,7 +43,6 @@ introButton.onclick=function(){
   act.style.display="none";
   intro.style.display="block";
   apply.style.display="none";
-  // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(intro).offset().top}, 500);
 }
 supportButton.onclick=function(){
@@ -52,24 +50,13 @@ supportButton.onclick=function(){
   intro.style.display="none";
   act.style.display="none";
   apply.style.display="block";
-  // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
-// noticeButton.onclick=function(){
-//   $('html').css('overflow','visible');
-//   intro.style.display="none";
-//   act.style.display="none";
-//   apply.style.display="none";
-//   notice.style.display="block";
-//   $('html,body').animate({'scrollTop':$(notice).offset().top}, 500);
-// }
-
 introMenu.onclick=function(){
   $('html').css('overflow','visible');
   act.style.display="none";
   intro.style.display="block";
   apply.style.display="none";
-  // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(intro).offset().top}, 500);
 }
 actMenu.onclick=function(){
@@ -77,16 +64,7 @@ actMenu.onclick=function(){
   act.style.display="block";
   intro.style.display="none";
   apply.style.display="none";
-  // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(act).offset().top}, 500);
-}
-noticeMenu.onclick=function(){
-  $('html').css('overflow','visible');
-  intro.style.display="none";
-  act.style.display="none";
-  apply.style.display="none";
-  notice.style.display="block";
-  $('html,body').animate({'scrollTop':$(notice).offset().top}, 500);
 }
 applyMenu.onclick=function(){
   $('html').css('overflow','visible');
