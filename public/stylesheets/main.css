@@ -80,11 +80,7 @@ nav{
   height: 33%;
   color: white;
 }
-#button1:hover{
-  cursor: pointer;
-  background-color: black;
-  opacity: 0.7;
-}
+
 .header_Button{
   overflow:hidden;
 }
@@ -142,6 +138,7 @@ nav{
 }
 #supportButton:hover{
     cursor: pointer;
+    opacity: 0.9;
 }
 #writebtnButton{
   display: none;
