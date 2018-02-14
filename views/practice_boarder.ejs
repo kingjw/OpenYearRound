@@ -1,3 +1,103 @@
+<html>
+<head>
+  <mete charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- [if It IE 9]>
+    <script src="html5shiv.js"></script>
+    <script src="respond.js"></script>
+    <![endif]-->
+    <!-- 익스플로우 8이하에는 html5와 css3를 지원하지 않기 때문에 우리가 사용하는 부트스트랩이 적용이 안되기 때문에 익스플로우 9
+    미만일시 부트스트랩을 사용할수 있게 해주는 js파일들을 연결 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title><%= title %></title>
+  </head>
+  <style>
+
+  #first_area{
+    width: 100%;
+    height:8%;
+  }
+  #main_area{
+    height : 92%;
+  }
+  #board_area{
+    height : 55%;
+  }
+  table.board{
+    /* margin-left: 15%; */
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+  }
+  table.board thead td {
+    vertical-align: top;
+    color: white;
+    background-color:#5a95b1;
+    text-align: center;
+    padding: 7px;
+  }
+  #first_td{
+    width: 20%;
+  }
+  #second_td{
+    width:60%;
+  }
+  #third_td{
+    width: 20%;
+  }
+  #writeButton
+  {
+    border-radius: 5px;
+    font-size: 8px;
+    color: rgb(255, 255, 255);
+    border-color: #5a95b1;
+    border-style: none;
+    background-color:#5a95b1;
+    width: 12%;
+    height:7%;
+    margin-top:10%;
+    left:90%;
+    position: relative;
+  }
+  #writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover{
+    cursor: pointer;
+  }
+  #ok_button_on_board{
+    color: rgb(255, 255, 255);
+    background-color:#5a95b1;
+    border-color: #5a95b1;
+    border-style: none;
+    height: 8%;
+    width: 85%;
+      margin-left: 7.5%;
+  }
+  .checkbtn{
+    color: rgb(255, 255, 255);
+    background-color:#5a95b1;
+    border-color: #5a95b1;
+    border-style: none;
+    height: 6%;
+    width: 85%;
+    margin-top: 4%;
+      margin-left: 7.5%;
+      margin-bottom: 2%;
+  }
+  .formModal{
+    margin-bottom: 1%;
+  }
+  .checkbtn:hover{
+    color: rgb(255, 255, 255);
+    background-color:#5a95b1;
+    border-color: #5a95b1;
+    border-style: none;
+  }
+  </style>
+  <script src="/javascripts/board.js"></script>
+  <body>
+<body>
 <div class="notice_Container container"><!--게시판 div-->
   <div class="box" id="note1">
     <div id="first_area"></div>
@@ -67,3 +167,6 @@
     </div>
   </div>
 </div>
+
+</body>
+</html>
