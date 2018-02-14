@@ -188,14 +188,14 @@ nav{
 }
 .moveTop:hover{
   cursor: pointer;
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
 }
 .moveTop {
   position: fixed;
   top: 85%;
   right: 3%;
-  width: 5%;
+  width: 4%;
   display: none;
 }
 
