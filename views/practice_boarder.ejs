@@ -15,7 +15,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title><%= title %></title>
   </head>
-  <body>
 <body>
 <div class="notice_Container container"><!--게시판 div-->
   <div class="box" id="note1">
@@ -93,12 +92,29 @@
           <input type='button' name='write' value='글쓰기' id='writeButton'></input>
           </tbody>
           </table>
+    </div>
+  </div>
 
+</div>
+
+<div class="w3-container">
+  <h2>W3.CSS Modal</h2>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <div><%=item.title%></div>
+        <div><%=item.contents%></div>
+        <textarea><%=item.date%></textarea>
+      </div>
     </div>
   </div>
 </div>
   <script src="/javascripts/board.js"></script>
   <scripy>
+
   </script>
 </body>
 </html>
