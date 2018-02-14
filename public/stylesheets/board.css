@@ -7,6 +7,8 @@
 }
 #board_area{
   height : 55%;
+}td {
+  cursor: pointer;
 }
 table.board{
   /* margin-left: 15%; */
