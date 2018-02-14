@@ -19,20 +19,6 @@
   </head>
   <body>
     <script>
-    // function processKey(){
-    //   if((event.ctrlKey==true &&(event.keyCode==78 || event.keyCode ==82)) || (event.keyCode>= 112 && event.keyCode <=123) || event.keyCode==8)
-    //   {
-    //     event.keyCode=0;
-    //     event.cancelBubble=true;
-    //     event.returnValue=false;
-    //   }
-    // }
-    // document.
-
-    // if(document.all)
-    // {
-    //   document.function("if (event.button==2) alert('Permission denied!')")
-    // }
     </script>
     <div class="header">
       <div class="header_Container container-fluit">
@@ -45,19 +31,9 @@
           <nav>
             <div class="menu"><b>동아리 소개</b></div>
             <div class="menu"><b>주요 활동</b></div>
-            <div class="menu"><b>게시판</b></div>
+            <div class="menu"><b>공지 사항</b></div>
             <div class="menu"><b>지원 하기</b></div>
           </nav>
-          <!-- <div class="row">
-          <div class="mente col-md-12">
-          <p id="mente"><small>내가 만들고 싶은 </small>웹사이트<small>를 만드는</br> </small>웹 스터디<small> 동아리 </small></p>
-        </div>
-      </div>
-      <div class="row">
-      <div class="logo col-md-12 hidden-xs">
-      <img id="logo" src="/images/logo.png" width="20%" height="auto"></img>
-    </div>
-  </div> -->
 </div>
 </div>
 <div class="container-fluit">
@@ -66,39 +42,99 @@
       <div class="button" id="introButton">
         <p id="aboutOYR">About OYR</p>
         <p id="aboutOYR_content">Open Year Round는 자신이 원하는 웹서비스를 개발하는 목표를 갖는 동아리입니다.</p>
-        <!-- <p class="buttonMobile">동아리 소개</p> -->
+
       </div>
 
-      <div class="button" id="noticeButton">
-        <p id="notice_Board">Notice Board</p>
-        <ul id="board_content">
-          <li>동아리 회비 사용 내역</li>
-          <li>2018 신입기수 선발 공지사항</li>
-          <li>2018 동아리 mt 공지(2018.5.12~2018.5.13)</li>
-        </ul>
-        <p class="buttonMobile">게시판</p>
+      <div class="button" id="actButton">
+        <p class="mainAct">주요 활동</p>
+        <img id="mainPagePhoto"src="/images/all.JPG"></img>
+        <p id="subActContent">2014-2017동아리 연혁</br>Open Year Round에서 개발 된 Web Services</p>
+
       </div>
 
-      <div class="button" id="actButtonM">
-        <p class="buttonMobile">주요 활동</p>
+      <div class="button" id="noticeButtonM">
+        <p class="buttonMobile">공지 사항</p>
       </div>
 
       <div class="button" id="supportButton">
-        <p class="applyText">2018년도</br>신입부원</br>지원하기</p>
-        <!-- <p class="buttonMobile">지원</p> -->
+        <div class="supportImage">
+      <p class="applyText"><b>2018년도</br>신입부원</br>모 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;집</b></p>
+      <p id="applyDate"> <b>2018.3.2~3.11</b></p>
+      <button class="applyWirteButton">지원서 작성하기</button>
+      </div>
       </div>
     </div>
   </div>
 </div>
 <div id="moveTopDiv">
-  <img class="moveTop" src="/images/doubleup.png"></img>
+  <img class="moveTop" src="/images/up2.png"></img>
 </div>
 </div>
 
 <div class="act_Container container-fluit" id="act_Container_Id">
-  <img src="/images/award.jpg" width="100%" height="auto"></img>
-  <img src="/images/record.jpg" width="100%" height="auto"></img>
-  <img src="/images/website.jpg" width="100%" height="auto"></img>
+  <div id="actTop">
+    <img id="actImage"src='/images/mainActImage2.png' width="100%" height="auto"></img>
+    <img id="actImageM"src='/images/mainActImage.png' width="100%" height="auto"></img>
+</div>
+  <div class="actTitle"id="history">
+
+    <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
+ <span class="titleContent">동아리 연혁</span>
+  </div>
+  <div id="award">
+<table>
+  <tbody>
+    <tr>
+      <td class="year">2017</td><td class="awardContent">아동 노동 착취 관련 웹 게임 <b>Dawson's Daily Life</b>, 2017 교내 학술제 입상</br>도서교환 웹서비스 <b>도서로</b>, 2017 교내 학술제 입상</br>편집 에디터 <b>마이노트</b>, 2017 교내 학술제 입상</td><td class="tableImg"rowspan="2"><img src="/images/all.JPG" width="85%"></img></td>
+    </tr>
+    <tr>
+      <td class="year">2016</td><td class="awardContent">브라우저 탭 통합 서비스 <b>TabStorage</b>, 2016 교내 학술제 입상</br>서울시 물가비교 쇼핑 어플 <b>PricePlace</b>, 2016 교내 학술제 입상</td>
+    </tr>
+    <tr>
+      <td class="year">2015</td><td class="awardContent">강의평가, 시간표 짜기 어플 <b>아뭐듣지</b>, 2015(등록된 시간표 수 1400개)</br>동물병원 추천 플랫폼 <b>Keepet</b>, 2015 교내 학술제 입상</td><td class="tableImg"rowspan="2"><img src="/images/award.jpg" width="85%"></img></td>
+    </tr>
+    <tr>
+      <td class="year">2014</td><td class="awardContent">현재 날씨에 어울리는 음악추천 <b>WeatherMusic</b>, 2014 청년창업기상기후산업 기상청장상</br><b>오늘의 자외선</b>, 2014(기상청 추천 앱 등록)</br>뉴스 요약 어플 <b>그래서 오늘은</b>, 2014 정주영 창업경진대회 해커톤 2위</br>대학생 이상형 월드컵 <b>Fethering</b>, 2014(venture square 2014 5월의 아이템 선정)</td>
+    </tr>
+  </tbody>
+</table>
+<div id="tableImageM">
+  <div class="webLogo">
+  <img src="/images/all.JPG" width="40%"></img>
+  <img src="/images/award.jpg" width="40%"></img>
+</div>
+</div>
+</div>
+<div class="actTitle" id="webServices">
+  <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
+  <span class="titleContent">Web Services</span>
+</div>
+<div id="allLogo">
+  <input type="radio" name="pos" id="pos1"checked>
+	<input type="radio" name="pos" id="pos2">
+  <ul>
+<div class="webLogo"id="webLogo1">
+  <img src="/images/dawson.jpg"width="30%"height="auto"></img>
+  <img src="/images/bookChange.png"width="30%"height="auto"></img>
+  <img src="/images/mynote.png"width="30%"height="auto"></img>
+</div>
+<div id="webLogo2">
+  <img src="/images/sejongPlate.jpg"width="25%"height="auto"></img>
+  <img src="/images/tabStorage.jpg"width="25%"height="auto"></img>
+</div>
+</ul>
+<div class="pos">
+  <label for="pos1"></label>
+  <label for="pos2"></label>
+</div>
+</div>
+<footer>
+  <div class="footerContent">
+  <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
+  <p class="footerSamllContent">@openyearround</p>
+  <p class="footerSamllContent">세종대학교 다산관 205호</p>
+</div>
+</footer>
 </div>
 <div class="introduce_Container container-fluit">
   <div class="introBox"><img src="/images/ssn.jpg" width="100%" height="auto"></img></div>
@@ -239,7 +275,7 @@
             <div class="check_Content">
               <span id="checkClose"class="Close">&times;</span>
                 <label></label>
-              <div class="form-group">
+              <div class="formModal">
                 <div class="col-sm-12">
                   <input type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
                 </div>

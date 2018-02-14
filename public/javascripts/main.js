@@ -1,7 +1,7 @@
 var introButton=document.getElementById('introButton');
 var supportButton=document.getElementById('supportButton');
-var noticeButton=document.getElementById('noticeButton');
-var actButton=document.getElementById('actButtonM');
+var noticeButton=document.getElementById('noticeButtonM');
+var actButton=document.getElementById('actButton');
 // eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];
 // e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}
 // ('0 1=2;',3,3,'var|password|12314'.split('|'),0,{}));
