@@ -4,7 +4,7 @@ var numberCheck = document.getElementById('numberCheck');
 var writebtn = document.getElementById('writeButton');
 var uploadClose = document.getElementById('uploadClose');
 var checkClose = document.getElementById('checkClose');
-
+var passwordCheck=document.getElementById("checkPassword");
 
 writebtn.onclick=function(){
   numberCheck.style.display = "block";
@@ -51,15 +51,7 @@ window.onclick = function(event) {
     numberCheck.style.display="none";
   }
 }
-$("input").focus(function(){
-  $(this).animate({borderColor: '#3899EC'},'slow');
-  this._placeholder = this.placeholder;
-  $(this).removeAttr('placeholder');
-});
-$("input").focusout(function(){
-  $(this).animate({borderColor: '#EEEEEE'},'slow');
-  this.placeholder = this._placeholder;
-});
+
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
   var contents = $('#contents').val();
