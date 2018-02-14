@@ -199,152 +199,13 @@ nav{
   display: none;
 }
 
-#first_area{
-  width: 100%;
-  height:8%;
-}
-#main_area{
-  height : 92%;
-}
-#board_area{
-  height : 55%;
-}
-table.board{
-  /* margin-left: 15%; */
-  border-collapse: collapse;
-  text-align: center;
-  line-height: 1.5;
-  width: 100%;
-}
-table.board thead td {
-  vertical-align: top;
-  color: white;
-  background-color:#5a95b1;
-  text-align: center;
-  padding: 7px;
-}
-#first_td{
-  width: 20%;
-}
-#second_td{
-  width:60%;
-}
-#third_td{
-  width: 20%;
-}
-#writeButton
-{
-  border-radius: 5px;
-  font-size: 8px;
-  color: rgb(255, 255, 255);
-  border-color: #5a95b1;
-  border-style: none;
-  background-color:#5a95b1;
-  width: 12%;
-  height:7%;
-  margin-top:10%;
-  left:90%;
-  position: relative;
-}
-#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover{
-  cursor: pointer;
-}
-#ok_button_on_board{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
-  height: 8%;
-  width: 85%;
-    margin-left: 7.5%;
-}
-.checkbtn{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
-  height: 6%;
-  width: 85%;
-  margin-top: 4%;
-    margin-left: 7.5%;
-    margin-bottom: 2%;
-}
-.formModal{
-  margin-bottom: 1%;
-}
-.checkbtn:hover{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
-}
 .supportForm{
   border-left: none;
   border-top: none;
   border-right: none;
   outline: none;
 }
-#numberCheck {
-  display: none;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-#textUpload {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.check_Content{
-text-align: center;
-width: 40%;
-background-color: #fefefe;
-margin: auto;
-padding: 1%;
-border: 1px solid #888;
-border-radius: 5px;
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 5px;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  margin-left: 95%;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 .actTitle{
   display: inline-flex;
   display: table;
@@ -546,9 +407,6 @@ table{
     padding: 0%;
     width: 50%;
   }
-  .check_Content{
-  width: 70%;
-  }
   footer{
     height: 15%;
   }
@@ -596,9 +454,6 @@ table{
   }
   #logoBig{
     display: none;
-  }
-  .check_Content{
-  width: 35%;
   }
   .footerBigContent{
     font-size: 16px;
@@ -658,9 +513,6 @@ table{
   }
   #logoBig{
     display: none;
-  }
-  .check_Content{
-  width: 30%;
   }
   .footerBigContent{
     font-size: 20px;
@@ -723,9 +575,6 @@ table{
   #logoBig{
     display: block;
   }
-  .check_Content{
-  width: 30%;
-  }
   .footerBigContent{
     font-size: 23px;
   }
@@ -784,9 +633,6 @@ table{
   #logoBig{
     display: block;
   }
-  .check_Content{
-  width: 20%;
-  }
   .footerBigContent{
     font-size: 30px;
   }
@@ -844,9 +690,7 @@ table{
   #logoBig{
     display: block;
   }
-  .check_Content{
-  width: 15%;
-  }
+
   .footerBigContent{
     font-size: 42px;
   }

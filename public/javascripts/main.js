@@ -5,7 +5,7 @@ var actButton=document.getElementById('actButton');
 // eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];
 // e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}
 // ('0 1=2;',3,3,'var|password|12314'.split('|'),0,{}));
-var passwordCheck=document.getElementById("checkPassword");
+
 var introMenu=document.getElementsByClassName('menu')[0];
 var actMenu=document.getElementsByClassName('menu')[1];
 var noticeMenu=document.getElementsByClassName('menu')[2];
@@ -16,12 +16,7 @@ var intro=document.getElementsByClassName('introduce_Container')[0];
 var apply=document.getElementsByClassName('apply_Container')[0];
 var notice=document.getElementsByClassName('notice_Container')[0];
 
-var checkbtn=document.getElementsByClassName('checkbtn')[0];
-var textUpload = document.getElementById('textUpload');
-var numberCheck = document.getElementById('numberCheck');
-var writebtn = document.getElementById('writeButton');
-var uploadClose = document.getElementById('uploadClose');
-var checkClose = document.getElementById('checkClose');
+
 var moveTop=document.getElementsByClassName('moveTop')[0];
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
