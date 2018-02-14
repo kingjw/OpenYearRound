@@ -1,0 +1,69 @@
+<div class="notice_Container container"><!--게시판 div-->
+  <div class="box" id="note1">
+    <div id="first_area"></div>
+    <div id="main_area">
+      <table class="board">
+        <thead>
+          <tr>
+            <td id="first_td">게시글번호</td>
+            <td id="second_td">글제목</td>
+            <td id="third_td">작성일자</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <% for (var i=0;i<board.length;i++) {%>
+            <td>
+              <%= i+1 %>
+            </td>
+            <td>
+              <%=board[i].title%>
+            </td>
+            <td>
+              <%=board[i].date%>
+            </td>
+          </tr>
+          <% } %>
+          </tbody>
+          <div id="numberCheck">
+            <div class="check_Content">
+              <span id="checkClose"class="Close">&times;</span>
+                <label></label>
+              <div class="formModal">
+                <div class="col-sm-12">
+                  <input type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
+                </div>
+              </div>
+              <button type="button" class="checkbtn btn-primary btn-block">확인</button>
+            </div>
+          </div>
+
+          <div id="textUpload">
+            <div class="modal-content">
+              <span id="uploadClose"class="Close">&times;</span>
+              <div class="form-group">
+                <label class="control-label col-sm-3">제목</label>
+                <div class="col-sm-12">
+                  <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
+                </div>
+              </div> <!-- /.form-group -->
+              <div class="form-group">
+                <label class="control-label col-sm-5">내용</label>
+                <div class="col-sm-12">
+                  <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
+                </div>
+              </div> <!-- /.form-group -->
+              <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
+            </div>
+          </div>
+          </table>
+
+          <input type='button' name='write' value='글쓰기' id='writeButton'></input>
+
+          </tbody>
+          </table>
+
+    </div>
+  </div>
+</div>
