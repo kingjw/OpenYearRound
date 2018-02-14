@@ -319,10 +319,20 @@ table{
   vertical-align: top;
   width: 60%;
 }
+#applyTop{
+  margin-bottom: 2%;
+  width: 100%;
+}
+#applyImageM{
+  display: none;
+}
 #images{
   width: 25%;
 }
 #tableImageM{
+  display: none;
+}
+#actImageM{
   display: none;
 }
 @media all and (orientation:portrait){
@@ -332,7 +342,13 @@ table{
   #actImage{
     display: none;
   }
+  #applyImage{
+    display: none;
+  }
   #actImageM{
+    display: block;
+  }
+  #applyImageM{
     display: block;
   }
   .actTitle{
