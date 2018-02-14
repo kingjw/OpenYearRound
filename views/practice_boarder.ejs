@@ -31,19 +31,32 @@
         </thead>
 
         <tbody>
+          <%
+            for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
+              if(i < 0) {
+                break;
+              } else {
+                var item = result[i];
+          %>
           <tr>
-            <% for (var i=0;i<board.length;i++) {%>
-            <td>
-              <%= i+1 %>
-            </td>
-            <td>
-              <%=board[i].title%>
-            </td>
-            <td>
-              <%=board[i].date%>
-            </td>
+            <td><%= i+1 %> </td>
+            <td><%=item.title%></td>
+            <td><%=item.date%></td>
           </tr>
-          <% } %>
+          <%
+              }
+            }
+          %>
+
+          <tr>
+            <td colspan = "5">
+              <%
+                for(var j = 0; j < result.length/10; j++) {
+              %>
+                [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
+              <%
+                }
+              %>
           </tbody>
           <div id="numberCheck">
             <div class="check_Content">
@@ -85,5 +98,7 @@
   </div>
 </div>
   <script src="/javascripts/board.js"></script>
+  <scripy>
+  </script>
 </body>
 </html>
