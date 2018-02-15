@@ -1,0 +1,72 @@
+.webServiceModal_Content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 1%;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 10px;
+}
+.webServiceModal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top:2%;/* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+.webServiceClose {
+  color: #aaaaaa;
+  margin-left: 95%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.webServiceClose:hover,
+.webServiceClose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.webTop{
+    text-align: center;
+}
+.webTitle{
+  color: #469fbb;
+  font-size: 36px;
+  margin-bottom: 5%;
+}
+.webImage{
+  margin-left: 9.2%;
+}
+.webImage img{
+  /* border-color: #444444;
+  border-style: solid; */
+    /* border-width: 2px; */
+}
+.mainService{
+  font-size: 20px;
+  color: #444444;
+  margin-bottom: 0;
+}
+.subService{
+  font-size: 16px;
+  margin-left: 10%;
+  width: 80%;
+  text-align: center;
+  margin-top: 2%;
+  padding:5%;
+  color: #727272;
+}
+@media all and (orientation:portrait){
+  .webServiceModal {
+    padding-top:15%;/* Location of the box */
+  }
+  .webServiceModal_Content {
+    width: 80%;
+  }
+}

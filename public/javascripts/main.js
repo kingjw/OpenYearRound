@@ -74,15 +74,15 @@ applyMenu.onclick=function(){
   // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
-$("input").focus(function(){
-  $(this).animate({borderColor: '#3899EC'},'slow');
-  this._placeholder = this.placeholder;
-  $(this).removeAttr('placeholder');
-});
-$("input").focusout(function(){
-  $(this).animate({borderColor: '#EEEEEE'},'slow');
-  this.placeholder = this._placeholder;
-});
+// $("input").focus(function(){
+//   $(this).animate({borderColor: '#3899EC'},'slow');
+//   this._placeholder = this.placeholder;
+//   $(this).removeAttr('placeholder');
+// });
+// $("input").focusout(function(){
+//   $(this).animate({borderColor: '#EEEEEE'},'slow');
+//   this.placeholder = this._placeholder;
+// });
 $('#goboard').click(function(){
   $(window).attr('location','/board/1');
 });

@@ -2,7 +2,7 @@
   <mete charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="/stylesheets/board.css"></link>
+    <link rel="stylesheet" href="/stylesheets/board.css"></link>
     <!-- [if It IE 9]>
     <script src="html5shiv.js"></script>
     <script src="respond.js"></script>
@@ -13,160 +13,113 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title><%= title %></title>
   </head>
-<body>
-<div class="notice_Container container"><!--게시판 div-->
-  <div class="box" id="note1">
-    <div id="first_area"></div>
-    <div id="main_area">
-      <table class="board">
-        <thead>
-          <tr>
-            <td id="first_td">게시글번호</td>
-            <td id="second_td">글제목</td>
-            <td id="third_td">작성일자</td>
-          </tr>
-        </thead>
-
-        <tbody>
-          <%
-            for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
-              if(i < 0) {
-                break;
-              } else {
-                var item = result[i];
-          %>
-          <tr>
-            <td><%= i+1 %> </td>
-            <td class="board_content_view_title<%=item.id%>"><%=item.title%></td>
-            <td><%=item.date%></td>
-          </tr>
-          <%
-              }
-            }
-          %>
-
-          <tr>
-            <td colspan = "5">
-              <%
-                for(var j = 0; j < result.length/10; j++) {
-              %>
-                [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
-              <%
+  <body>
+    <div class="notice_Container container-fluit">
+      <div id="noticeTop">
+        <img id="noticeImage"src='/images/mainNoticeImage.png' width="100%" height="auto"></img>
+        <img id="noticeImageM"src='/images/mainNoticeImageM.png' width="100%" height="auto"></img>
+      </div>
+      <div class="container"><!--게시판 div-->
+        <div id="search">
+          <input type="text"class='form-control'  id="searchForm" placeholder="검색어를 입력하세요."></input>
+          <button id="searchButton">검색</button>
+        </div>
+        <div class="box" id="note1">
+          <!-- <div id="first_area"></div> -->
+          <div id="main_area">
+            <table class="board">
+              <thead>
+                <tr>
+                  <td id="first_td"><b>글번호</b></td>
+                  <td id="second_td"><b>제목</b></td>
+                  <td id="third_td"><b>작성일자</b></td>
+                </tr>
+              </thead>
+              <tbody>
+                <%
+                for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
+                  if(i < 0) {
+                    break;
+                  } else {
+                    var item = result[i];
+                    %>
+                    <tr>
+                      <td><%= i+1 %> </td>
+                      <td class="board_content_view_title<%=item.id%>" style="text-align:left"><%=item.title%></td>
+                      <td><%=item.date%></td>
+                    </tr>
+                    <%
+                  }
                 }
-              %>
-          </tbody>
-          <div id="numberCheck">
-            <div class="check_Content">
-              <span id="checkClose"class="Close">&times;</span>
-                <label></label>
-              <div class="formModal">
-                <div class="col-sm-12">
-                  <input type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
-                </div>
-              </div>
-              <button type="button" class="checkbtn btn-primary btn-block">확인</button>
-            </div>
-          </div>
+                %>
 
-          <div id="textUpload">
-            <div class="modal-content">
-              <span id="uploadClose"class="Close">&times;</span>
-              <div class="form-group">
-                <label class="control-label col-sm-3">제목</label>
-                <div class="col-sm-12">
-                  <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
+                <tr>
+                  <td id="pageBoard"colspan = "5">
+                    <%
+                    for(var j = 0; j < result.length/10; j++) {
+                      %>
+                      [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
+                      <%
+                    }
+                    %>
+                  </td>
+                </tbody>
+                <div id="numberCheck">
+                  <div class="check_Content">
+                    <span id="checkClose"class="Close">&times;</span>
+                    <label></label>
+                    <div class="formModal">
+                      <div class="col-sm-12">
+                        <input type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
+                      </div>
+                    </div>
+                    <button type="button" class="checkbtn btn-primary btn-block">확인</button>
+                  </div>
                 </div>
-              </div> <!-- /.form-group -->
-              <div class="form-group">
-                <label class="control-label col-sm-5">내용</label>
-                <div class="col-sm-12">
-                  <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
+
+                <div id="textUpload">
+                  <div class="modal-content">
+                    <span id="uploadClose"class="Close">&times;</span>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3">제목</label>
+                      <div class="col-sm-12">
+                        <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
+                      </div>
+                    </div> <!-- /.form-group -->
+                    <div class="form-group">
+                      <label class="control-label col-sm-5">내용</label>
+                      <div class="col-sm-12">
+                        <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
+                      </div>
+                    </div> <!-- /.form-group -->
+                    <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
+                  </div>
                 </div>
-              </div> <!-- /.form-group -->
-              <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
-            </div>
-          </div>
+              </table>
+              <input type='button' name='write' value='글쓰기' id='writeButton'class="form-control"></input>
+            </tbody>
           </table>
-          <input type='button' name='write' value='글쓰기' id='writeButton'></input>
-          </tbody>
-          </table>
+        </div>
+      </div>
     </div>
+    <footer>
+      <div class="footerContent">
+        <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
+        <p class="footerSamllContent">@openyearround</p>
+        <p class="footerSamllContent">세종대학교 다산관 205호</p>
+      </div>
+    </footer>
   </div>
-
-</div>
-
-  <script src="/javascripts/board.js"></script>
-  <style>
-  .modal2 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content2 {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close2 {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close2:hover,
-.close2:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-  </style>
   <div id="myModal2" class="modal2">
-
     <!-- Modal content -->
     <div class="modal-content2">
       <span class="close2">&times;</span>
       <p><%=item.title%></p>
     </div>
-
   </div>
-  <script>
-  var span = document.getElementsByClassName("close2")[0];
-  var modal = document.getElementById('myModal2');
-  var btn = document.getElementsByClassName("board_content_view_title<%=item.id%>")[0];
-
-  $(btn).click(function(){
-      $(modal).css("display", "block");
-  });
-//   btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-  </script>
+  <div id="moveTopDiv">
+    <img class="moveTop" src="/images/home.png"></img>
+  </div>
+  <script src="/javascripts/board.js"></script>
 </body>
 </html>

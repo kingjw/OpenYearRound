@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css"></link>
+      <link rel="stylesheet" href="/stylesheets/webService.css"></link>
     <link rel="stylesheet" href="/stylesheets/applyform.css"></link>
     <!-- [if It IE 9]>
     <script src="html5shiv.js"></script>
@@ -79,7 +80,6 @@
         <img id="actImageM"src='/images/mainActImage.png' width="100%" height="auto"></img>
       </div>
       <div class="actTitle"id="history">
-
         <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
         <span class="titleContent">동아리 연혁</span>
       </div>
@@ -114,20 +114,26 @@
       <div id="allLogo">
         <input type="radio" name="pos" id="pos1"checked>
         <input type="radio" name="pos" id="pos2">
+        <input type="radio" name="pos" id="pos3">
         <ul>
           <div class="webLogo"id="webLogo1">
-            <img src="/images/dawson.jpg"width="30%"height="auto"></img>
-            <img src="/images/bookChange.png"width="30%"height="auto"></img>
-            <img src="/images/mynote.png"width="30%"height="auto"></img>
+            <img class="logoClick"src="/images/dawson.jpg"width="30%"height="auto"></img>
+            <img class="logoClick"src="/images/bookChange.png"width="30%"height="auto"></img>
+            <img class="logoClick"src="/images/mynote.png"width="30%"height="auto"></img>
           </div>
-          <div id="webLogo2">
-            <img src="/images/sejongPlate.jpg"width="25%"height="auto"></img>
-            <img src="/images/tabStorage.png"width="25%"height="auto"></img>
+          <div class="webLogo2">
+            <img class="logoClick"src="/images/sejongPlate.png"width="25%"height="auto"></img>
+            <img class="logoClick"src="/images/tabStorage.png"width="25%"height="auto"></img>
+            <img class="logoClick"src="/images/shopIn.png"width="25%"height="auto"></img>
+          </div>
+          <div class="webLogo2">
+            <img class="logoClick"src="/images/keepet.png"width="25%"height="auto"></img>
           </div>
         </ul>
         <div class="pos">
           <label for="pos1"></label>
           <label for="pos2"></label>
+          <label for="pos3"></label>
         </div>
       </div>
       <footer>
@@ -137,6 +143,149 @@
           <p class="footerSamllContent">세종대학교 다산관 205호</p>
         </div>
       </footer>
+
+
+      <div id="dawson"class="webServiceModal">
+        <div class="webServiceModal_Content">
+          <span class="webServiceClose">&times;</span>
+          <label></label>
+          <div class="formModal">
+          <div class="webTop">
+            <p class="mainService"><b>아동 노동 착취 관련 웹 게임</b></p>
+            <p class="webTitle"><b>DAWSON'S DAILY LIFE</b></p>
+          </div>
+          <div class="webImage">
+            <img src="/images/dawson1.png" width="45%" height="auto"></img>
+            <img src="/images/dawson2.png" width="45%" height="auto"></img>
+          </div>
+          <div class="subService">
+            <p>Dawson이라는 콩고의 한 아이를 모티브로 전세계의 아동 노동 착취를 알리고, 실제 아동들의 노동들을 바탕으로 제작된 웹 게임 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div id="bookChange"class="webServiceModal">
+        <div class="webServiceModal_Content">
+          <span class="webServiceClose">&times;</span>
+          <label></label>
+          <div class="formModal">
+          <div class="webTop">
+              <p class="mainService"><b>도서교환 웹 서비스</b></p>
+            <p class="webTitle"><b>도서교환</b></p>
+          </div>
+          <div class="webImage">
+            <img src="/images/dawson1.png" width="45%" height="auto"></img>
+            <img src="/images/dawson2.png" width="45%" height="auto"></img>
+          </div>
+          <div class="subService">
+              <p>웹 상에서 자신이 원하는 자료를  정리하고 사람들과 공유할 수 있는 웹 노트 서비스 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div id="mynote"class="webServiceModal">
+        <div class="webServiceModal_Content">
+          <span class="webServiceClose">&times;</span>
+          <label></label>
+          <div class="formModal">
+          <div class="webTop">
+            <p class="mainService"><b>자신만의 웹 노트 서비스</b></p>
+            <p class="webTitle"><b>MY NOTE</b></p>
+          </div>
+          <div class="webImage">
+            <img src="/images/mynote1.png" width="45%" height="auto"></img>
+            <img src="/images/mynote2.png" width="45%" height="auto"></img>
+          </div>
+          <div class="subService">
+            <p>웹 상에서 자신이 원하는 자료를  정리하고 사람들과 공유할 수 있는 웹 노트 서비스 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sejongPlate"class="webServiceModal">
+      <div class="webServiceModal_Content">
+        <span class="webServiceClose">&times;</span>
+        <label></label>
+        <div class="formModal">
+        <div class="webTop">
+          <p class="mainService"><b>세종대 학생들을 위한 맛집 추천 웹 서비스</b></p>
+          <p class="webTitle"><b>SEJONG PLATE</b></p>
+        </div>
+        <div class="webImage">
+          <img src="/images/sejongPlate1.png" width="45%" height="auto"></img>
+          <img src="/images/sejongPlate2.png" width="45%" height="auto"></img>
+        </div>
+        <div class="subService">
+          <p>세종대 근처 식당의 위치, 메뉴, 가격, 후기 등 다양한 정보들이 한 눈에 보기쉽게 정리되어 있는 세종대생들을 위한 웹 서비스</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tabStorage"class="webServiceModal">
+    <div class="webServiceModal_Content">
+      <span class="webServiceClose">&times;</span>
+      <label></label>
+      <div class="formModal">
+      <div class="webTop">
+        <p class="mainService"><b>브라우저 탭 통합 서비스 </b></p>
+        <p class="webTitle"><b>TAB STORAGE</b></p>
+      </div>
+      <div class="webImage">
+        <img src="/images/tabStorage1.gif" width="45%" height="auto"></img>
+        <img src="/images/tabStorage2.gif" width="45%" height="auto"></img>
+      </div>
+      <div class="subService">
+          <p>웹 상에서 자신이 원하는 자료를  정리하고 사람들과 공유할 수 있는 웹 노트 서비스 </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="shopIn"class="webServiceModal">
+  <div class="webServiceModal_Content">
+    <span class="webServiceClose">&times;</span>
+    <label></label>
+    <div class="formModal">
+    <div class="webTop">
+      <p class="mainService"><b>더 편한 쇼핑을 위한 나만의 쇼핑카트</b></p>
+      <p class="webTitle"><b>SHOP IN</b></p>
+    </div>
+    <div class="webImage">
+      <img src="/images/shopIn1.png" width="45%" height="auto"></img>
+      <img src="/images/shopIn2.png" width="45%" height="auto"></img>
+    </div>
+    <div class="subService">
+        <p>웹 상에서 자신이 원하는 자료를  정리하고 사람들과 공유할 수 있는 웹 노트 서비스 </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="keepPet"class="webServiceModal">
+  <div class="webServiceModal_Content">
+    <span class="webServiceClose">&times;</span>
+    <label></label>
+    <div class="formModal">
+    <div class="webTop">
+      <p class="mainService"><b>동물병원 추천 플랫폼</b></p>
+      <p class="webTitle"><b>KEEPET</b></p>
+    </div>
+    <div class="webImage">
+      <img src="/images/keepPet1.png" width="45%" height="auto"></img>
+      <img src="/images/keepPet2.png" width="45%" height="auto"></img>
+    </div>
+    <div class="subService">
+        <p>웹 상에서 자신이 원하는 자료를  정리하고 사람들과 공유할 수 있는 웹 노트 서비스 </p>
+    </div>
+  </div>
+</div>
+</div>
+
     </div>
     <div class="introduce_Container container-fluit">
       <div class="introBox"><img src="/images/ssn.jpg" width="100%" height="auto"></img></div>
@@ -248,10 +397,18 @@
           </form> <!-- /form -->
         </div> <!-- ./container -->
       </div>
+      <footer>
+        <div class="footerContent">
+          <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
+          <p class="footerSamllContent">@openyearround</p>
+          <p class="footerSamllContent">세종대학교 다산관 205호</p>
+        </div>
+      </footer>
     </div>
     <div class="notice_Container container"><!--게시판 div-->
 
     </div>
     <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/webService.js"></script>
   </body>
   </html>

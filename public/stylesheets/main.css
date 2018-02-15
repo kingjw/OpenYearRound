@@ -196,13 +196,15 @@ nav{
   top: 85%;
   right: 3%;
   width: 4%;
+  z-index: 1;
   display: none;
 }
-
+.logoClick:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
 .supportForm{
-  border-left: none;
-  border-top: none;
-  border-right: none;
   outline: none;
 }
 
@@ -223,12 +225,12 @@ nav{
   position: relative;
 }
 #allLogo ul{
-  width:200%;
+  width:300%;
   transition:1s;
   margin: 0; /* To remove default bottom margin */
     padding: 0; /* To remove default left padding */
 }
-#allLogo div{float:left;width:50%;}
+#allLogo div{float:left;width:33.33%;}
 #allLogo input{display:none;}
 #allLogo label{display:inline-block;vertical-align:middle;transition:0.3s;border-radius:50%;cursor:pointer;}
 #allLogo .pos{
@@ -241,9 +243,10 @@ nav{
 }
 #pos1:checked~ul{margin-left:0%;}
 #pos2:checked~ul{margin-left:-100%;}
+#pos3:checked~ul{margin-left:-200%;}
 #pos1:checked~.pos>label:nth-child(1){background:#469fbb;}
 #pos2:checked~.pos>label:nth-child(2){background:#469fbb;}
-
+#pos3:checked~.pos>label:nth-child(3){background:#469fbb;}
 #allLogo label{
   border: none;
   background-color: #aaaaaa;
@@ -255,12 +258,12 @@ nav{
   padding: 3%;
   margin-bottom: 2%;
 }
-#webLogo2{
+.webLogo2{
   margin-bottom: 2%;
 }
-#webLogo2 img{
+.webLogo2 img{
   vertical-align: middle;
-  padding: 2%;
+  padding: 3%;
 }
 .webLogo img{
   vertical-align: middle;
@@ -334,6 +337,12 @@ table{
 }
 #actImageM{
   display: none;
+}
+#applyButton{
+  margin-bottom: 5%;
+  background-color: #5a95b1;
+  border-color: #5a95b1;
+  height: 50px;
 }
 @media all and (orientation:portrait){
   nav{
@@ -438,9 +447,6 @@ table{
   #aboutOYR_content{
     font-size: 12px;
   }
-  #writeButton{
-    font-size: 11px;
-  }
   #writebtn_Board{
     font-size: 21px;
   }
@@ -490,9 +496,6 @@ table{
   }
   #aboutOYR_content{
     font-size: 14px;
-  }
-  #writeButton{
-    font-size: 15px;
   }
   #writebtn_Board{
     font-size: 23px;
@@ -560,9 +563,6 @@ table{
   }
   #subActContent{
     font-size: 22px;
-  }
-  #writeButton{
-    font-size: 20px;
   }
   .applyText{
     font-size: 30px;
