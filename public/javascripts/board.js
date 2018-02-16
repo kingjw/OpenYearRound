@@ -101,7 +101,6 @@ $('#ok_button_on_board').click(function(){
       'contents' : contents,
       'date' : date
     }
-
     $.ajax({
       type: 'post',
       url: '/board/goBoard',
