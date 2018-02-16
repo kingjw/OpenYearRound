@@ -11,6 +11,10 @@
     미만일시 부트스트랩을 사용할수 있게 해주는 js파일들을 연결 -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/board.css"></link>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <title><%= title %></title>
   </head>
   <body>
@@ -30,9 +34,9 @@
             <table class="board">
               <thead>
                 <tr>
-                  <td id="first_td"><b>글번호</b></td>
-                  <td id="second_td"><b>제목</b></td>
-                  <td id="third_td"><b>작성일자</b></td>
+                  <td id="first_td" style="cursor : pointer;"><b>글번호</b></td>
+                  <td id="second_td" style="cursor : pointer;"><b>제목</b></td>
+                  <td id="third_td" style="cursor : pointer;"><b>작성일자</b></td>
                 </tr>
               </thead>
 
@@ -45,11 +49,35 @@
                       var item = result[i];
                       %>
                       <tr class='board_set'>
-                        <td><%= i+1 %> </td>
-                        <td class="board_content_view_title <%=item.id%>" style="text-align:left"><%=item.title%></td>
-                        <td><%= item.date %></td>
-                        <div class='board_content <%= item.id %>' style='display: none;'><%= item.text %></div>
+                        <td style="cursor : pointer;"><%= i+1 %> </td>
+                        <td>
+                          <a href = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" data-toggle = "modal" style="text-decoration:none"><%=item.title%></a>
+                        </td>
+                        <td style="cursor : pointer;"><%= item.date %></td>
+
+
+                        <div class = "modal" id= "board_content_view_modal<%=item.id%>" style="display:none;" >
+                          <div class = "modal-dialog">
+                            <div class = "modal-content" id = "modal-boardview-content">
+                              <!-- remote ajax call이 되는영역 -->
+                            </div>
+                            </div>
+                            </div>
                       </tr>
+                      <script>
+                      $('#board_content_view_title<%=item.id%>').click('show.bs.modal',function(event){
+                          $('#board_content_view_modal<%=item.id%>').modal({
+                            remote : '/board/title_content/<%=item.id%>'
+                          });
+                        });
+                      $('#board_content_view_modal<%=item.id%>').on('loaded.bs.modal',function(event){
+                        $('#board_content_view_modal<%=item.id%>').modal('show');
+                      });
+                      $('#board_content_view_modal<%=item.id%>').on('hidden.bs.modal', function () {
+                          $(this).removeData('bs.modal');
+                      });
+
+                        </script>
                       <%
                     }
                   }
