@@ -1,5 +1,3 @@
-
-
 $(".logoClick").click(function(){
   var index = $(".logoClick").index(this);
     $(".webServiceModal:eq(" + index + ")").fadeIn(500);
@@ -9,7 +7,6 @@ $(".webServiceClose").click(function(){
   var index = $(".webServiceClose").index(this);
     $(".webServiceModal:eq(" + index + ")").fadeOut(500);
 });
-
 
 $(".left").click(function(){
   var index = $(".left").index(this);
