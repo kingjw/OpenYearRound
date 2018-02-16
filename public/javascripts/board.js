@@ -11,6 +11,7 @@ var btn = document.getElementsByClassName("board_content_view_title<%=item.id%>"
 $(btn).click(function(){
   $(modal).css("display", "block");
 });
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
