@@ -13,7 +13,6 @@ table.board{
 tbody{
   color: #444444;
 }
-
 table.board thead td {
   vertical-align: middle;
   color: #469fbb;
@@ -256,7 +255,7 @@ footer{
 }
 @media all and (orientation:portrait){
   .moveTop{
-    display: none;
+  width: 10%;
   }
   .check_Content{
     width: 70%;
