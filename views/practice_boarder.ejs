@@ -1,5 +1,5 @@
 <head>
-  <mete charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/board.css"></link>
@@ -35,35 +35,38 @@
                   <td id="third_td"><b>작성일자</b></td>
                 </tr>
               </thead>
-              <tbody>
-                <%
-                for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
-                  if(i < 0) {
-                    break;
-                  } else {
-                    var item = result[i];
-                    %>
-                    <tr>
-                      <td><%= i+1 %> </td>
-                      <td class="board_content_view_title<%=item.id%>" style="text-align:left"><%=item.title%></td>
-                      <td><%=item.date%></td>
-                    </tr>
-                    <%
-                  }
-                }
-                %>
 
-                <tr>
-                  <td id="pageBoard"colspan = "5">
-                    <%
-                    for(var j = 0; j < result.length/10; j++) {
+                <tbody>
+                  <%
+                  for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
+                    if(i < 0) {
+                      break;
+                    } else {
+                      var item = result[i];
                       %>
-                      [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
+                      <tr class='board_set'>
+                        <td><%= i+1 %> </td>
+                        <td class="board_content_view_title <%=item.id%>" style="text-align:left"><%=item.title%></td>
+                        <td><%= item.date %></td>
+                        <div class='board_content <%= item.id %>' style='display: none;'><%= item.text %></div>
+                      </tr>
                       <%
                     }
-                    %>
-                  </td>
-                </tbody>
+                  }
+                  %>
+
+                  <tr>
+                    <td id="pageBoard"colspan = "5">
+                      <%
+                      for(var j = 0; j < result.length/10; j++) {
+                        %>
+                        [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
+                        <%
+                      }
+                      %>
+                    </td>
+                  </tbody>
+
                 <div id="numberCheck">
                   <div class="check_Content">
                     <span id="checkClose"class="Close">&times;</span>
@@ -105,8 +108,8 @@
     <footer>
       <div class="footerContent">
         <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
-        <p class="footerSamllContent">@openyearround</p>
-        <p class="footerSamllContent">세종대학교 다산관 205호</p>
+        <p class="footerSmallContent">@openyearround</p>
+        <p class="footerSmallContent">세종대학교 다산관 205호</p>
       </div>
     </footer>
   </div>
@@ -114,7 +117,8 @@
     <!-- Modal content -->
     <div class="modal-content2">
       <span class="close2">&times;</span>
-      <p><%=item.title%></p>
+      <p id='post_title'>dfdsfsdf</p>
+      <p id='post_content'>mbmnbmnbmn</p>
     </div>
   </div>
 </div>
