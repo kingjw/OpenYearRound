@@ -29,7 +29,7 @@ writebtn.onclick=function(){
     var data = {
       'Password': password
     }
-    console.log(data);
+    // console.log(data);
     $.ajax({
       type: "POST",
       url: "/check/goCheck",
@@ -72,6 +72,19 @@ $('.moveTop').click(function(){
 });
 
 
+$('.board_content_view_title').click(function(){
+  $('#post_title').text($(this).text());
+
+  var num = $(this).attr('class').split(' ')[1];
+  var content_class = 'board_content ' + num;
+
+  console.log(content_class);
+  var text = document.getElementsByClassName(content_class)[0].textContent;
+  $('#post_content').text(text);
+  $('#myModal2').css('display', 'block');
+});
+
+
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
   var contents = $('#contents').val();
@@ -98,7 +111,7 @@ $('#ok_button_on_board').click(function(){
       datatype: 'json',
       success: function(result) {
         if (result['result']=='success'){
-          console.log(result);
+          // console.log(result);
           alert('등록완료');
           location.reload();
         }
