@@ -21,6 +21,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
 writebtn.onclick=function(){
   numberCheck.style.display = "block";
   checkbtn.onclick=function(){
@@ -40,7 +41,6 @@ writebtn.onclick=function(){
         if(result['results']==100){
           numberCheck.style.display = "none";
           textUpload.style.display = "block";
-
         }
         else
         alert('비밀번호가 일치하지 않습니다.');
@@ -49,6 +49,7 @@ writebtn.onclick=function(){
     })
   }
 }
+
 uploadClose.onclick=function(){
   textUpload.style.display="none";
 }

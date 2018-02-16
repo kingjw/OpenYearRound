@@ -1,21 +1,14 @@
 var introButton=document.getElementById('introButton');
 var supportButton=document.getElementById('supportButton');
-var noticeButton=document.getElementById('noticeButtonM');
 var actButton=document.getElementById('actButton');
-// eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];
-// e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}
-// ('0 1=2;',3,3,'var|password|12314'.split('|'),0,{}));
 
 var introMenu=document.getElementsByClassName('menu')[0];
 var actMenu=document.getElementsByClassName('menu')[1];
-var noticeMenu=document.getElementsByClassName('menu')[2];
 var applyMenu=document.getElementsByClassName('menu')[3];
 
 var act=document.getElementsByClassName('act_Container')[0];
 var intro=document.getElementsByClassName('introduce_Container')[0];
 var apply=document.getElementsByClassName('apply_Container')[0];
-var notice=document.getElementsByClassName('notice_Container')[0];
-
 
 var moveTop=document.getElementsByClassName('moveTop')[0];
 
@@ -52,6 +45,8 @@ supportButton.onclick=function(){
   apply.style.display="block";
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
+
+
 introMenu.onclick=function(){
   $('html').css('overflow','visible');
   act.style.display="none";
@@ -71,7 +66,6 @@ applyMenu.onclick=function(){
   intro.style.display="none";
   act.style.display="none";
   apply.style.display="block";
-  // notice.style.display="none";
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
 writebtn.onclick=function(){

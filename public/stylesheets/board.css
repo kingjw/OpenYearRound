@@ -2,7 +2,6 @@
   margin-top: 5%;
 }
 table.board{
-  /* margin-left: 15%; */
   border-collapse: collapse;
   text-align: center;
   line-height: 1.5;
@@ -323,9 +322,6 @@ footer{
   .footerSamllContent{
     font-size: 18px;
   }
-  /* #utton{
-  font-size: 20px;
-  } */
 }
 
 @media screen and (min-width:1921px) and (max-width:2560px){
