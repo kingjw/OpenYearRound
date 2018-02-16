@@ -11,7 +11,7 @@ $(".webServiceClose").click(function(){
 $(".left").click(function(){
   var index = $(".left").index(this);
 if (index==0) {
-  var before=6
+  var before=6;
 }
 else{
   var before= index-1;
