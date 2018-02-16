@@ -1,7 +1,3 @@
-
-
-
-
 var express = require('express');
 var router = express.Router();
 
@@ -41,5 +37,11 @@ router.get('/:page', function(req, res, next) {
     }
   });//query
   //res.render('applyadmin',{title:'apply admin page'});
+});
+router.get('/title_content/:id',function(req,res){
+  var sql='select * from postboard where id=?;';
+  conn.query(sql,[req.params.id],function(err,rows){
+    res.render('board_title_content',{rows : rows});
+  });
 });
 module.exports = router;

@@ -5,17 +5,7 @@ var writebtn = document.getElementById('writeButton');
 var uploadClose = document.getElementById('uploadClose');
 var checkClose = document.getElementById('checkClose');
 var passwordCheck=document.getElementById("checkPassword");
-var span = document.getElementsByClassName("close2")[0];
-var modal = document.getElementById('myModal2');
-var btn = document.getElementsByClassName("board_content_view_title<%=item.id%>")[0];
-$(btn).click(function(){
-  $(modal).css("display", "block");
-});
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -72,18 +62,6 @@ $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
 
-
-$('.board_content_view_title').click(function(){
-  $('#post_title').text($(this).text());
-
-  var num = $(this).attr('class').split(' ')[1];
-  var content_class = 'board_content ' + num;
-
-  console.log(content_class);
-  var text = document.getElementsByClassName(content_class)[0].textContent;
-  $('#post_content').text(text);
-  $('#myModal2').css('display', 'block');
-});
 
 
 $('#ok_button_on_board').click(function(){
