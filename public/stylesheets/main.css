@@ -194,7 +194,7 @@ nav{
 .moveTop {
   position: fixed;
   top: 85%;
-  right: 3%;
+  right: 5%;
   width: 4%;
   z-index: 1;
   display: none;
