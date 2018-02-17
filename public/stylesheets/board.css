@@ -67,7 +67,16 @@ td a:hover{
   width: 13%;
   position: relative;
 }
-#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover{
+#deleteButton,#reformButton{
+  margin-left : 5%;
+  width : 40%;
+  height: 38px;
+  color: rgb(255, 255, 255);
+  border-color: #469fbb;
+  border-style: none;
+  background-color:#469fbb;
+}
+#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover,#deleteButton:hover,#reformButton:hover{
   cursor: pointer;
 }
 #ok_button_on_board{
@@ -252,7 +261,7 @@ tbody tr:hover{
   #searchButton{
     width: 17%;
   }
-  #writeButton{
+  #writeButton,#deleteButton,#reformButton{
     width: 20%;
   }
   #searchForm{
@@ -284,8 +293,8 @@ tbody tr:hover{
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  height:50%;
+  width: 90%;
+  height:70%;
   border-radius: 5px;
 }
 
