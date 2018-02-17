@@ -219,7 +219,7 @@ tr{
   height : 50px;
 }
 tr:hover{
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgba(0,0,0,0.4);
 }
 @media all and (orientation:portrait){
   .moveTop{
@@ -332,7 +332,7 @@ tr:hover{
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  height:40%;
+  height:50%;
   border-radius: 5px;
 
 }

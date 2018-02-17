@@ -1,3 +1,13 @@
-<div> <%= rows[0].title %></div>
-<div> <%= rows[0].text %></div>
-<p>여기가 모달안의 내용 창 views/board_title_content.ejs</p>
+<div class="form-group">
+  <label class="control-label col-sm-3">제목</label>
+  <div class="col-sm-12">
+    <textarea class='form-control' rows='1' id='title_name'><%= rows[0].title %></textarea>
+  </div>
+</div> <!-- /.form-group -->
+<div class="form-group">
+  <label class="control-label col-sm-5">내용</label>
+  <div class="col-sm-12">
+    <textarea class='form-control' rows='7' id='contents'><%= rows[0].text %></textarea>
+    <label class="control-label col-sm-3">시간</label>  <div><%= rows[0].date.toDateString() %></div>
+  </div>
+</div> <!-- /.form-group -->
