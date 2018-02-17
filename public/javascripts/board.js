@@ -69,7 +69,7 @@ $('#numberCheck').keypress(function(event){
  }
 });
 $('#textUpload').keypress(function(event){
-  console.log('ok');
+  console.log('okok');
  if ( event.which == 13 ) {
      $('#ok_button_on_board').click();
      return false;
