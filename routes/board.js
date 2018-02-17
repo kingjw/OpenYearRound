@@ -44,4 +44,20 @@ router.get('/title_content/:id',function(req,res){
     res.render('board_title_content',{rows : rows});
   });
 });
+
+
+router.post('/search', function(req, res){
+  var sql = 'select * from `postboard` where title like ?';
+  var like = '%' + req.body.search + '%';
+  conn.query(sql, [like], function(error, result){
+    if(error){
+      console.log(error);
+    }
+    else{
+      console.log(result);
+      res.send({result: 'success', board: result});
+    }
+  });
+});
+
 module.exports = router;

@@ -61,6 +61,7 @@ window.onclick = function(event) {
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
+
 $('#numberCheck').keypress(function(event){
   console.log('ok');
  if ( event.which == 13 ) {
@@ -75,6 +76,7 @@ $('#textUpload').keypress(function(event){
      return false;
  }
 });
+
 
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
@@ -93,6 +95,8 @@ $('#ok_button_on_board').click(function(){
   var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
                   leadingZeros(now.getMonth()+1,2)+'-' +
                   leadingZeros(now.getDate(),2);
+
+
 
 
   if(title=='')
@@ -127,6 +131,6 @@ $('#ok_button_on_board').click(function(){
         alert('등록실패2');
         location.reload();
       }
-    })
+    });
   }
 });
