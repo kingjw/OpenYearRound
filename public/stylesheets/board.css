@@ -94,25 +94,26 @@ td a:hover{
 
 }
 .checkbtn{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
   height: 38px;
-  width: 80%;
-  /* margin-top: 14%; */
-  margin-bottom: 2%;
   border-radius: 2px;
+  text-align: center;
+  width: 90%;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  color: white;
+  border-style: none;
+  margin-top: 3%;
+  margin-bottom:3%;
 }
 .formModal{
   margin-bottom: 1%;
 }
-.checkbtn:hover{
+/* .checkbtn:hover{
   color: rgb(255, 255, 255);
   background-color:#5a95b1;
   border-color: #5a95b1;
   border-style: none;
-}
+} */
 #numberCheck {
   display: none;
   position: fixed; /* Stay in place */
@@ -160,7 +161,7 @@ td a:hover{
   margin-right:1%;
   height: 38px;
 }
-#searchButton,#okay_btn{
+#searchButton{
   height: 38px;
   border-radius: 2px;
   text-align: center;
