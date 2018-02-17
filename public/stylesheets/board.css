@@ -54,7 +54,7 @@ td a:hover{
 #third_td{
   width: 20%;
 }
-#writeButton,#reformButton,#deleteButton
+#writeButton
 {
   margin-bottom: 5%;
   border-radius: 2px;
@@ -67,7 +67,7 @@ td a:hover{
   width: 13%;
   position: relative;
 }
-#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover,#reformButton:hover,#deleteButton:hover{
+#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover{
   cursor: pointer;
 }
 #ok_button_on_board{
@@ -90,11 +90,8 @@ td a:hover{
   top: 85%;
   right: 5%;
   width: 4%;
-}
-#board_content_view_modal123{
-  padding-top: 30px;
-}
 
+}
 .checkbtn{
   color: rgb(255, 255, 255);
   background-color:#5a95b1;
@@ -236,32 +233,6 @@ tbody tr:hover{
 #pageBoard:hover{
   background-color: rgb(255,255,255);
 }
-.contentModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    left: 0;
-    top: 0;
-    padding-top: 30px;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-}
-#modal-boardview-content{
-  background-color: white;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  height:90%;
-  border-radius: 5px;
-}
-
-#titleBoard{
-  text-align:left;
-  padding-left: 6%;
-}
 @media all and (orientation:portrait){
   .moveTop{
   width: 10%;
@@ -281,7 +252,7 @@ tbody tr:hover{
   #searchButton{
     width: 17%;
   }
-  #writeButton,#reformButton,#deleteButton{
+  #writeButton{
     width: 20%;
   }
   #searchForm{
@@ -295,6 +266,32 @@ tbody tr:hover{
   #textUpload {
     padding-top: 5%; /* Location of the box */
   }
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+#modal-boardview-content{
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:50%;
+  border-radius: 5px;
+}
+
+#titleBoard{
+  text-align:left;
+  padding-left: 6%;
 }
 @media screen and (min-width:750px) and (max-width:1080px){
   .check_Content{

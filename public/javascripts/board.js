@@ -5,14 +5,11 @@ var writebtn = document.getElementById('writeButton');
 var uploadClose = document.getElementById('uploadClose');
 var checkClose = document.getElementById('checkClose');
 var passwordCheck=document.getElementById("checkPassword");
-var reformbtn=document.getElementById("reformButton");
-var deletebtn=document.getElementById("deleteButton");
-var boardContentView=document.getElementsByClassName('contentModal')[0];
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == boardContentView) {
-    boardContentView.style.display = "none";
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
 
@@ -43,63 +40,6 @@ writebtn.onclick=function(){
     })
   }
 }
-$('#reformButton').onclick=function(){
-  alert('fwef');
-  boardContentView.style.display = "block";
-  checkbtn.onclick=function(){
-    var password=passwordCheck.value;
-    var data = {
-      'Password': password
-    }
-    $.ajax({
-      type: "POST",
-      url: "/check/goCheck",
-      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-      cache: false,
-      datatype: "json", // expecting JSON to be returned
-      data: data,
-      success: function(result) {
-        if(result['results']==100){
-          numberCheck.style.display = "none";
-          alert('수정부분');
-        }
-        else
-        alert('비밀번호가 일치하지 않습니다.');
-        passwordCheck.value="";
-      },
-    })
-  }
-}
-
-//
-//
-// deletebtn.onclick=function(){
-//   boardContentView.style.display = "block";
-//   checkbtn.onclick=function(){
-//     var password=passwordCheck.value;
-//     var data = {
-//       'Password': password
-//     }
-//     // console.log(data);
-//     $.ajax({
-//       type: "POST",
-//       url: "/check/goCheck",
-//       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-//       cache: false,
-//       datatype: "json", // expecting JSON to be returned
-//       data: data,
-//       success: function(result) {
-//         if(result['results']==100){
-//           numberCheck.style.display = "none";
-//           alert('삭제부분');
-//         }
-//         else
-//         alert('비밀번호가 일치하지 않습니다.');
-//         passwordCheck.value="";
-//       },
-//     })
-//   }
-// }
 
 uploadClose.onclick=function(){
   textUpload.style.display="none";
