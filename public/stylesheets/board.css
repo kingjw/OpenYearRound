@@ -145,7 +145,6 @@ td a:hover{
   width: 40%;
   background-color: #fefefe;
   margin: auto;
-  padding: 1%;
   border: 1px solid #888;
   border-radius: 5px;
 }
@@ -161,7 +160,7 @@ td a:hover{
   margin-right:1%;
   height: 38px;
 }
-#searchButton{
+#searchButton,#okay_btn{
   height: 38px;
   border-radius: 2px;
   text-align: center;
@@ -310,7 +309,7 @@ tbody tr:hover{
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   .check_Content{
-    width: 30%;
+    width: 25%;
   }
   .footerBigContent{
     font-size: 20px;
@@ -324,7 +323,7 @@ tbody tr:hover{
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
   .check_Content{
-    width: 30%;
+    width: 25%;
   }
   .footerBigContent{
     font-size: 23px;

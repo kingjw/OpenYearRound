@@ -1,33 +1,19 @@
 <style>
-.check_Content{
-  text-align: center;
-  width: 90%;
-  height:100%;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 1%;
-  border: 1px solid #888;
-  border-radius: 5px;
-}
-.checkbtn{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
-  height: 38px;
-  width: 80%;
-  /* margin-top: 14%; */
-  margin-bottom: 2%;
-  border-radius: 2px;
-}
 .formModal{
   margin-bottom: 1%;
 }
-.checkbtn:hover{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
+
+#okay_btn{
+  height: 38px;
+  border-radius: 2px;
+  text-align: center;
+  width: 90%;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  color: white;
   border-style: none;
+  margin-top: 3%;
+  margin-bottom:3%;
 }
 #numberCheck {
   display: none;
@@ -187,8 +173,10 @@ table{
         <input  type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
       </div>
     </div>
-    <button  type="button" id="okay_btn" style="margin : 20%;">확인</button>
+    <div >
+    <button  type="button" id="okay_btn" >확인</button>
   </div>
+</div>
 </div>
 <script>
 var deletebtn = document.getElementById('deleteButton');
@@ -220,8 +208,10 @@ deletebtn.onclick=function(){
   ok.onclick=function(){
     alert('press ok');
     var password=passwordCheck.value;
+
     var data = {
-      'Password': password
+      'Password': password,
+      // 'deletePost' : deletePost
     }
     // console.log(data);
     $.ajax({
@@ -235,7 +225,8 @@ deletebtn.onclick=function(){
         if(result['results']==100){
           alert('삭제되었습니다.');
           numberCheck.style.display = "none";
-          textUpload.style.display = "block";
+          textUpload.style.display = "none";
+          $(window).attr('location','/board/1');
         }
         else
         alert('비밀번호가 일치 하지 않습니다.');
