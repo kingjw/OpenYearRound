@@ -57,22 +57,124 @@
   text-decoration: none;
   cursor: pointer;
 }
+table{
+  width: 90%;
+  margin-left: 5%;
+  height: 90%;
+}
+#contentTable{
+  border-bottom-color: white;
+}
+.titleDate{
+  border-top-color: #469fbb;
+  border-bottom-color: #469fbb;
+  height: 7%;
+  text-align: center;
+}
+#modalButtonDiv{
+  display : flex;
+ align-items : center;
+  height: 100%;
+}
+#reformButton{
+  width: 10%;
+  height: 38px;
+  color: rgb(255, 255, 255);
+  border-color: #469fbb;
+  border-style: none;
+  background-color:#469fbb;
+  margin-left: 39%;
+}
+#deleteButton{
+  width: 10%;
+  height: 38px;
+  color: rgb(255, 255, 255);
+  border-color: #469fbb;
+  border-style: none;
+  background-color:#469fbb;
+  margin-left: 2%;
+  display: table-cell;
+  vertical-align: center;
+}
+#content{
+  height:50%;
+  border-bottom-color: white;
+}
+#BoardModalContent{
+  font-size: 9px;
+}
+#BoardModalContentArea{
+  background-color: white;
+  font-size: 9px;
+}
+@media all and (orientation:portrait){
+  #deleteButton,#reformButton{
+    width: 20%;
+  }
+  #reformButton{
+
+    margin-left: 29%;
+  }
+}
+@media screen and (min-width:750px) and (max-width:1080px){
+  #BoardModalContent{
+    font-size: 12px;
+  }
+  #BoardModalContentArea{
+    font-size: 12px;
+  }
+}
+@media screen and (min-width:1081px) and (max-width:1600px){
+  #BoardModalContent{
+    font-size: 14px;
+  }
+  #BoardModalContentArea{
+    font-size: 14px;
+  }
+}
+@media screen and (min-width:1601px) and (max-width:1920px){
+  #BoardModalContent{
+    font-size: 16px;
+  }
+  #BoardModalContentArea{
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width:1921px) and (max-width:2560px){
+  #BoardModalContent{
+    font-size: 20px;
+  }
+  #BoardModalContentArea{
+    font-size: 20px;
+  }
+}
+@media screen and (min-width:2561px){
+  #BoardModalContent{
+    font-size: 25px;
+  }
+  #BoardModalContentArea{
+    font-size: 25px;
+  }
+
+}
 </style>
-<div class="form-group">
-  <label class="control-label col-sm-3">제목</label>
-  <div class="col-sm-12">
-    <textarea class='form-control' rows='1' id='title_name'><%= rows[0].title %></textarea>
-  </div>
-</div> <!-- /.form-group -->
-<label class="control-label col-sm-3">작성일자 <%= rows[0].date %></label>
-<!-- <div><%= rows[0].date %></div> -->
-<div class="form-group">
-  <label class="control-label col-sm-5">내용</label>
-  <div class="col-sm-12">
-    <textarea class='form-control' rows='7' id='contents'><%= rows[0].text %></textarea>
-  </div>
-</div> <!-- /.form-group -->
-<div id="modalButtonDiv"  style="display:inline-flex">
+<table id="BoardModalContent">
+  <tr>
+    <td class="titleDate">제목</td>
+      <td class="titleDate"><%= rows[0].title %></td>
+      <td class="titleDate">게시일</td>
+      <td class="titleDate"><%= rows[0].date %></td>
+  </tr>
+  <tr>
+    <td id="contentTable" colspan="4" style="height:7%">내용</td>
+  </tr>
+  <tr>
+    <td id="content"colspan="4"><textarea  readonly="readonly" id="BoardModalContentArea"style="height:100%"class='form-control' rows='15' ><%= rows[0].text %></textarea></td>
+  </tr>
+</table>
+
+<div id="modalButtonDiv"  >
   <input type='button' name='write' value='수정'id='reformButton'class="form-control"></input>
     <input type='button' name='write' value='삭제' id='deleteButton'class="form-control"></input>
 </div>
