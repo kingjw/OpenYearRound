@@ -124,7 +124,7 @@ td a:hover{
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 #textUpload {
   display: none; /* Hidden by default */
@@ -137,7 +137,7 @@ td a:hover{
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
 .check_Content{
@@ -194,7 +194,7 @@ td a:hover{
   text-decoration: none;
   cursor: pointer;
 }
-footer{
+#footerC{
   background-color: black;
   color: white;
   width: 100%;
@@ -202,6 +202,7 @@ footer{
   display: table;
   text-align: center;
 }
+
 .footerContent{
   display: table-cell;
   vertical-align: middle;
@@ -218,8 +219,11 @@ footer{
 tr{
   height : 50px;
 }
-tr:hover{
-  background-color: rgba(0,0,0,0.4);
+tbody tr:hover{
+  background-color: rgba(70,159,187,0.2);
+}
+#pageBoard:hover{
+  background-color: rgb(255,255,255);
 }
 @media all and (orientation:portrait){
   .moveTop{
@@ -272,10 +276,8 @@ tr:hover{
   }
   .footerBigContent{
     font-size: 20px;
-    margin-bottom: 1%;
   }
   .footerSamllContent{
-    margin-bottom: 0;
     font-size: 13px;
   }
 }
@@ -324,7 +326,7 @@ tr:hover{
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 #modal-boardview-content{
   background-color: white;
