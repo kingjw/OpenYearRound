@@ -220,8 +220,10 @@ deletebtn.onclick=function(){
   ok.onclick=function(){
     alert('press ok');
     var password=passwordCheck.value;
+
     var data = {
-      'Password': password
+      'Password': password,
+      // 'deletePost' : deletePost
     }
     // console.log(data);
     $.ajax({
@@ -235,7 +237,8 @@ deletebtn.onclick=function(){
         if(result['results']==100){
           alert('삭제되었습니다.');
           numberCheck.style.display = "none";
-          textUpload.style.display = "block";
+          textUpload.style.display = "none";
+          $(window).attr('location','/board/1');
         }
         else
         alert('비밀번호가 일치 하지 않습니다.');
