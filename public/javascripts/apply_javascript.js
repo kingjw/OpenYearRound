@@ -67,4 +67,10 @@ window.onload=function(){
           }
     });//ajax
   }//apply button click
+  $('.form-group').keypress(function(event){
+   if ( event.which == 13 ) {
+       $('#applyButton').click();
+       return false;
+   }
+});
 }//onload

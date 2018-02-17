@@ -61,8 +61,20 @@ window.onclick = function(event) {
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
-
-
+$('#numberCheck').keypress(function(event){
+  console.log('ok');
+ if ( event.which == 13 ) {
+     $('#okay_btn').click();
+     return false;
+ }
+});
+$('#textUpload').keypress(function(event){
+  console.log('ok');
+ if ( event.which == 13 ) {
+     $('#ok_button_on_board').click();
+     return false;
+ }
+});
 
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
