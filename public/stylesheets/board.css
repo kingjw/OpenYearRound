@@ -215,6 +215,12 @@ footer{
   margin-bottom: 0;
   font-size: 7px;
 }
+tr{
+  height : 50px;
+}
+tr:hover{
+  background-color: rgba(0,0,0,0.4); 
+}
 @media all and (orientation:portrait){
   .moveTop{
   width: 10%;
