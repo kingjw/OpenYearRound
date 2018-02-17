@@ -225,12 +225,12 @@ td a:hover{
   padding: 2%;
 }
 .footerBigContent{
-  font-size: 9px;
+  font-size: 12px;
   margin-bottom: 1%;
 }
-.footerSamllContent{
+.footerSmallContent{
+  font-size: 8px;
   margin-bottom: 0;
-  font-size: 7px;
 }
 tr{
   height : 50px;
@@ -309,7 +309,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 16px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 10px;
   }
   .board_set{
@@ -323,7 +323,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 20px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 13px;
   }
   .board_set{
@@ -337,7 +337,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 23px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 18px;
   }
   .board_set{
@@ -352,7 +352,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 30px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 24px;
   }
   .board_set{
@@ -367,7 +367,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 42px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 36px;
   }
   .board_set{
