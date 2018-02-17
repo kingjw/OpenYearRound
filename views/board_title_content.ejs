@@ -59,7 +59,7 @@
 }
 </style>
 <div class="form-group">
-  <label class="control-label col-sm-3">제목</label>
+  <label class="control-label col-sm-3" >제목</label>
   <div class="col-sm-12">
     <textarea class='form-control' rows='1' id='title_name'><%= rows[0].title %></textarea>
   </div>
@@ -118,8 +118,10 @@ deletebtn.onclick=function(){
   ok.onclick=function(){
     alert('press ok');
     var password=passwordCheck.value;
+
     var data = {
-      'Password': password
+      'Password': password,
+      // 'deletePost' : deletePost
     }
     // console.log(data);
     $.ajax({
@@ -133,7 +135,8 @@ deletebtn.onclick=function(){
         if(result['results']==100){
           alert('삭제되었습니다.');
           numberCheck.style.display = "none";
-          textUpload.style.display = "block";
+          textUpload.style.display = "none";
+          $(window).attr('location','/board/1');
         }
         else
         alert('비밀번호가 일치 하지 않습니다.');
