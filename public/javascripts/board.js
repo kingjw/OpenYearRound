@@ -80,11 +80,7 @@ $('#ok_button_on_board').click(function(){
         }
   var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
                   leadingZeros(now.getMonth()+1,2)+'-' +
-                  leadingZeros(now.getDate(),2)+' ['+
-                  leadingZeros(now.getHours(),2)+':'+
-                  leadingZeros(now.getMinutes(),2)+']';
-
-  var date = post_date.toString();
+                  leadingZeros(now.getDate(),2);
 
 
   if(title=='')
@@ -95,7 +91,7 @@ $('#ok_button_on_board').click(function(){
     var data={
       'title' : title,
       'contents' : contents,
-      'date' : date
+      'date' : post_date
     }
     $.ajax({
       type: 'post',
