@@ -17,7 +17,7 @@ router.post('/goBoard',function(req,res,next){//올리기 버튼 클릭 시 ajax
       console.log('postboard insert failed');
     }//if
     else{
-      console.log(results);
+      console.log(date);
       res.send({result:'success'});//ajax 통신이 성공하면 다시 success 메세지를 보냅니다.
     }
   });//query

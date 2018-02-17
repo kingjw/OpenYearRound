@@ -67,8 +67,25 @@ $('.moveTop').click(function(){
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
   var contents = $('#contents').val();
-  var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var now = new Date();
+        function leadingZeros(n, digits){
+          var zero='';
+          n = n.toString();
+          if(n.length < digits){
+            for(i = 0 ; i < digits - n.length; i++){
+              zero += '0';
+            }
+          }
+          return zero + n;
+        }
+  var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
+                  leadingZeros(now.getMonth()+1,2)+'-' +
+                  leadingZeros(now.getDate(),2)+' ['+
+                  leadingZeros(now.getHours(),2)+':'+
+                  leadingZeros(now.getMinutes(),2)+']';
+
+  var date = post_date.toString();
+
 
   if(title=='')
   alert("제목을 입력하세요");
