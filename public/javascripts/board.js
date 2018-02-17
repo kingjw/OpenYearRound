@@ -37,7 +37,7 @@ writebtn.onclick=function(){
           textUpload.style.display = "block";
         }
         else
-        alert('비밀번호가 일치하지 않습니다.');
+        alert('비밀번호가 일치 하지 않습니다.');
         passwordCheck.value="";
       },
     })
