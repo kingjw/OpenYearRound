@@ -59,5 +59,10 @@ router.post('/search', function(req, res){
     }
   });
 });
-
+router.get('/deletepost/:id',function(req,res,next){
+  var sql = "delete from postboard where id = ?";
+  conn.query(sql,[req.params.id],function(){
+  res.render('board_title_content');
+});
+});
 module.exports = router;
