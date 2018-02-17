@@ -40,7 +40,8 @@
                 </tr>
               </thead>
 
-                <tbody>
+                <tbody id='board_body'>
+
                   <%
                   for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
                     if(i < 0) {
@@ -54,14 +55,15 @@
                           <a href = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" data-toggle = "modal" style="text-decoration:none"><%=item.title%></a>
                         </td>
 
+
                         <td><%= item.date%></td>
                         <div class = "modal" id= "board_content_view_modal<%=item.id%>" style="display:none;" >
                           <div class = "modal-dialog">
                             <div class = "modal-content" id = "modal-boardview-content">
-                              <!-- remote ajax call이 되는영역 -->
+
                             </div>
-                            </div>
-                            </div>
+                          </div>
+                        </div>
                       </tr>
                       <script>
                       $('#board_content_view_title<%=item.id%>').click('show.bs.modal',function(event){
@@ -82,7 +84,8 @@
                   }
                   %>
 
-                  <tr>
+
+                  <tr id='pageBoardWrapper'>
                     <td id="pageBoard"colspan = "5">
                       <%
                       for(var j = 0; j < result.length/10; j++) {
@@ -92,11 +95,13 @@
                       }
                       %>
                     </td>
+                  </tr>
                   </tbody>
+
 
                 <div id="numberCheck">
                   <div class="check_Content">
-                    <span id="checkClose"class="Close">&times;</span>
+                    <span id="checkClose"class="close">&times;</span>
                     <label></label>
                     <div class="formModal">
                       <div class="col-sm-12">
@@ -115,13 +120,13 @@
                       <div class="col-sm-12">
                         <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
                       </div>
-                    </div> <!-- /.form-group -->
+                    </div>
                     <div class="form-group">
                       <label class="control-label col-sm-5">내용</label>
                       <div class="col-sm-12">
                         <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
                       </div>
-                    </div> <!-- /.form-group -->
+                    </div>
                     <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
                   </div>
                 </div>

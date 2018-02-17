@@ -61,6 +61,7 @@ window.onclick = function(event) {
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
+
 $('#numberCheck').keypress(function(event){
   console.log('ok');
  if ( event.which == 13 ) {
@@ -75,6 +76,79 @@ $('#textUpload').keypress(function(event){
      return false;
  }
 });
+
+
+
+
+$('#searchButton').click(function(){
+
+  var search = $('#searchForm').val();
+  if(! search){
+    location.reload();
+  }
+  else{
+    data = {
+      'search': search,
+    }
+    $.ajax({
+      type: 'post',
+      url: '/board/search',
+      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+      cache: false,
+      data: data,
+      datatype: 'json',
+      success: function(result) {
+        if (result['result']=='success'){
+          $('.board_set').css('display', 'none');
+          var pageBoard = document.getElementById('pageBoardWrapper');
+          pageBoard.parentNode.removeChild(pageBoard);
+          var board = result['board'];
+          for(var i=board.length-1; i>=0; i--){
+            console.log(board[i].title);
+            // var board_table="<tr class='board_set'>" + "<td style='cursor : pointer;'>"+ (i+1) +" </td>"
+            // + "<td>"+"<a href='#board_content_view_modal"+board[i].id+"' id = 'board_content_view_title"+board[i].id+"' data-toggle = 'modal' style='text-decoration:none'>"+board[i].title+"</a>"
+            // +"</td>"+"<td style='cursor : pointer;'>"+board[i].date+"</td>"
+            // +"<div class = 'modal' id= 'board_content_view_modal"+board[i].id+"' style='display:none;' >"
+            // +"<div class = 'modal-dialog'>"
+            // +"<div class = 'modal-content' id = 'modal-boardview-content'>"
+            // +"</div>"+"</div>"+"</div>"+"</tr>";
+
+            var board_table="<tr class='board_set'>" + "<td style='cursor : pointer;'>"+ (i+1) +" </td>"
+            + "<td>"+"<a href='#board_content_view_modal"+board[i].id+"' id = 'board_content_view_title"+board[i].id+"' data-toggle = 'modal' style='text-decoration:none'>"+board[i].title+"</a>"
+            +"</td>"+"<td style='cursor : pointer;'>"+board[i].date+"</td>"+"</tr>";
+
+
+            document.getElementById('board_body').innerHTML += board_table;
+
+
+            var board_content_view_title = '#board_content_view_title' + board[i].id;
+            var board_content_view_modal = '#board_content_view_modal' + board[i].id;
+            var remoteUrl = '/board/title_content/' + board[i].id;
+            $(board_content_view_title).click('show.bs.modal',function(event){
+                $(board_content_view_modal).modal({
+                  remote : remoteUrl
+                });
+              });
+            $(board_content_view_modal).on('loaded.bs.modal',function(event){
+              $(board_content_view_modal).modal('show');
+            });
+            $(board_content_view_modal).on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+
+          }// for
+          document.getElementById('board_body').appendChild(pageBoard);
+
+        }//result success if
+      },
+      error: function(error){
+      }
+    });//ajax
+  }//else
+
+});
+
+
 
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
@@ -93,6 +167,8 @@ $('#ok_button_on_board').click(function(){
   var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
                   leadingZeros(now.getMonth()+1,2)+'-' +
                   leadingZeros(now.getDate(),2);
+
+
 
 
   if(title=='')
@@ -127,6 +203,6 @@ $('#ok_button_on_board').click(function(){
         alert('등록실패2');
         location.reload();
       }
-    })
+    });
   }
 });
