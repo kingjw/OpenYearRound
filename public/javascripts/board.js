@@ -34,7 +34,7 @@ writebtn.onclick=function(){
           textUpload.style.display = "block";
         }
         else
-        alert('비밀번호가 일치하지 않습니다.');
+        alert('비밀번호가 일치 하지 않습니다.');
         passwordCheck.value="";
       },
     })
@@ -61,6 +61,7 @@ window.onclick = function(event) {
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
+<<<<<<< HEAD
 
 
 $('#searchButton').click(function(){
@@ -131,6 +132,22 @@ $('#searchButton').click(function(){
 
 });
 
+=======
+$('#numberCheck').keypress(function(event){
+  console.log('ok');
+ if ( event.which == 13 ) {
+     $('#okay_btn').click();
+     return false;
+ }
+});
+$('#textUpload').keypress(function(event){
+  console.log('okok');
+ if ( event.which == 13 ) {
+     $('#ok_button_on_board').click();
+     return false;
+ }
+});
+>>>>>>> fbf60a49891f2fe06a733a515cd370cd249bea8c
 
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
@@ -149,8 +166,11 @@ $('#ok_button_on_board').click(function(){
   var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
                   leadingZeros(now.getMonth()+1,2)+'-' +
                   leadingZeros(now.getDate(),2);
+<<<<<<< HEAD
 
   var date = post_date.toString();
+=======
+>>>>>>> fbf60a49891f2fe06a733a515cd370cd249bea8c
 
 
   if(title=='')
@@ -161,7 +181,7 @@ $('#ok_button_on_board').click(function(){
     var data={
       'title' : title,
       'contents' : contents,
-      'date' : date
+      'date' : post_date
     }
     $.ajax({
       type: 'post',
