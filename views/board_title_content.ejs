@@ -1,13 +1,145 @@
+<style>
+.check_Content{
+  text-align: center;
+  width: 90%;
+  height:100%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 1%;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+.checkbtn{
+  color: rgb(255, 255, 255);
+  background-color:#5a95b1;
+  border-color: #5a95b1;
+  border-style: none;
+  height: 38px;
+  width: 80%;
+  /* margin-top: 14%; */
+  margin-bottom: 2%;
+  border-radius: 2px;
+}
+.formModal{
+  margin-bottom: 1%;
+}
+.checkbtn:hover{
+  color: rgb(255, 255, 255);
+  background-color:#5a95b1;
+  border-color: #5a95b1;
+  border-style: none;
+}
+#numberCheck {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  margin-left: 95%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
 <div class="form-group">
   <label class="control-label col-sm-3">제목</label>
   <div class="col-sm-12">
     <textarea class='form-control' rows='1' id='title_name'><%= rows[0].title %></textarea>
   </div>
 </div> <!-- /.form-group -->
+<label class="control-label col-sm-3">작성일자 <%= rows[0].date %></label>
+<!-- <div><%= rows[0].date %></div> -->
 <div class="form-group">
   <label class="control-label col-sm-5">내용</label>
   <div class="col-sm-12">
     <textarea class='form-control' rows='7' id='contents'><%= rows[0].text %></textarea>
-    <label class="control-label col-sm-3">시간</label>  <div><%= rows[0].date %></div>
   </div>
 </div> <!-- /.form-group -->
+<div id="modalButtonDiv"  style="display:inline-flex">
+  <input type='button' name='write' value='수정'id='reformButton'class="form-control"></input>
+    <input type='button' name='write' value='삭제' id='deleteButton'class="form-control"></input>
+</div>
+<div id="numberCheck">
+  <div class="check_Content">
+    <span id="checkClose"class="Close">&times;</span>
+    <label></label>
+    <div class="formModal">
+      <div class="col-sm-12">
+        <input  type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
+      </div>
+    </div>
+    <button  type="button" id="okay_btn" style="margin : 20%;">확인</button>
+  </div>
+</div>
+<script>
+var deletebtn = document.getElementById('deleteButton');
+var numberCheck = document.getElementById('numberCheck');
+var checkClose = document.getElementById('checkClose');
+var passwordCheck=document.getElementById("checkPassword");
+var ok = document.getElementById('okay_btn');
+var passwordCheck=document.getElementById("checkPassword");
+
+deletebtn.onclick=function(){
+  console.log('ok');
+  numberCheck.style.display = "block";
+
+  checkClose.onclick=function(){
+    numberCheck.style.display="none";
+  };
+
+  if (event.target == numberCheck) {
+    numberCheck.style.display="none";
+  };
+
+  $('#numberCheck').keypress(function(event){
+    console.log('ok');
+   if ( event.which == 13 ) {
+       $('#okay_btn').click();
+       return false;
+   }
+  });
+  ok.onclick=function(){
+    alert('press ok');
+    var password=passwordCheck.value;
+    var data = {
+      'Password': password
+    }
+    // console.log(data);
+    $.ajax({
+      type: "POST",
+      url: "/check/goCheck",
+      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+      cache: false,
+      datatype: "json", // expecting JSON to be returned
+      data: data,
+      success: function(result) {
+        if(result['results']==100){
+          alert('삭제되었습니다.');
+          numberCheck.style.display = "none";
+          textUpload.style.display = "block";
+        }
+        else
+        alert('비밀번호가 일치 하지 않습니다.');
+        passwordCheck.value="";
+      },
+    })
+  }
+};
+</script>
