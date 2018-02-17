@@ -1,6 +1,6 @@
 @font-face{
   font-family:'yungodic';
-  src:url('/stylesheets/yungodic550.ttf')
+  src:url('/stylesheets/yungodic550.ttf') format('truetype');
 }
 html,body{
   font-family:'yungodic';
