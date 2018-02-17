@@ -53,7 +53,7 @@
                         <td>
                           <a href = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" data-toggle = "modal" style="text-decoration:none"><%=item.title%></a>
                         </td>
-                        <td style="cursor : pointer;"><%= item.date %></td>
+                        <td style="cursor : pointer;"><%= item.date.toDateString() %></td>
 
 
                         <div class = "modal" id= "board_content_view_modal<%=item.id%>" style="display:none;" >

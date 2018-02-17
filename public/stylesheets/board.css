@@ -99,8 +99,8 @@ td a:hover{
   border-style: none;
   height: 38px;
   width: 85%;
-  margin-top: 4%;
-  margin-left: 7.5%;
+  margin-top: 14%;
+
   margin-bottom: 2%;
   border-radius: 2px;
 }
@@ -179,21 +179,6 @@ td a:hover{
   border: 1px solid #888;
   width: 80%;
   border-radius: 5px;
-}
-
-/* The Close Button */
-.close2 {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close2:hover,
-.close2:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 /* The Close Button */
 .close {
