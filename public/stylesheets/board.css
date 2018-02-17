@@ -202,9 +202,7 @@ td a:hover{
   display: table;
   text-align: center;
 }
-summary:not(footer){
-  display: block;
-}
+
 .footerContent{
   display: table-cell;
   vertical-align: middle;
@@ -278,10 +276,8 @@ tbody tr:hover{
   }
   .footerBigContent{
     font-size: 20px;
-    margin-bottom: 1%;
   }
   .footerSamllContent{
-    margin-bottom: 0;
     font-size: 13px;
   }
 }
