@@ -162,6 +162,11 @@ $('#textUpload').keypress(function(event){
 //  }
 // });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8fd4a85b993662ad30b3b085f2a0181acdd35eb
 
 
 
@@ -251,8 +256,15 @@ $('#ok_button_on_board').click(function(){
   var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
                   leadingZeros(now.getMonth()+1,2)+'-' +
                   leadingZeros(now.getDate(),2);
+<<<<<<< HEAD
 
   var date = post_date.toString();
+=======
+
+
+  var date = post_date.toString();
+
+>>>>>>> f8fd4a85b993662ad30b3b085f2a0181acdd35eb
 
 
   if(title=='')

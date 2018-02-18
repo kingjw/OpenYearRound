@@ -29,19 +29,6 @@
   border-color: #5a95b1;
   border-style: none;
 }
-#numberCheck {
-  display: none;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 5%; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-}
 
 /* The Close Button */
 .close {
@@ -57,7 +44,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 #contentTable{
   border-bottom-color: white;
 }
@@ -97,6 +83,9 @@
   border-bottom-color: white;
 }
 #BoardModalContent{
+  width: 90%;
+  margin-left: 5%;
+  height: 90%;
   font-size: 9px;
   width: 90%;
   margin-left: 5%;
@@ -163,7 +152,7 @@
 <table id="BoardModalContent">
   <tr>
     <td class="titleDate">제목</td>
-      <td class="titleDate"><%= rows[0].title %></td>
+      <td id="contentTitle"class="titleDate"><%= rows[0].title %></td>
       <td class="titleDate">게시일</td>
       <td class="titleDate"><%= rows[0].date %></td>
   </tr>
@@ -171,7 +160,7 @@
     <td id="contentTable" colspan="4" style="height:7%">내용</td>
   </tr>
   <tr>
-    <td id="content"colspan="4"><textarea  readonly="readonly" id="BoardModalContentArea"style="height:100%"class='form-control' rows='15' ><%= rows[0].text %></textarea></td>
+    <td colspan="6"><textarea  readonly="readonly" id="BoardModalContentArea"style="height:100%"class='form-control' rows='15' ><%= rows[0].text %></textarea></td>
   </tr>
 </table>
 
@@ -182,11 +171,26 @@
 
 <div id="numberCheck2">
   <div class="check_Content">
-    <span id="checkClose"class="Close">&times;</span>
+    <span id="checkClose2"class="Close">&times;</span>
     <label></label>
     <div class="formModal">
       <div class="col-sm-12">
-        <input  type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
+        <input  type="password"class='form-control' rows='1' id="checkPassword2" placeholder="비밀번호를 입력해주세요."></input>
+      </div>
+    </div>
+    <div >
+    <button  type="button" id="okay_btn2" >확인</button>
+  </div>
+</div>
+</div>
+
+<div id="numberCheck3">
+  <div class="check_Content">
+    <span id="checkClose3"class="Close">&times;</span>
+    <label></label>
+    <div class="formModal">
+      <div class="col-sm-12">
+        <input  type="password"class='form-control' rows='1' id="checkPassword3" placeholder="비밀번호를 입력해주세요."></input>
       </div>
     </div>
     <button  type="button" id="okay_btn" style="margin : 20%;">확인</button>
@@ -194,17 +198,24 @@
 </div>
 <script>
 var deletebtn = document.getElementById('deleteButton');
+var reformbtn = document.getElementById('reformButton');
 var numberCheck2 = document.getElementById('numberCheck2');
-var checkClose = document.getElementById('checkClose');
-var passwordCheck=document.getElementById("checkPassword");
-var ok = document.getElementById('okay_btn');
-var passwordCheck=document.getElementById("checkPassword");
-
+var checkClose2= document.getElementById('checkClose2');
+var checkClose3= document.getElementById('checkClose3');
+var passwordCheck2=document.getElementById("checkPassword2");
+var ok2 = document.getElementById('okay_btn2');
+var ok3 = document.getElementById('okay_btn3');
+var uploadClose2 =document.getElementById('uploadClose2');
+var passwordCheck3=document.getElementById("checkPassword3");
+var contentTitle=document.getElementById('contentTitle');
+var content=document.getElementById('BoardModalContentArea');
+var title_nameR=document.getElementById('title_nameR');
+var contentsR=document.getElementById('contentsR');
 deletebtn.onclick=function(){
   console.log('ok');
   numberCheck2.style.display = "block";
 
-  checkClose.onclick=function(){
+  checkClose2.onclick=function(){
     numberCheck2.style.display="none";
   };
 
@@ -215,16 +226,15 @@ deletebtn.onclick=function(){
   $('#numberCheck2').keypress(function(event){
     console.log('ok');
    if ( event.which == 13 ) {
-       $('#okay_btn').click();
+       $('#okay_btn2').click();
        return false;
    }
   });
-  ok.onclick=function(){
-    alert('press ok');
-    var password=passwordCheck.value;
+  ok2.onclick=function(){
+    var password2=passwordCheck2.value;
 
     var data = {
-      'Password': password
+      'Password': password2
       // 'title' : title
     }
     // console.log(data);
@@ -249,10 +259,65 @@ deletebtn.onclick=function(){
 
             }else {
               alert('비밀번호가 일치하지 않습니다.');
-              passwordCheck.value="";
+              passwordCheck2.value="";
             }
         //     }
         // })
+      },
+    })
+  }
+};
+
+
+reformbtn.onclick=function(){
+  console.log('ok222');
+  var titleR=contentTitle.innerHTML;
+  var contentR=content.innerHTML;
+  uploadClose2.onclick=function(){
+    textUpload2.style.display="none";
+  };
+
+  console.log('ok');
+  numberCheck3.style.display = "block";
+
+  checkClose3.onclick=function(){
+    numberCheck3.style.display="none";
+  };
+
+  if (event.target == numberCheck3) {
+    numberCheck3.style.display="none";
+  };
+
+  $('#numberCheck3').keypress(function(event){
+    console.log('ok');
+   if ( event.which == 13 ) {
+       $('#okay_btn3').click();
+       return false;
+   }
+  });
+  ok3.onclick=function(){
+    var password3=passwordCheck3.value;
+
+    var data = {
+      'Password': password3
+    }
+    $.ajax({
+      type: "POST",
+      url: "/check/goCheck",
+      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+      cache: false,
+      datatype: "json", // expecting JSON to be returnedzz
+      data: data,
+      success: function(result) {
+              if(result['results']==100){
+                numberCheck3.style.display = "none";
+                textUpload2.style.display = "block";
+                title_nameR.innerHTML=titleR;
+                contentsR.innerHTML=contentR;
+            }else {
+              alert('비밀번호가 일치하지 않습니다.');
+              passwordCheck3.value="";
+            }
       },
     })
   }
