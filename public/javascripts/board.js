@@ -61,7 +61,6 @@ window.onclick = function(event) {
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
-<<<<<<< HEAD
 
 
 $('#searchButton').click(function(){
@@ -132,7 +131,7 @@ $('#searchButton').click(function(){
 
 });
 
-=======
+
 $('#numberCheck').keypress(function(event){
   console.log('ok');
  if ( event.which == 13 ) {
@@ -147,7 +146,27 @@ $('#textUpload').keypress(function(event){
      return false;
  }
 });
->>>>>>> fbf60a49891f2fe06a733a515cd370cd249bea8c
+
+// $('#numberCheck').keypress(function(event){
+//   console.log('ok');
+//  if ( event.which == 13 ) {
+//      $('#okay_btn').click();
+//      return false;
+//  }
+// });
+// $('#textUpload').keypress(function(event){
+//   console.log('okok');
+//  if ( event.which == 13 ) {
+//      $('#ok_button_on_board').click();
+//      return false;
+//  }
+// });
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8fd4a85b993662ad30b3b085f2a0181acdd35eb
 
 
 
@@ -194,9 +213,8 @@ $('#searchButton').click(function(){
       }
     });//ajax
   }//else
-
 });
-
+//왜 안돼 ㅅㅂ
 
 
 $('#ok_button_on_board').click(function(){
@@ -220,7 +238,11 @@ $('#ok_button_on_board').click(function(){
 
   var date = post_date.toString();
 =======
->>>>>>> fbf60a49891f2fe06a733a515cd370cd249bea8c
+
+
+  var date = post_date.toString();
+
+>>>>>>> f8fd4a85b993662ad30b3b085f2a0181acdd35eb
 
 
   if(title=='')

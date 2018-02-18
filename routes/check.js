@@ -25,5 +25,4 @@ router.post('/goCheck', function(req, res, next) {
     }
   });
 });
-
 module.exports = router;

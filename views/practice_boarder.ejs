@@ -56,14 +56,11 @@
                         </td>
                         <td style="cursor : pointer;"><%= item.date %></td>
 
-
                         <div class = "modal" id= "board_content_view_modal<%=item.id%>" style="display:none;" >
-                          <div class = "modal-dialog">
                             <div class = "modal-content" id = "modal-boardview-content">
-
                             </div>
-                          </div>
                         </div>
+
                       </tr>
                       <script>
                       $('#board_content_view_title<%=item.id%>').click('show.bs.modal',function(event){
@@ -85,7 +82,7 @@
                   %>
 
 
-                  <tr id='pageBoardWrapper'>
+                  <tr z>
                     <td id="pageBoard"colspan = "5">
                       <%
                       for(var j = 0; j < result.length/10; j++) {
@@ -108,7 +105,7 @@
                         <input type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
                       </div>
                     </div>
-                    <button type="button" class="checkbtn btn-primary btn-block" id="okay_btn">확인</button>
+                    <button type="button" class="checkbtn" id="okay_btn">확인</button>
                   </div>
                 </div>
 

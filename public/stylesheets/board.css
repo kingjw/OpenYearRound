@@ -67,19 +67,11 @@ td a:hover{
   width: 13%;
   position: relative;
 }
-#deleteButton,#reformButton{
-  margin-left : 5%;
-  width : 40%;
-  height: 38px;
-  color: rgb(255, 255, 255);
-  border-color: #469fbb;
-  border-style: none;
-  background-color:#469fbb;
-}
-#writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover,#deleteButton:hover,#reformButton:hover{
+
+#writeButton:hover,#ok_button_on_board:hover,#ok_button_on_board2:hover, .checkbtn:hover,#deleteButton:hover,#reformButton:hover{
   cursor: pointer;
 }
-#ok_button_on_board{
+#ok_button_on_board,#ok_button_on_board2{
   color: rgb(255, 255, 255);
   background-color:#5a95b1;
   border-color: #5a95b1;
@@ -102,26 +94,27 @@ td a:hover{
 
 }
 .checkbtn{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
   height: 38px;
-  width: 80%;
-  /* margin-top: 14%; */
-  margin-bottom: 2%;
   border-radius: 2px;
+  text-align: center;
+  width: 90%;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  color: white;
+  border-style: none;
+  margin-top: 3%;
+  margin-bottom:3%;
 }
 .formModal{
   margin-bottom: 1%;
 }
-.checkbtn:hover{
+/* .checkbtn:hover{
   color: rgb(255, 255, 255);
   background-color:#5a95b1;
   border-color: #5a95b1;
   border-style: none;
-}
-#numberCheck {
+} */
+#numberCheck,#numberCheck2,#numberCheck3 {
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -134,7 +127,7 @@ td a:hover{
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
-#textUpload {
+#textUpload,#textUpload2 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -185,7 +178,7 @@ td a:hover{
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 2%;
   border: 1px solid #888;
   width: 80%;
   border-radius: 5px;
@@ -225,12 +218,12 @@ td a:hover{
   padding: 2%;
 }
 .footerBigContent{
-  font-size: 9px;
+  font-size: 12px;
   margin-bottom: 1%;
 }
-.footerSamllContent{
+.footerSmallContent{
+  font-size: 8px;
   margin-bottom: 0;
-  font-size: 7px;
 }
 tr{
   height : 50px;
@@ -261,7 +254,7 @@ tbody tr:hover{
   #searchButton{
     width: 17%;
   }
-  #writeButton,#deleteButton,#reformButton{
+  #writeButton{
     width: 20%;
   }
   #searchForm{
@@ -269,17 +262,17 @@ tbody tr:hover{
     height: 38px;
     margin-left: 16%;
   }
-  #numberCheck {
+  #numberCheck,#numberCheck2,#numberCheck2 {
     padding-top: 20%; /* Location of the box */
   }
-  #textUpload {
+  #textUpload,#textUpload2 {
     padding-top: 5%; /* Location of the box */
   }
 }
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 5%; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -294,7 +287,7 @@ tbody tr:hover{
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  height:70%;
+  height:90%;
   border-radius: 5px;
 }
 
@@ -309,7 +302,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 16px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 10px;
   }
   .board_set{
@@ -323,7 +316,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 20px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 13px;
   }
   .board_set{
@@ -337,7 +330,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 23px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 18px;
   }
   .board_set{
@@ -352,7 +345,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 30px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 24px;
   }
   .board_set{
@@ -367,7 +360,7 @@ tbody tr:hover{
   .footerBigContent{
     font-size: 42px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 36px;
   }
   .board_set{
