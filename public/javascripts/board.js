@@ -14,6 +14,7 @@ window.onclick = function(event) {
 }
 
 writebtn.onclick=function(){
+  alert('fq');
   numberCheck.style.display = "block";
   checkbtn.onclick=function(){
     var password=passwordCheck.value;

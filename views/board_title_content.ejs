@@ -181,7 +181,7 @@ table{
     <input type='button' name='write' value='삭제' id='deleteButton'class="form-control"></input>
 </div>
 
-<div id="numberCheck">
+<div id="numberCheck2">
   <div class="check_Content">
     <span id="checkClose"class="Close">&times;</span>
     <label></label>
@@ -195,7 +195,7 @@ table{
 </div>
 <script>
 var deletebtn = document.getElementById('deleteButton');
-var numberCheck = document.getElementById('numberCheck');
+var numberCheck2 = document.getElementById('numberCheck2');
 var checkClose = document.getElementById('checkClose');
 var passwordCheck=document.getElementById("checkPassword");
 var ok = document.getElementById('okay_btn');
@@ -203,17 +203,17 @@ var passwordCheck=document.getElementById("checkPassword");
 
 deletebtn.onclick=function(){
   console.log('ok');
-  numberCheck.style.display = "block";
+  numberCheck2.style.display = "block";
 
   checkClose.onclick=function(){
-    numberCheck.style.display="none";
+    numberCheck2.style.display="none";
   };
 
-  if (event.target == numberCheck) {
-    numberCheck.style.display="none";
+  if (event.target == numberCheck2) {
+    numberCheck2.style.display="none";
   };
 
-  $('#numberCheck').keypress(function(event){
+  $('#numberCheck2').keypress(function(event){
     console.log('ok');
    if ( event.which == 13 ) {
        $('#okay_btn').click();
@@ -247,7 +247,7 @@ deletebtn.onclick=function(){
               if(result['results']==100){
                 alert('삭제완료');
                 $(window).attr('location','/board/1');
-                
+
             }else {
               alert('비밀번호가 일치하지 않습니다.');
               passwordCheck.value="";
