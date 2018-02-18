@@ -61,9 +61,7 @@ window.onclick = function(event) {
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 $('#searchButton').click(function(){
 
@@ -133,7 +131,7 @@ $('#searchButton').click(function(){
 
 });
 
-=======
+
 $('#numberCheck').keypress(function(event){
   console.log('ok');
  if ( event.which == 13 ) {
@@ -148,8 +146,7 @@ $('#textUpload').keypress(function(event){
      return false;
  }
 });
->>>>>>> fbf60a49891f2fe06a733a515cd370cd249bea8c
-=======
+
 // $('#numberCheck').keypress(function(event){
 //   console.log('ok');
 //  if ( event.which == 13 ) {
@@ -165,7 +162,6 @@ $('#textUpload').keypress(function(event){
 //  }
 // });
 
->>>>>>> 60e5667... delete
 
 
 
@@ -255,11 +251,8 @@ $('#ok_button_on_board').click(function(){
   var post_date = leadingZeros(now.getYear()-100,2)+ '-'+
                   leadingZeros(now.getMonth()+1,2)+'-' +
                   leadingZeros(now.getDate(),2);
-<<<<<<< HEAD
 
   var date = post_date.toString();
-=======
->>>>>>> fbf60a49891f2fe06a733a515cd370cd249bea8c
 
 
   if(title=='')
