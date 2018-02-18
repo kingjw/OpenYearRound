@@ -58,7 +58,7 @@
   align-items : center;
   height: 100%;
 }
-#reformButton{
+.reformButton{
   width: 10%;
   height: 38px;
   color: rgb(255, 255, 255);
@@ -67,7 +67,7 @@
   background-color:#469fbb;
   margin-left: 39%;
 }
-#deleteButton{
+.deleteButton{
   width: 10%;
   height: 38px;
   color: rgb(255, 255, 255);
@@ -96,10 +96,10 @@
   font-size: 9px;
 }
 @media all and (orientation:portrait){
-  #deleteButton,#reformButton{
+  .deleteButton,.reformButton{
     width: 20%;
   }
-  #reformButton{
+  .reformButton{
     margin-left: 29%;
   }
   #numberCheck {
@@ -183,7 +183,7 @@
   </div>
 </div>
 
-<div id="numberCheck3">
+<div id="numberCheck3"><!--수정하기 위해서 비밀번호 받는 모달-->
   <div class="check_Content">
     <span id="checkClose3"class="Close">&times;</span>
     <label></label>
@@ -196,8 +196,6 @@
   </div>
 </div>
 <script>
-var deletebtn = document.getElementById('deleteButton');
-var reformbtn = document.getElementById('reformButton');
 var numberCheck2 = document.getElementById('numberCheck2');
 var checkClose2= document.getElementById('checkClose2');
 var checkClose3= document.getElementById('checkClose3');
@@ -210,10 +208,10 @@ var contentTitle=document.getElementById('contentTitle');
 var content=document.getElementById('BoardModalContentArea');
 var title_nameR=document.getElementById('title_nameR');
 var contentsR=document.getElementById('contentsR');
-deletebtn.onclick=function(){
+// deletebtn.onclick=function(){
+$('.deleteButton').click(function(){
   console.log('ok');
   numberCheck2.style.display = "block";
-
   checkClose2.onclick=function(){
     numberCheck2.style.display="none";
   };
@@ -265,11 +263,11 @@ deletebtn.onclick=function(){
       },
     })
   }
-};
+});
 
-
-reformbtn.onclick=function(){
-  console.log('ok222');
+$('.reformButton').click(function(){
+// reformbtn.onclick=function(){
+  console.log('press reform button');
   var titleR=contentTitle.innerHTML;
   var contentR=content.innerHTML;
   uploadClose2.onclick=function(){
@@ -320,5 +318,5 @@ reformbtn.onclick=function(){
       },
     })
   }
-};
+});
 </script>
