@@ -55,7 +55,7 @@
 }
 #modalButtonDiv{
   display : flex;
- align-items : center;
+  align-items : center;
   height: 100%;
 }
 #reformButton{
@@ -146,15 +146,14 @@
   #BoardModalContentArea{
     font-size: 25px;
   }
-
 }
 </style>
 <table id="BoardModalContent">
   <tr>
     <td class="titleDate">제목</td>
-      <td id="contentTitle"class="titleDate"><%= rows[0].title %></td>
-      <td class="titleDate">게시일</td>
-      <td class="titleDate"><%= rows[0].date %></td>
+    <td id="contentTitle"class="titleDate"><%= rows[0].title %></td>
+    <td class="titleDate">게시일</td>
+    <td class="titleDate"><%= rows[0].date %></td>
   </tr>
   <tr>
     <td id="contentTable" colspan="4" style="height:7%">내용</td>
@@ -166,7 +165,7 @@
 
 <div id="modalButtonDiv">
   <input type='button' name='write' value='수정'id='reformButton'class="form-control"></input>
-  <input type='button' name='write' value='삭제' id='deleteButton'class="form-control" ></input>
+  <input type='button' name='write' value='삭제' id='deleteButton'class="form-control"></input>
 </div>
 
 <div id="numberCheck2">
@@ -179,9 +178,9 @@
       </div>
     </div>
     <div >
-    <button  type="button" id="okay_btn2" >확인</button>
+      <button  type="button" id="okay_btn2" >확인</button>
+    </div>
   </div>
-</div>
 </div>
 
 <div id="numberCheck3">
@@ -290,10 +289,10 @@ reformbtn.onclick=function(){
 
   $('#numberCheck3').keypress(function(event){
     console.log('ok');
-   if ( event.which == 13 ) {
-       $('#okay_btn3').click();
-       return false;
-   }
+    if ( event.which == 13 ) {
+      $('#okay_btn3').click();
+      return false;
+    }
   });
   ok3.onclick=function(){
     var password3=passwordCheck3.value;
@@ -309,15 +308,15 @@ reformbtn.onclick=function(){
       datatype: "json", // expecting JSON to be returnedzz
       data: data,
       success: function(result) {
-              if(result['results']==100){
-                numberCheck3.style.display = "none";
-                textUpload2.style.display = "block";
-                title_nameR.innerHTML=titleR;
-                contentsR.innerHTML=contentR;
-            }else {
-              alert('비밀번호가 일치하지 않습니다.');
-              passwordCheck3.value="";
-            }
+        if(result['results']==100){
+          numberCheck3.style.display = "none";
+          textUpload2.style.display = "block";
+          title_nameR.innerHTML=titleR;
+          contentsR.innerHTML=contentR;
+        }else {
+          alert('비밀번호가 일치하지 않습니다.');
+          passwordCheck3.value="";
+        }
       },
     })
   }
