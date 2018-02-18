@@ -145,9 +145,8 @@ $('#searchButton').click(function(){
       }
     });//ajax
   }//else
-
 });
-
+//왜 안돼 ㅅㅂ
 
 
 $('#ok_button_on_board').click(function(){
