@@ -178,7 +178,7 @@ table{
 
 <div id="modalButtonDiv">
   <input type='button' name='write' value='수정'id='reformButton'class="form-control"></input>
-    <input type='button' name='write' value='삭제' id='deleteButton'class="form-control"></input>
+  <input type='button' name='write' value='삭제' id='deleteButton'class="form-control" onclick="location.href='/board/goCheckk/<%=rows[0].id%>'"></input>
 </div>
 
 <div id="numberCheck">
@@ -234,26 +234,26 @@ deletebtn.onclick=function(){
       url: "/check/goCheck",
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       cache: false,
-      datatype: "json", // expecting JSON to be returned
+      datatype: "json", // expecting JSON to be returnedzz
       data: data,
       success: function(result) {
-        $.ajax({
-          type : "get",
-            url : "/board/goCheckk/:id",
-            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-            cache: false,
-            datatype: "json", // expecting JSON to be returned
-            success : function(){
+        // $.ajax({
+        //   type : "get",
+        //     url : "/board/goCheckk",
+        //     contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        //     cache: false,
+        //     datatype: "json", // expecting JSON to be returned
+        //     success : function(){
               if(result['results']==100){
                 alert('삭제완료');
-                $(window).attr('location','/board/1');
-                
+                $(window).attr('location','/board/goCheckk/<%=rows[0].id%>');
+
             }else {
               alert('비밀번호가 일치하지 않습니다.');
               passwordCheck.value="";
             }
-            }
-        })
+        //     }
+        // })
       },
     })
   }
