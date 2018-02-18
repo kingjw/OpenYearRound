@@ -38,6 +38,8 @@ router.get('/:page', function(req, res, next) {
   });//query
   //res.render('applyadmin',{title:'apply admin page'});
 });
+
+
 router.get('/title_content/:id',function(req,res){
   var sql='select * from postboard where id=?;';
   conn.query(sql,[req.params.id],function(err,rows){
@@ -45,6 +47,20 @@ router.get('/title_content/:id',function(req,res){
   });
 });
 
+router.get('/goCheckk/:id', function(req,res){
+  var sql = "delete from `postboard` where id = ?;";
+  conn.query(sql, [req.params.id], function(error, results){
+    if(error){
+      console.log(error);
+      console.log('delete error');
+    }
+    else{
+      console.log('삭제');
+      console.log(req.param.id);
+      res.send({results:100});
+    }
+  });
+});
 
 router.post('/search', function(req, res){
   var sql = 'select * from `postboard` where title like ?';
@@ -59,10 +75,5 @@ router.post('/search', function(req, res){
     }
   });
 });
-router.get('/deletepost/:id',function(req,res,next){
-  var sql = "delete from postboard where id = ?";
-  conn.query(sql,[req.params.id],function(){
-  res.render('board_title_content');
-});
-});
+
 module.exports = router;
