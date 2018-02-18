@@ -66,14 +66,18 @@ router.get('/goCheckk/:id', function(req,res){
 
 router.post('/search', function(req, res){
   var sql = 'select * from `postboard` where title like ?';
+  var all_sql = 'select * from `postboard`;';
   var like = '%' + req.body.search + '%';
   conn.query(sql, [like], function(error, result){
     if(error){
       console.log(error);
     }
     else{
-      console.log(result);
-      res.send({result: 'success', board: result});
+      var board_set;
+      conn.query(all_sql, function(err, rows){
+        console.log(result);
+        res.send({result: 'success', board: result, allBoard: rows});
+      });
     }
   });
 });
