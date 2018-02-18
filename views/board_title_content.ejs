@@ -164,7 +164,7 @@ table{
 
 <div id="modalButtonDiv">
   <input type='button' name='write' value='수정'id='reformButton'class="form-control"></input>
-  <input type='button' name='write' value='삭제' id='deleteButton'class="form-control" onclick="location.href='/board/goCheckk/<%=rows[0].id%>'"></input>
+  <input type='button' name='write' value='삭제' id='deleteButton'class="form-control" ></input>
 </div>
 
 <div id="numberCheck2">
@@ -234,7 +234,7 @@ deletebtn.onclick=function(){
         //     success : function(){
               if(result['results']==100){
                 alert('삭제완료');
-
+                  $(window).attr('location','/board/goCheckk/<%=rows[0].id%>');
             }else {
               alert('비밀번호가 일치하지 않습니다.');
               passwordCheck.value="";
