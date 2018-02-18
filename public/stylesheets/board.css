@@ -67,15 +67,7 @@ td a:hover{
   width: 13%;
   position: relative;
 }
-#deleteButton,#reformButton{
-  margin-left : 5%;
-  width : 40%;
-  height: 38px;
-  color: rgb(255, 255, 255);
-  border-color: #469fbb;
-  border-style: none;
-  background-color:#469fbb;
-}
+
 #writeButton:hover,#ok_button_on_board:hover, .checkbtn:hover,#deleteButton:hover,#reformButton:hover{
   cursor: pointer;
 }
@@ -102,25 +94,26 @@ td a:hover{
 
 }
 .checkbtn{
-  color: rgb(255, 255, 255);
-  background-color:#5a95b1;
-  border-color: #5a95b1;
-  border-style: none;
   height: 38px;
-  width: 80%;
-  /* margin-top: 14%; */
-  margin-bottom: 2%;
   border-radius: 2px;
+  text-align: center;
+  width: 90%;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  color: white;
+  border-style: none;
+  margin-top: 3%;
+  margin-bottom:3%;
 }
 .formModal{
   margin-bottom: 1%;
 }
-.checkbtn:hover{
+/* .checkbtn:hover{
   color: rgb(255, 255, 255);
   background-color:#5a95b1;
   border-color: #5a95b1;
   border-style: none;
-}
+} */
 #numberCheck {
   display: none;
   position: fixed; /* Stay in place */
@@ -153,7 +146,6 @@ td a:hover{
   width: 40%;
   background-color: #fefefe;
   margin: auto;
-  padding: 1%;
   border: 1px solid #888;
   border-radius: 5px;
 }
@@ -185,7 +177,7 @@ td a:hover{
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 2%;
   border: 1px solid #888;
   width: 80%;
   border-radius: 5px;
@@ -261,7 +253,7 @@ tbody tr:hover{
   #searchButton{
     width: 17%;
   }
-  #writeButton,#deleteButton,#reformButton{
+  #writeButton{
     width: 20%;
   }
   #searchForm{
@@ -279,7 +271,7 @@ tbody tr:hover{
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 5%; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -294,7 +286,7 @@ tbody tr:hover{
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  height:70%;
+  height:90%;
   border-radius: 5px;
 }
 
@@ -318,7 +310,7 @@ tbody tr:hover{
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   .check_Content{
-    width: 30%;
+    width: 25%;
   }
   .footerBigContent{
     font-size: 20px;
@@ -332,7 +324,7 @@ tbody tr:hover{
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
   .check_Content{
-    width: 30%;
+    width: 25%;
   }
   .footerBigContent{
     font-size: 23px;
