@@ -47,9 +47,9 @@ router.get('/title_content/:id',function(req,res){
   });
 });
 
-router.get('/goCheckk/:id', function(req,res){
+router.get('/goCheckk/:id', function(req,res){z
   var sql = "delete from `postboard` where id = ?;";
-  conn.query(sql, [req.params.id], function(error, results){
+  conn.query(sql, [req.params.id], function(error,results){
     if(error){
       console.log(error);
       console.log('delete error');
@@ -57,7 +57,9 @@ router.get('/goCheckk/:id', function(req,res){
     else{
       console.log('삭제');
       console.log(req.param.id);
-      res.send({results:100});
+      res.render('index',{
+        title:'openyearround'
+      });
     }
   });
 });
