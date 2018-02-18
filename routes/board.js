@@ -47,7 +47,7 @@ router.get('/title_content/:id',function(req,res){
   });
 });
 
-router.get('/goCheckk/:id', function(req,res){z
+router.get('/goCheckk/:id', function(req,res){
   var sql = "delete from `postboard` where id = ?;";
   conn.query(sql, [req.params.id], function(error,results){
     if(error){
