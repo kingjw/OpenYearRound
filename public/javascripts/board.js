@@ -189,11 +189,16 @@ $('#searchButton').click(function(){
       datatype: 'json',
       success: function(result) {
         if (result['result']=='success'){
-        //  $('.board_set').css('display', 'none');
-          //var pageBoard = document.getElementById('pageBoardWrapper');
-          //pageBoard.parentNode.removeChild(pageBoard);
+          console.log(result['allBoard']);
+
           var board_set = document.getElementsByClassName('board_set');
+          var board_all = result['allBoard'];
           var board = result['board'];
+
+          for(var i=0; i<board_set.length; i++){
+            board_set[i].style.display = 'table-row';
+          }
+
           for(var i=0; i<board_set.length; i++){
             var flag = false;
             for(var j=0; j<board.length; j++){
@@ -205,11 +210,12 @@ $('#searchButton').click(function(){
               board_set[i].style.display = 'none';
             }
           }//board_set for
-          //document.getElementById('board_body').appendChild(pageBoard);
 
         }//result success if
       },
       error: function(error){
+        console.log(error);
+        console.log('search failed');
       }
     });//ajax
   }//else
