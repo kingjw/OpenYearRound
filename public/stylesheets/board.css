@@ -114,7 +114,7 @@ td a:hover{
   border-color: #5a95b1;
   border-style: none;
 } */
-#numberCheck {
+#numberCheck,#numberCheck2 {
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -261,7 +261,7 @@ tbody tr:hover{
     height: 38px;
     margin-left: 16%;
   }
-  #numberCheck {
+  #numberCheck,#numberCheck2 {
     padding-top: 20%; /* Location of the box */
   }
   #textUpload {
