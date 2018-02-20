@@ -24,10 +24,12 @@
         <img id="noticeImageM"src='/images/mainNoticeImageM.png' width="100%" height="auto"></img>
       </div>
       <div class="container"><!--게시판 div-->
-        <div id="search">
-          <input type="text"class='form-control'  id="searchForm" placeholder="검색어를 입력하세요."></input>
-          <button id="searchButton">검색</button>
-        </div>
+        <!-- <div id="search"> -->
+        <form id='search' method='get' action='/board/search/1'>
+          <input type="text" class='form-control' name='search_input'  id="searchForm" placeholder="검색어를 입력하세요."/ >
+          <button type='submit' id="searchButton">검색</button>
+        </form>
+        <!-- </div> -->
         <div class="box" id="note1">
           <!-- <div id="first_area"></div> -->
           <div id="main_area">
@@ -67,32 +69,42 @@
                           $('#board_content_view_modal<%=item.id%>').modal({
                             remote : '/board/title_content/<%=item.id%>'
                           });
+                        $('#board_content_view_modal<%=item.id%>').on('loaded.bs.modal',function(event){
+                          $('#board_content_view_modal<%=item.id%>').modal('show');
                         });
-                      $('#board_content_view_modal<%=item.id%>').on('loaded.bs.modal',function(event){
-                        $('#board_content_view_modal<%=item.id%>').modal('show');
-                      });
-                      $('#board_content_view_modal<%=item.id%>').on('hidden.bs.modal', function () {
-                          $(this).removeData('bs.modal');
-                      });
+                        $('#board_content_view_modal<%=item.id%>').on('hidden.bs.modal', function () {
+                            $(this).removeData('bs.modal');
+                        });
 
-                        </script>
-                      <%
-                    }
-                  }
-                  %>
-
-
-                  <tr>
-                    <td id="pageBoard"colspan = "5">
-                      <%
-                      for(var j = 0; j < result.length/10; j++) {
-                        %>
-                        [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
+                          </script>
                         <%
                       }
-                      %>
-                    </td>
-                  </tr>
+                    }
+                    %>
+
+
+                    <tr>
+                      <td id="pageBoard"colspan = "5">
+                        <%
+                        for(var j = 0; j < result.length/10; j++) {
+                          %>
+                          [ <a href="/board/<%= j+1 %>"><%= j+1 %></a> ]
+                          <%
+                        }
+                        %>
+                      </td>
+                    </tr>
+                  
+
+
+
+
+
+
+
+
+
+
                   </tbody>
 
 
