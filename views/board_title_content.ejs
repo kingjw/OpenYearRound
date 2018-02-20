@@ -44,6 +44,15 @@
   align-items : center;
   height: 100%;
 }
+#modal-boardview-content{
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  height:90%;
+  border-radius: 5px;
+}
 .reformButton{
   width: 10%;
   height: 38px;
@@ -71,21 +80,32 @@
 #BoardModalContent{
   width: 90%;
   margin-left: 5%;
-  height: 90%;
+  height: 85%;
   font-size: 9px;
   width: 90%;
   margin-left: 5%;
-  height: 90%;
 }
 .BoardModalContentArea{
   background-color: white;
   font-size: 9px;
+  width: 100%;
+    border-radius: 5px;
+    padding: 1%;
+
+}
+::-webkit-scrollbar {
+
+display:none;
+
 }
 .contentTitle{
   border-top-color: #469fbb;
   border-bottom-color: #469fbb;
   height: 7%;
   text-align: center;
+}
+.contentDiv{
+  border-bottom-style: hidden;
 }
 @media all and (orientation:portrait){
   .deleteButton,.reformButton{
@@ -96,6 +116,15 @@
   }
   #numberCheck {
     padding-top: 20%; /* Location of the box */
+  }
+  #BoardModalContent{
+    height: 70%;
+  }
+  #modal-boardview-content{
+    height:60%;
+  }
+  .modal{
+    padding-top: 20%;
   }
 }
 @media screen and (min-width:750px) and (max-width:1080px){
@@ -141,17 +170,15 @@
 }
 </style>
 <table id="BoardModalContent">
+      <span class="contentClose">&times;</span>
   <tr>
     <td class="titleDate">제목</td>
     <td class="contentTitle"><%= rows[0].title %></td>
     <td class="titleDate">게시일</td>
     <td class="titleDate"><%= rows[0].date %></td>
   </tr>
-  <tr>
-    <td id="contentTable" colspan="4" style="height:7%">내용</td>
-  </tr>
-  <tr>
-    <td colspan="6"><textarea  readonly="readonly" style="height:100%"class='BoardModalContentArea form-control' rows='15' ><%= rows[0].text %></textarea></td>
+  <tr class="contentDiv">
+    <td colspan="6"><textarea  readonly="readonly" style="height:85%"class='BoardModalContentArea' rows='12' ><%= rows[0].text %></textarea></td>
   </tr>
 </table>
 
@@ -166,7 +193,7 @@
     <label></label>
     <div class="formModal">
       <div class="col-sm-12">
-        <input  type="password"class=' form-control' id="checkPassword2"rows='1' placeholder="비밀번호를 입력해주세요."></input>
+        <input  type="password"class='checkPassword2 form-control' rows='1' placeholder="비밀번호를 입력해주세요."></input>
       </div>
     </div>
     <div >
@@ -181,7 +208,7 @@
     <label></label>
     <div class="formModal">
       <div class="col-sm-12">
-        <input  type="password"class='form-control'  id="checkPassword3"rows='1' placeholder="비밀번호를 입력해주세요."></input>
+        <input  type="password"class='checkPassword3 form-control'  rows='1' placeholder="비밀번호를 입력해주세요."></input>
       </div>
     </div>
     <button  type="button" id="okay_btn" style="margin : 20%;">확인</button>
@@ -199,6 +226,7 @@ function btn2(){
   console.log('deleteButton click');
   $('.numberCheck2').css('display','block');
   $('.checkClose2').click(function(){
+    location.reload();
     $('.numberCheck2').css('display','none');
   });
 
@@ -208,13 +236,15 @@ function btn2(){
 
   $('.numberCheck2').keypress(function(event){
     console.log('ok');
-   if ( event.which == 13 ) {
-       $('.okay_btn2').click();
-       return false;
-   }
+    if ( event.which == 13 ) {
+      $('.okay_btn2').click();
+      return false;
+    }
   });
 
   $('.okay_btn2').click(function(){
+    var index=$('.okay_btn2').index(this);
+    var passwordCheck2=document.getElementsByClassName("checkPassword2")[index];
     var password2=passwordCheck2.value;
 
     var data = {
@@ -235,10 +265,10 @@ function btn2(){
                 alert('삭제완료');
                 $(window).attr('location','/board/goCheckk/<%=rows[0].id%>');
 
-            }else {
-              alert('비밀번호가 일치하지 않습니다.');
-              passwordCheck2.value="";
-            }
+        }else {
+          alert('비밀번호가 일치하지 않습니다.');
+          passwordCheck2.value="";
+        }
         //     }
         // })
       },
@@ -250,12 +280,14 @@ $('.reformButton').click(function(){
 
   $('.numberCheck3').css('display','block');
   $('.checkClose3').click(function(){
-  $('.numberCheck3').css('display','none');
+     location.reload();
+    // $('.numberCheck3').css('display','none');
   });
 
-
   $('.uploadClose2').click(function(){
-  $('.textUpload2').css('display','none');
+    location.reload();
+    // $('.textUpload2').css('display','none');
+
   });
   // if (event.target == numberCheck3) {
   //   numberCheck3.style.display="none";
@@ -268,28 +300,35 @@ $('.reformButton').click(function(){
     }
   });
   $('.okay_btn3').click(function(){
+    var index=$('.okay_btn3').index(this);
+    var passwordCheck3=document.getElementsByClassName("checkPassword3")[index];
     var password3=passwordCheck3.value;
-
+    // if(isRun == true) {
+    //         return;
+    //     }
+    //     isRun = true;
     var data = {
       'Password': password3
     }
     console.log(data);
     $.ajax({
       type: "POST",
-      url: "/check/goCheck",
+      url: "/check/goCheck?"+ Math.random(),
+      // async:false,
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       cache: false,
       datatype: "json", // expecting JSON to be returnedzz
       data: data,
       success: function(result) {
         if(result['results']==100){
-          passwordCheck3.value="";
           $('.numberCheck3').css('display','none');
           $('.textUpload2').css('display','block');
-
+          passwordCheck3.value="";
+          // isRun  = false;
         }else {
           alert('비밀번호가 일치하지 않습니다.');
           passwordCheck3.value="";
+          // isRun  = false;
         }
       },
     })
@@ -312,44 +351,44 @@ $('#reform_btn').click(function(){
     return zero + n;
   }
   var re_post_date = leadingZeros(re_now.getYear()-100,2)+ '-'+
-            leadingZeros(re_now.getMonth()+1,2)+'-' +
-            leadingZeros(re_now.getDate(),2);
+  leadingZeros(re_now.getMonth()+1,2)+'-' +
+  leadingZeros(re_now.getDate(),2);
 
 
 
 
-    if(re_title=='')
-    alert("제목을 입력하세요");
-    else if(re_contents == '')
-    alert("내용을 입력하세요");
-    else{
+  if(re_title=='')
+  alert("제목을 입력하세요");
+  else if(re_contents == '')
+  alert("내용을 입력하세요");
+  else{
     var data={
-    'title' : re_title,
-    'contents' : re_contents,
-    'date' : re_post_date
+      'title' : re_title,
+      'contents' : re_contents,
+      'date' : re_post_date
     }
     console.log(data);
-   $.ajax({
-     type : 'post',
-     url : '/board/reBoard/<%=rows[0].id%>',
-     contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-     cache: false,
-     data: data,
-     datatype: 'json',
-     success : function(result) {
-       if(result['result'] == 'success'){
-         alert('수정완료');
-         location.reload();
-       }else{
-         console.log(result);
-         alert('등록실패1');
-       }
-     },
-     error : function(error){
-       alert('등록실패2');
+    $.ajax({
+      type : 'post',
+      url : '/board/reBoard/<%=rows[0].id%>',
+      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+      cache: false,
+      data: data,
+      datatype: 'json',
+      success : function(result) {
+        if(result['result'] == 'success'){
+          alert('수정완료');
+          location.reload();
+        }else{
+          console.log(result);
+          alert('등록실패1');
+        }
+      },
+      error : function(error){
+        alert('등록실패2');
 
-     }
-   });
+      }
+    });
   }
 });
 </script>
