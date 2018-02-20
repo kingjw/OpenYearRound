@@ -82,4 +82,22 @@ router.post('/search', function(req, res){
   });
 });
 
+router.post('/reBoard/:id',function(req,res,next){
+  var title = req.body.title;
+  var contents = req.body.contents;
+  var date = req.body.date;
+  var id = req.params.id;
+  var sql = "update `postboard` set title = ?, date = ?, text = ? where id = ?;";
+
+  conn.query(sql,[title,date,contents,id], function(error,results, fields){
+    if(error){
+      console.log(id);
+      console.log('postboard update failded');
+    } else {
+      console.log('success');
+      res.send({result : 'success'});
+    }
+  });
+});
+
 module.exports = router;
