@@ -245,8 +245,6 @@ $('.deleteButton').click(function(){
 });
 
 $('.reformButton').click(function(){
-  var titleR=$('.contentTitle').innerHTML;
-  var contentR=$('.BoardModalContentArea').innerHTML;
 
   $('.numberCheck3').css('display','block');
 $('.checkClose3').click(function(){
@@ -285,8 +283,7 @@ $('.uploadClose2').click(function(){
           passwordCheck3.value="";
           $('.numberCheck3').css('display','none');
           $('.textUpload2').css('display','block');
-          $('.title_nameR').html(titleR);
-          $('.contentsR').html(contentR);
+
         }else {
           alert('비밀번호가 일치하지 않습니다.');
           passwordCheck3.value="";
@@ -294,5 +291,62 @@ $('.uploadClose2').click(function(){
       },
     })
   });
+});
+
+$('#reform_btn').click(function(){
+  var re_title = $('#re_title').val();
+  var re_contents = $('#re_contens').val();
+  var re_now = new Date();
+
+  function leadingZeros(n, digits){
+    var zero='';
+    n = n.toString();
+    if(n.length < digits){
+      for(i = 0 ; i < digits - n.length; i++){
+        zero += '0';
+      }
+    }
+    return zero + n;
+  }
+  var re_post_date = leadingZeros(re_now.getYear()-100,2)+ '-'+
+            leadingZeros(re_now.getMonth()+1,2)+'-' +
+            leadingZeros(re_now.getDate(),2);
+
+
+
+
+    if(re_title=='')
+    alert("제목을 입력하세요");
+    else if(re_contents == '')
+    alert("내용을 입력하세요");
+    else{
+    var data={
+    'title' : re_title,
+    'contents' : re_contents,
+    'date' : re_post_date
+    }
+    console.log(data);
+   $.ajax({
+     type : 'post',
+     url : '/board/reBoard/<%=rows[0].id%>',
+     contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+     cache: false,
+     data: data,
+     datatype: 'json',
+     success : function(result) {
+       if(result['result'] == 'success'){
+         alert('수정완료');
+         location.reload();
+       }else{
+         console.log(result);
+         alert('등록실패1');
+       }
+     },
+     error : function(error){
+       alert('등록실패2');
+
+     }
+   });
+  }
 });
 </script>
