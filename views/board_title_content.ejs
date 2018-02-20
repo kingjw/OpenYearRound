@@ -142,8 +142,8 @@
 </table>
 
 <div id="modalButtonDiv">
-  <input type='button' name='write' value='수정'class='reformButton'class="form-control"></input>
-  <input type='button' name='write' value='삭제' class='deleteButton'class="form-control"></input>
+  <input type='button' onclick="btn1();" name='write' value='수정'class='reformButton'class="form-control" ></input>
+  <input type='button' onclick="btn2();" name='write' value='삭제' class='deleteButton'class="form-control"></input>
 </div>
 
 <div class="numberCheck2">
@@ -201,7 +201,8 @@ var passwordCheck3=document.getElementById("checkPassword3");
 
 
 // deletebtn.onclick=function(){
-$('.deleteButton').click(function(){
+function btn2(){
+  console.log('deleteButton click');
   $('.numberCheck2').css('display','block');
   $('.checkClose2').click(function(){
     $('.numberCheck2').css('display','none');
@@ -235,6 +236,7 @@ $('.deleteButton').click(function(){
       datatype: "json", // expecting JSON to be returnedzz
       data: data,
       success: function(result) {
+        console.log(data);
               if(result['results']==100){
                 alert('삭제완료');
                 passwordCheck2.value="";
@@ -249,20 +251,20 @@ $('.deleteButton').click(function(){
       },
     })
   });
-});
+};
 
 
-$('.reformButton').click(function(){
+function btn1(){
 
   $('.numberCheck3').css('display','block');
-$('.checkClose3').click(function(){
+  $('.checkClose3').click(function(){
   $('.numberCheck3').css('display','none');
-});
+  });
 
 
-$('.uploadClose2').click(function(){
+  $('.uploadClose2').click(function(){
   $('.textUpload2').css('display','none');
-});
+  });
   // if (event.target == numberCheck3) {
   //   numberCheck3.style.display="none";
   // };
@@ -279,6 +281,7 @@ $('.uploadClose2').click(function(){
     var data = {
       'Password': password3
     }
+    console.log(data);
     $.ajax({
       type: "POST",
       url: "/check/goCheck",
@@ -299,7 +302,7 @@ $('.uploadClose2').click(function(){
       },
     })
   });
-});
+};
 
 $('#reform_btn').click(function(){
   var re_title = $('#re_title').val();
