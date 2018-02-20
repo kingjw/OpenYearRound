@@ -24,17 +24,29 @@ router.post('/goBoard',function(req,res,next){//올리기 버튼 클릭 시 ajax
 });//router post
 router.get('/:page', function(req, res, next) {
   var page = req.params.page;
-  var sql='select * from postboard;';//지원자 정보를 불러오는 쿼리문 저장
+  var sql='select * from postboard;';
+
+  // var search_input = req.query.search_input;
+  // var sql2 = 'select * from `postboard` where title like ?;';
+  // var like = '%' + req.query.search_input + '%';
   conn.query(sql,function(error,result,fields){
     if(error){//데이터베이스에서 불러올 때 오류 메세지 띄워줌
       console.log(error);
       console.log('get postboard information failed');
     }
-    else{//화면 렌더링 할 때 보내는 값, 사이트 제목, 지원자 정보
-      res.render('practice_boarder',{
-        title:'openyearround', // 사이트 제목
-        result : result, page : page, leng : Object.keys(result).length-1, page_num : 10      });//render
-    }
+    else{//화면 렌더링 할 때 보내는 값
+        res.render('practice_boarder',{
+              title:'openyearround', // 사이트 제목
+              result : result,
+              page : page,
+              leng : Object.keys(result).length-1,
+              page_num : 10,
+              search: false
+             }
+           );//render
+
+      }//else
+
   });//query
   //res.render('applyadmin',{title:'apply admin page'});
 });
@@ -64,21 +76,30 @@ router.get('/goCheckk/:id', function(req,res){
   });
 });
 
-router.post('/search', function(req, res){
-  var sql = 'select * from `postboard` where title like ?';
-  var all_sql = 'select * from `postboard`;';
-  var like = '%' + req.body.search + '%';
+router.get('/search/:page', function(req, res){
+  var sql = 'select * from `postboard` where title like ?;';
+  var like = '%' + req.query.search_input + '%';
+  var page = req.params.page;
   conn.query(sql, [like], function(error, result){
     if(error){
+      console.log('search error');
       console.log(error);
     }
     else{
-      var board_set;
-      conn.query(all_sql, function(err, rows){
-        console.log(result);
-        res.send({result: 'success', board: result, allBoard: rows});
-      });
-    }
+      console.log('work search func');
+      console.log(result);
+      res.render(
+        'practice_boarder',
+        {
+          title:'openyearround',
+          result: result,
+          page: page,
+          leng : Object.keys(result).length-1,
+          page_num : 10,
+          search: true
+        }
+      );
+    }//else
   });
 });
 
