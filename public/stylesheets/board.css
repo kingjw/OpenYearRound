@@ -23,6 +23,7 @@ table.board thead td {
   border-bottom: #eaeaea;
   border-bottom-style:solid;
   border-bottom-width: 2px;
+  font-size: 14px;
 }
 tbody td{
   border-top-style: solid;
@@ -183,15 +184,15 @@ td a:hover{
   border-radius: 5px;
 }
 /* The Close Button */
-.close,.checkClose2,.checkClose3,.uploadClose2 {
+.close,.checkClose2,.checkClose3,.uploadClose2,.contentClose {
   color: #aaaaaa;
   margin-left: 95%;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,.checkClose2:hover,.checkClose3:hover, .uploadClose2:hover,
-.close:focus, .checkClose2:focus, .checkClose3:focus, .uploadClose2:focus {
+.close:hover,.checkClose2:hover,.checkClose3:hover, .uploadClose2:hover,.contentClose:hover,
+.close:focus, .checkClose2:focus, .checkClose3:focus, .uploadClose2:focus,.contentClose:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -227,13 +228,11 @@ td a:hover{
 tr{
   height : 50px;
 }
-tbody tr:hover{
+
+.board_set:hover{
   background-color: rgba(70,159,187,0.2);
 }
 
-#pageBoard:hover{
-  background-color: rgb(255,255,255);
-}
 @media all and (orientation:portrait){
   .moveTop{
   width: 10%;
@@ -281,15 +280,7 @@ tbody tr:hover{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
-#modal-boardview-content{
-  background-color: white;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 90%;
-  height:90%;
-  border-radius: 5px;
-}
+
 
 #titleBoard{
   text-align:left;
@@ -308,6 +299,9 @@ tbody tr:hover{
   .board_set{
     font-size: 16px;
   }
+  table.board thead td {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   .check_Content{
@@ -322,6 +316,9 @@ tbody tr:hover{
   .board_set{
     font-size: 16px;
   }
+  table.board thead td {
+    font-size: 187x;
+  }
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
   .check_Content{
@@ -335,6 +332,9 @@ tbody tr:hover{
   }
   .board_set{
     font-size: 16px;
+  }
+  table.board thead td {
+    font-size: 18px;
   }
 }
 
@@ -351,6 +351,9 @@ tbody tr:hover{
   .board_set{
     font-size: 16px;
   }
+  table.board thead td {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width:2561px){
 
@@ -365,5 +368,8 @@ tbody tr:hover{
   }
   .board_set{
     font-size: 16px;
+  }
+  table.board thead td {
+    font-size: 23px;
   }
 }
