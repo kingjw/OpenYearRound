@@ -1,13 +1,32 @@
-@font-face{
-  font-family:'yungodic';
-  src:url('/stylesheets/yungodic550.ttf') format('truetype');
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 800;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 200;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
 html,body{
-  font-family:'yungodic';
+  font-family: 'LotteMartDream', sans-serif;
   margin: 0;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  font-weight: 900;
 }
 img {
    max-width: 100%;
@@ -286,9 +305,10 @@ footer{
   font-size: 9px;
   margin-bottom: 1%;
 }
-.footerSamllContent{
+.footerSmallContent{
   margin-bottom: 0;
   font-size: 7px;
+  color:#c9c9c9;
 }
 .titleContent{
   font-size: 15px;
@@ -316,11 +336,12 @@ table{
 }
 .awardContent{
   position: relative;
-    left: 3%;
+    left: 1%;
     font-size: 8px;
   color: gray;
   vertical-align: top;
   width: 60%;
+  line-height: 10px;
 }
 #applyTop{
   margin-bottom: 2%;
@@ -377,6 +398,7 @@ table{
   }
   .awardContent{
     width: 70%;
+
   }
   .introduce{
     height: 65%;
@@ -483,7 +505,7 @@ table{
   .footerBigContent{
     font-size: 16px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 10px;
   }
   .year{
@@ -491,6 +513,7 @@ table{
   }
   .awardContent{
       font-size: 12px;
+      line-height: 20px;
   }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
@@ -540,7 +563,7 @@ table{
     font-size: 20px;
     margin-bottom: 1%;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     margin-bottom: 0;
     font-size: 13px;
   }
@@ -549,6 +572,7 @@ table{
   }
   .awardContent{
       font-size: 16px;
+        line-height: 20px;
   }
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
@@ -597,7 +621,7 @@ table{
   .footerBigContent{
     font-size: 23px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 18px;
   }
   .year{
@@ -605,6 +629,7 @@ table{
   }
   .awardContent{
       font-size: 19px;
+        line-height: 20px;
   }
   #allLogo label{
     width: 17px;
@@ -655,7 +680,7 @@ table{
   .footerBigContent{
     font-size: 30px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 24px;
   }
   .year{
@@ -663,6 +688,7 @@ table{
   }
   .awardContent{
       font-size: 25px;
+        line-height: 20px;
   }
   #allLogo label{
     width: 22px;
@@ -713,7 +739,7 @@ table{
   .footerBigContent{
     font-size: 42px;
   }
-  .footerSamllContent{
+  .footerSmallContent{
     font-size: 36px;
   }
   .year{
@@ -721,6 +747,7 @@ table{
   }
   .awardContent{
       font-size: 38px;
+        line-height: 20px;
   }
   #allLogo label{
     width: 24px;

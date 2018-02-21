@@ -10,7 +10,7 @@
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top:2%;/* Location of the box */
+  padding-top:5%;/* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -37,7 +37,7 @@
 }
 .webTitle{
   color: #469fbb;
-  font-size: 36px;
+  font-size: 30px;
   margin-top: -1%;
   margin-bottom: 5%;
 }
@@ -62,12 +62,12 @@ top: 55px;
   margin-left: 1%;
 }
 .mainService{
-  font-size: 20px;
+  font-size: 15px;
   color: #444444;
   margin-bottom: 0;
 }
 .subService{
-  font-size: 16px;
+  font-size: 13px;
   margin-left: 10%;
   width: 80%;
   text-align: center;
@@ -77,9 +77,21 @@ top: 55px;
 }
 @media all and (orientation:portrait){
   .webServiceModal {
-    padding-top:15%;/* Location of the box */
+    padding-top:25%;/* Location of the box */
   }
   .webServiceModal_Content {
     width: 80%;
+  }
+}
+
+@media screen and (min-width:750px){
+  .mainService{
+    font-size: 20px;
+  }
+  .webTitle{
+    font-size: 36px;
+  }
+  .subService{
+    font-size: 16px;
   }
 }
