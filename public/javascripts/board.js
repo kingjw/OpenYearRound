@@ -80,60 +80,6 @@ $('#textUpload').keypress(function(event){
 
 
 
-// $('#searchButton').click(function(){
-//
-//   var search = $('#searchForm').val();
-//   if(! search){
-//     location.reload();
-//   }
-//   else{
-//     data = {
-//       'search': search,
-//     }
-//     $.ajax({
-//       type: 'post',
-//       url: '/board/search',
-//       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-//       cache: false,
-//       data: data,
-//       datatype: 'json',
-//       success: function(result) {
-//         if (result['result']=='success'){
-//           location.reload();
-//
-//           // console.log(result['allBoard']);
-//           //
-//           // var board_set = document.getElementsByClassName('board_set');
-//           // var board = result['board'];
-//           //
-//           // for(var i=0; i<board_set.length; i++){
-//           //   board_set[i].style.display = 'table-row';
-//           // }
-//           //
-//           // for(var i=0; i<board_set.length; i++){
-//           //   var flag = false;
-//           //   for(var j=0; j<board.length; j++){
-//           //     if( board_set[i].children[1].children[0].id == 'board_content_view_title'+board[j].id ){
-//           //       flag = true;
-//           //     }
-//           //   }//board for
-//           //   if(! flag){
-//           //     board_set[i].style.display = 'none';
-//           //   }
-//           // }//board_set for
-//
-//         }//result success if
-//       },
-//       error: function(error){
-//         console.log(error);
-//         console.log('search failed');
-//       }
-//     });//ajax
-//   }//else
-// });
-//왜 안돼 ㅅㅂ
-
-
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
   var contents = $('#contents').val();
