@@ -73,7 +73,7 @@ router.get('/goCheckk/:id', function(req,res){
   });
 });
 
-router.get('/search/:page', function(req, res){
+router.get('/:page/search', function(req, res){
   var sql = 'select * from `postboard` where title like ?;';
   var like = '%' + req.query.search_input + '%';
   var page = req.params.page;
