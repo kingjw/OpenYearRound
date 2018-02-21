@@ -1,3 +1,4 @@
+<html>
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,7 +18,7 @@
 
     <title><%= title %></title>
   </head>
-  <body ondragstart = "return false">
+  <body ondragstart = "return false" font-family: 'LotteMartHappy', sans-serif;>
     <div class="notice_Container container-fluit">
       <div id="noticeTop">
         <img id="noticeImage"src='/images/mainNoticeImage.png' width="100%" height="auto"></img>
@@ -27,7 +28,7 @@
 
         <form id='search' method='get' action='/board/1/search'>
           <input type="text" class='form-control' name='search_input'  id="searchForm" placeholder="검색어를 입력하세요."/ >
-          <button type='submit' id="searchButton">검색</button>
+          <button  style="font:'LotteMartHappy', sans-serif;"type='submit' id="searchButton">검색</button>
         </form>
 
         <div class="box" id="note1">
