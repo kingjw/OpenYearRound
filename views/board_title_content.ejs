@@ -52,7 +52,19 @@
   border-color: #469fbb;
   border-style: none;
   background-color:#469fbb;
-  margin-left: 39%;
+  margin-left: 2%;
+  /* margin-left: 39%; */
+}
+.closeModalB{
+  font-family: 'LotteMartDream', sans-serif;
+  width: 10%;
+  height: 38px;
+  color: rgb(255, 255, 255);
+  border-color: #469fbb;
+  border-style: none;
+  background-color:#469fbb;
+  border-radius: 5px;
+  margin-left: 33%;
 }
 .deleteButton{
   font-family: 'LotteMartDream', sans-serif;
@@ -107,13 +119,13 @@ display:none;
   font-family: 'LotteMartDream', sans-serif;
 }
 @media all and (orientation:portrait){
-  .deleteButton,.reformButton{
+  .deleteButton,.reformButton,.closeModalB{
     font-family: 'LotteMartDream', sans-serif;
     width: 20%;
   }
-  .reformButton{
+  .closeModalB{
     font-family: 'LotteMartDream', sans-serif;
-    margin-left: 29%;
+    margin-left: 18%;
   }
   #numberCheck {
     font-family: 'LotteMartDream', sans-serif;
@@ -125,7 +137,7 @@ display:none;
   }
   #modal-boardview-content{
     font-family: 'LotteMartDream', sans-serif;
-    height:60%;
+    height:52%;
   }
   .modal{
     font-family: 'LotteMartDream', sans-serif;
@@ -185,6 +197,7 @@ display:none;
 }
 </style>
 <table id="BoardModalContent">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
       <!-- <span class="contentClose">&times;</span> -->
   <tr>
     <td class="titleDate">제목</td>
@@ -198,6 +211,7 @@ display:none;
 </table>
 
 <div id="modalButtonDiv">
+    <button type="button" class="closeModalB btn-default" data-dismiss="modal">Close</button>
   <input type='button' onclick="btn1();" name='write' value='수정'class="reformButton form-control" ></input>
   <input type='button' onclick="btn2();" name='write' value='삭제' class="deleteButton form-control"></input>
 </div>
