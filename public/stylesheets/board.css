@@ -23,21 +23,26 @@ html,body{
   font-family: 'LotteMartDream', sans-serif;
 }
 #main_area{
+  font-family: 'LotteMartDream', sans-serif;
   margin-top: 5%;
 }
 table.board{
+  font-family: 'LotteMartDream', sans-serif;
   border-collapse: collapse;
   text-align: center;
   line-height: 1.5;
   width: 100%;
 }
 #noticeImageM{
+  font-family: 'LotteMartDream', sans-serif;
   display: none;
 }
 tbody{
+  font-family: 'LotteMartDream', sans-serif;
   color: #444444;
 }
 table.board thead td {
+  font-family: 'LotteMartDream', sans-serif;
   vertical-align: middle;
   color: #469fbb;
   text-align: center;
@@ -50,6 +55,7 @@ table.board thead td {
   font-size: 14px;
 }
 tbody td{
+  font-family: 'LotteMartDream', sans-serif;
   border-top-style: solid;
   border-bottom-style:solid;
   border-color: #eaeaea;
@@ -57,30 +63,38 @@ tbody td{
 }
 td a{
   color: #636363;
+  font-family: 'LotteMartDream', sans-serif;
 }
 td a:hover{
+  font-family: 'LotteMartDream', sans-serif;
   color: #636363;
 
 }
 #pageBoard{
+  font-family: 'LotteMartDream', sans-serif;
   padding: 3%;
   border-bottom-style:none;
   color: #636363;
 }
 #first_td{
+  font-family: 'LotteMartDream', sans-serif;
   width: 20%;
 }
 #contentTitle{
+  font-family: 'LotteMartDream', sans-serif;
   text-align: left;
 }
 #second_td{
+  font-family: 'LotteMartDream', sans-serif;
   width:60%;
 }
 #third_td{
+  font-family: 'LotteMartDream', sans-serif;
   width: 20%;
 }
 #writeButton
 {
+  font-family: 'LotteMartDream', sans-serif;
   margin-bottom: 5%;
   border-radius: 2px;
   float: right;
@@ -95,8 +109,10 @@ td a:hover{
 
 #writeButton:hover,#ok_button_on_board:hover,.ok_button_on_board2:hover, .checkbtn:hover,#deleteButton:hover,#reformButton:hover{
   cursor: pointer;
+  font-family: 'LotteMartDream', sans-serif;
 }
 #ok_button_on_board,.ok_button_on_board2{
+  font-family: 'LotteMartDream', sans-serif;
   color: rgb(255, 255, 255);
   background-color:#5a95b1;
   border-color: #5a95b1;
@@ -107,11 +123,13 @@ td a:hover{
   border-radius: 2px;
 }
 .moveTop:hover{
+  font-family: 'LotteMartDream', sans-serif;
   cursor: pointer;
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
 }
 .moveTop {
+  font-family: 'LotteMartDream', sans-serif;
   position: fixed;
   top: 85%;
   right: 5%;
@@ -119,6 +137,7 @@ td a:hover{
 
 }
 .checkbtn{
+  font-family: 'LotteMartDream', sans-serif;
   height: 38px;
   border-radius: 2px;
   text-align: center;
@@ -131,6 +150,7 @@ td a:hover{
   margin-bottom:3%;
 }
 .formModal{
+  font-family: 'LotteMartDream', sans-serif;
   margin-bottom: 1%;
 }
 /* .checkbtn:hover{
@@ -140,6 +160,7 @@ td a:hover{
   border-style: none;
 } */
 #numberCheck,.numberCheck2,.numberCheck3 {
+  font-family: 'LotteMartDream', sans-serif;
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -153,6 +174,7 @@ td a:hover{
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 #textUpload,.textUpload2 {
+  font-family: 'LotteMartDream', sans-serif;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -167,6 +189,7 @@ td a:hover{
 }
 
 .check_Content{
+  font-family: 'LotteMartDream', sans-serif;
   text-align: center;
   width: 40%;
   background-color: #fefefe;
@@ -175,6 +198,7 @@ td a:hover{
   border-radius: 5px;
 }
 #search{
+  font-family: 'LotteMartDream', sans-serif;
   display: inline-flex;
   text-align: center;
   width: 100%;
@@ -183,11 +207,13 @@ td a:hover{
 #searchForm{
   width: 40%;
   margin-left: 23.5%;
+  font-family: 'LotteMartDream', sans-serif;
   margin-right:1%;
   height: 38px;
 }
 #searchButton{
   height: 38px;
+  font-family: 'LotteMartDream', sans-serif;
   border-radius: 2px;
   text-align: center;
   width: 12%;
@@ -197,10 +223,12 @@ td a:hover{
   border-style: none;
 }
 #searchButton:hover{
+  font-family: 'LotteMartDream', sans-serif;
   cursor: pointer;
 }
 .modal-content {
   background-color: #fefefe;
+  font-family: 'LotteMartDream', sans-serif;
   margin: auto;
   padding: 2%;
   border: 1px solid #888;
@@ -213,16 +241,19 @@ td a:hover{
   margin-left: 95%;
   font-size: 28px;
   font-weight: bold;
+  font-family: 'LotteMartDream', sans-serif;
 }
 
 .close:hover,.checkClose2:hover,.checkClose3:hover, .uploadClose2:hover,.contentClose:hover,
 .close:focus, .checkClose2:focus, .checkClose3:focus, .uploadClose2:focus,.contentClose:focus {
   color: #000;
   text-decoration: none;
+  font-family: 'LotteMartDream', sans-serif;
   cursor: pointer;
 }
 #footerC{
   background-color: black;
+  font-family: 'LotteMartDream', sans-serif;
   color: white;
   width: 100%;
   height: 20%;
@@ -230,9 +261,11 @@ td a:hover{
   text-align: center;
 }
 .board_set{
+  font-family: 'LotteMartDream', sans-serif;
   font-size: 12px;
 }
 #titleBoard{
+  font-family: 'LotteMartDream', sans-serif;
   padding-left:6%;
   text-align:left;
 }
@@ -245,55 +278,70 @@ td a:hover{
 .footerBigContent{
   font-size: 12px;
   margin-bottom: 1%;
+  font-family: 'LotteMartDream', sans-serif;
 }
 .footerSmallContent{
   font-size: 8px;
+  font-family: 'LotteMartDream', sans-serif;
   margin-bottom: 0;
   color:#c9c9c9;
 }
 tr{
   height : 50px;
+  font-family: 'LotteMartDream', sans-serif;
 }
 
 .board_set:hover{
+  font-family: 'LotteMartDream', sans-serif;
   background-color: rgba(70,159,187,0.2);
 }
 
 @media all and (orientation:portrait){
   .moveTop{
+    font-family: 'LotteMartDream', sans-serif;
   width: 10%;
   }
   .check_Content{
+    font-family: 'LotteMartDream', sans-serif;
     width: 70%;
   }
   #noticeImageM{
+    font-family: 'LotteMartDream', sans-serif;
     display: block;
   }
   #noticeImage{
+    font-family: 'LotteMartDream', sans-serif;
     display: none;
   }
   footer{
+    font-family: 'LotteMartDream', sans-serif;
     height: 15%;
   }
   #searchButton{
+    font-family: 'LotteMartDream', sans-serif;
     width: 17%;
   }
   #writeButton{
+    font-family: 'LotteMartDream', sans-serif;
     width: 20%;
   }
   #searchForm{
+    font-family: 'LotteMartDream', sans-serif;
     width: 50%;
     height: 38px;
     margin-left: 16%;
   }
   #numberCheck,.numberCheck2,.numberCheck3 {
+    font-family: 'LotteMartDream', sans-serif;
     padding-top: 20%; /* Location of the box */
   }
   #textUpload,.textUpload2 {
+    font-family: 'LotteMartDream', sans-serif;
     padding-top: 5%; /* Location of the box */
   }
 }
 .modal {
+  font-family: 'LotteMartDream', sans-serif;
     display: none; /* Hidden
      by default */
     position: fixed; /* Stay in place */
@@ -309,75 +357,96 @@ tr{
 
 
 #titleBoard{
+  font-family: 'LotteMartDream', sans-serif;
   text-align:left;
   padding-left: 6%;
 }
 @media screen and (min-width:750px) and (max-width:1080px){
   .check_Content{
+    font-family: 'LotteMartDream', sans-serif;
     width: 35%;
   }
   .footerBigContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 16px;
   }
   .footerSmallContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 10px;
   }
   .board_set{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 16px;
   }
   table.board thead td {
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 16px;
   }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   .check_Content{
+    font-family: 'LotteMartDream', sans-serif;
     width: 25%;
   }
   .footerBigContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 20px;
   }
   .footerSmallContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 13px;
   }
   .board_set{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 16px;
   }
   table.board thead td {
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 187x;
   }
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
   .check_Content{
+    font-family: 'LotteMartDream', sans-serif;
     width: 25%;
   }
   .footerBigContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 23px;
   }
   .footerSmallContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 18px;
   }
   .board_set{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 16px;
   }
   table.board thead td {
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 18px;
   }
 }
 
 @media screen and (min-width:1921px) and (max-width:2560px){
   .check_Content{
+    font-family: 'LotteMartDream', sans-serif;
     width: 20%;
   }
   .footerBigContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 30px;
   }
   .footerSmallContent{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 24px;
   }
   .board_set{
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 16px;
   }
   table.board thead td {
+    font-family: 'LotteMartDream', sans-serif;
     font-size: 20px;
   }
 }
@@ -385,17 +454,22 @@ tr{
 
   .check_Content{
     width: 15%;
+    font-family: 'LotteMartDream', sans-serif;
   }
   .footerBigContent{
     font-size: 42px;
+    font-family: 'LotteMartDream', sans-serif;
   }
   .footerSmallContent{
     font-size: 36px;
+    font-family: 'LotteMartDream', sans-serif;
   }
   .board_set{
     font-size: 16px;
+    font-family: 'LotteMartDream', sans-serif;
   }
   table.board thead td {
     font-size: 23px;
+    font-family: 'LotteMartDream', sans-serif;
   }
 }
