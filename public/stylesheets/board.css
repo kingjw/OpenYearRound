@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 800;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 200;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
+html,body{
+  font-family: 'LotteMartDream', sans-serif;
+}
 #main_area{
   margin-top: 5%;
 }
@@ -216,6 +240,7 @@ td a:hover{
   display: table-cell;
   vertical-align: middle;
   padding: 2%;
+  font-family: 'Godo', sans-serif;
 }
 .footerBigContent{
   font-size: 12px;
@@ -224,6 +249,7 @@ td a:hover{
 .footerSmallContent{
   font-size: 8px;
   margin-bottom: 0;
+  color:#c9c9c9;
 }
 tr{
   height : 50px;
