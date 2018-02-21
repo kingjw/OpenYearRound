@@ -55,16 +55,20 @@
                         <tr class='board_set'>
                           <td><%= i+1 %> </td>
                           <td id="titleBoard">
-                            <a href = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" data-toggle = "modal" style="text-decoration:none"><%=item.title%></a>
+                            <a target = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" data-toggle = "modal" style="text-decoration:none"><%=item.title%></a>
                           </td>
                           <td><%= item.date%></td>
 
-                          <div class = "modal" id= "board_content_view_modal<%=item.id%>" style="display:none;" >
+                          <div class = "modal fade" id= "board_content_view_modal<%=item.id%>"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                           <div class="vertical-alignment-helper">
+                              <div class="modal-dialog vertical-align-center">
                             <!-- <span class="contentClose">&times;</span> -->
                               <div class = "modal-content" id = "modal-boardview-content">
 
                               </div>
                           </div>
+                        </div>
+                      </div>
 
                         </tr>
                         <script>
