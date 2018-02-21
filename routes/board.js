@@ -26,9 +26,6 @@ router.get('/:page', function(req, res, next) {
   var page = req.params.page;
   var sql='select * from postboard;';
 
-  // var search_input = req.query.search_input;
-  // var sql2 = 'select * from `postboard` where title like ?;';
-  // var like = '%' + req.query.search_input + '%';
   conn.query(sql,function(error,result,fields){
     if(error){//데이터베이스에서 불러올 때 오류 메세지 띄워줌
       console.log(error);
