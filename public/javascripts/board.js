@@ -18,7 +18,7 @@ window.onclick = function(event) {
 $("body").keydown(function(e){
     if(e.which==116){
         e.preventDefault();
-        window.location.assign("http://52.36.145.11:3000/board/1/");
+        window.location.assign("/board/1/");
     }
 });
 
