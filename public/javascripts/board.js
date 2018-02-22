@@ -21,7 +21,10 @@ $("body").keydown(function(e){
         window.location.assign("/board/1/");
     }
 });
-
+$('#searchResetButton').click(function(){
+  e.preventDefault();
+  window.location.assign("/board/1/");
+})
 
 
 writebtn.onclick=function(){
