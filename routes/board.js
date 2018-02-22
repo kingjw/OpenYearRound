@@ -95,7 +95,7 @@ router.get('/:page/search', function(req, res){
           leng : Object.keys(result).length-1,
           page_num : 10,
           search: true,
-          keyword: req.query.search_input
+          keyword: req.query.search_input  // 키워드 잘 되나요??
         }
       );
     }//else
