@@ -221,7 +221,7 @@ a:hover{
 }
 #searchForm{
   width: 40%;
-  margin-left: 23.5%;
+  margin-left: 17%;
   font-family: 'LotteMartDream', sans-serif;
   margin-right:1%;
   height: 38px;
@@ -237,7 +237,19 @@ a:hover{
   color: white;
   border-style: none;
 }
-#searchButton:hover{
+#searchResetButton{
+  height: 38px;
+  font-family: 'LotteMartDream', sans-serif;
+  border-radius: 2px;
+  text-align: center;
+  width: 12%;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  color: white;
+  border-style: none;
+  margin-left: 1%;
+}
+#searchButton:hover,#searchResetButton:hover{
   font-family: 'LotteMartDream', sans-serif;
   cursor: pointer;
 }
@@ -334,7 +346,10 @@ tr{
   }
   #searchButton{
     font-family: 'LotteMartDream', sans-serif;
-    width: 17%;
+    width: 19%;
+  }
+  #searchResetButton{
+    width: 19%;
   }
   #writeButton{
     font-family: 'LotteMartDream', sans-serif;
@@ -344,7 +359,7 @@ tr{
     font-family: 'LotteMartDream', sans-serif;
     width: 50%;
     height: 38px;
-    margin-left: 16%;
+    margin-left: 4.7%;
   }
   #numberCheck,.numberCheck2,.numberCheck3 {
     font-family: 'LotteMartDream', sans-serif;
