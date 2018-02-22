@@ -55,7 +55,7 @@ nav{
   margin-top: 1%;
   text-align: center;
   width: 34%;
-  margin-left: 32%;
+  margin-left: 33%;
   margin-bottom: 2%;
 }
 
@@ -397,14 +397,18 @@ table{
     font-size: 18px;
   }
   #aboutOYR{
-    margin-left: 7%;
+    margin-left: 0;
+    text-align: center;
   }
   #aboutOYR_content{
-    margin-left: 7%;
+    margin-left: 0;
+    text-align: center;
   }
+
   .mainAct{
     font-size: 12px;
     text-align: center;
+    margin-left: 0;
   }
   #writebtn_Board{
     display: none;
@@ -421,7 +425,7 @@ table{
 }
   #introButton{
     width: 50%;
-
+    padding-left: 5%;
   }
   #supportButton{
     width: 50%;
