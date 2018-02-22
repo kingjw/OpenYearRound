@@ -21,9 +21,8 @@ $(window).scroll(function() {
     moveTop.style.display='block';
   }
 });
-moveTop.onclick=function(){
-  $('html,body').animate({'scrollTop':0}, 500);
-}
+
+
 actButton.onclick=function(){
   $('html').css('overflow','visible');
   act.style.display="block";
