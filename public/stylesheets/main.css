@@ -54,11 +54,14 @@ nav{
 #mainPagePhoto{
   margin-top: 1%;
   text-align: center;
-  width: 35%;
+  width: 34%;
   margin-left: 32%;
+  margin-bottom: 2%;
 }
+
 #subActContent{
   margin-top: 1%;
+  margin-bottom: 0;
   text-align: center;
 }
 .introduce{
@@ -119,8 +122,15 @@ nav{
 
 #actButton{
   width: 31%;
-  padding: 2%;
+  /* padding: 2%; */
+  display: table;
   background-color:#469fbb;
+}
+.act-Content{
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
 #introButton{
   width: 38%;
@@ -152,7 +162,12 @@ nav{
 
 .applyWirteButton:hover {
   transform: scale(1.05);
-  transition: all .4s;
+  transition: all .5s;
+  cursor: pointer;
+}
+.applyWirteButton:not(:hover) {
+  transform: scale(0.95);
+  transition: all .5s;
   cursor: pointer;
 }
 #supportButton:hover{
@@ -235,59 +250,6 @@ nav{
   margin-top: 5%;
   margin-left: 5%;
 }
-#webServices{
-  margin-top: 1%;
-}
-#allLogo{
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-#allLogo ul{
-  width:300%;
-  transition:1s;
-  margin: 0; /* To remove default bottom margin */
-    padding: 0; /* To remove default left padding */
-}
-#allLogo div{float:left;width:33.33%;}
-#allLogo input{display:none;}
-#allLogo label{display:inline-block;vertical-align:middle;transition:0.3s;border-radius:50%;cursor:pointer;}
-#allLogo .pos{
-  text-align:center;
-  position:absolute;
-  top: 80%;
-  left:0;
-  width:100%;
-  text-align:center;
-}
-#pos1:checked~ul{margin-left:0%;}
-#pos2:checked~ul{margin-left:-100%;}
-#pos3:checked~ul{margin-left:-200%;}
-#pos1:checked~.pos>label:nth-child(1){background:#469fbb;}
-#pos2:checked~.pos>label:nth-child(2){background:#469fbb;}
-#pos3:checked~.pos>label:nth-child(3){background:#469fbb;}
-#allLogo label{
-  border: none;
-  background-color: #aaaaaa;
-  width: 15px;
-  height: 15px;
-}
-.webLogo{
-  text-align: center;
-  padding: 3%;
-  margin-bottom: 2%;
-}
-.webLogo2{
-  margin-bottom: 2%;
-}
-.webLogo2 img{
-  vertical-align: middle;
-  padding: 3%;
-}
-.webLogo img{
-  vertical-align: middle;
-  padding: 2%;
-}
 footer{
   background-color: black;
   color: white;
@@ -314,6 +276,15 @@ footer{
   font-size: 15px;
   width: 100%;
   margin-left: 1%;
+}
+.WebMente{
+  margin-left: 1%;
+  font-size: 12px;
+  color: gray;
+
+}
+#webLogo1{
+  margin-top: -1%;
 }
 #bar{
 height: 100%;
@@ -390,6 +361,10 @@ table{
   .titleContent{
     margin-left: 2%;
   }
+  .WebMente{
+    margin-left: 2%;
+
+  }
   .tableImg{
     display: none;
   }
@@ -429,7 +404,7 @@ table{
   }
   .mainAct{
     font-size: 12px;
-    margin-left: 5%;
+    text-align: center;
   }
   #writebtn_Board{
     display: none;
@@ -487,6 +462,9 @@ table{
   .titleContent{
     font-size: 20px;
   }
+  .WebMente{
+    font-size: 15px;
+  }
   .buttonMobile{
     font-size: 28px;
   }
@@ -543,6 +521,9 @@ table{
   }
   .titleContent{
     font-size: 23px;
+  }
+  .WebMente{
+    font-size: 18px;
   }
   .buttonMobile{
     font-size: 32px;
@@ -603,6 +584,9 @@ table{
   .titleContent{
     font-size: 27px;
   }
+  .WebMente{
+    font-size: 20px;
+  }
   .buttonMobile{
     font-size: 50px;
   }
@@ -661,6 +645,9 @@ table{
   }
   .titleContent{
     font-size: 35px;
+  }
+  .nte{
+    font-size: 29px;
   }
   .applyWirteButton{
     font-size: 30px;
@@ -722,6 +709,9 @@ table{
   }
   .titleContent{
     font-size: 50px;
+  }
+  .WebMente{
+    font-size: 38px;
   }
   .menu{
     font-size: 26px;
