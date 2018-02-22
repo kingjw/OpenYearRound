@@ -221,9 +221,9 @@ a:hover{
 }
 #searchForm{
   width: 40%;
-  margin-left: 17%;
+  margin-left: 19%;
   font-family: 'LotteMartDream', sans-serif;
-  margin-right:1%;
+  margin-right:0.5%;
   height: 38px;
 }
 #searchButton{
@@ -231,7 +231,7 @@ a:hover{
   font-family: 'LotteMartDream', sans-serif;
   border-radius: 2px;
   text-align: center;
-  width: 12%;
+  width: 10%;
   background-color: #469fbb;
   border-color: #469fbb;
   color: white;
@@ -242,12 +242,12 @@ a:hover{
   font-family: 'LotteMartDream', sans-serif;
   border-radius: 2px;
   text-align: center;
-  width: 12%;
+  width: 10%;
   background-color: #469fbb;
   border-color: #469fbb;
   color: white;
   border-style: none;
-  margin-left: 1%;
+  margin-left: 0.5%;
 }
 #searchButton:hover,#searchResetButton:hover{
   font-family: 'LotteMartDream', sans-serif;
