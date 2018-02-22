@@ -27,7 +27,7 @@
       <div class="container"><!--게시판 div-->
 
         <form id='search' method='get' action='/board/1/search'>
-          <input type="text" class='form-control' name='search_input'  id="searchForm" placeholder="검색어를 입력하세요."/ >
+          <input type="text" class='form-control' name='search_input' value='<%= keyword %>'  id="searchForm" placeholder="검색어를 입력하세요."/ >
           <button  style="font:'LotteMartHappy', sans-serif;"type='submit' id="searchButton">검색</button>
           <button  style="font:'LotteMartHappy', sans-serif;"type='submit' id="searchResetButton">초기화</button>
         </form>
