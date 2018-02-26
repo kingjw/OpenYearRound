@@ -112,9 +112,6 @@
   width:100%;
   text-align:center;
 }
-#pos1:checked~ul{margin-left:0%;}
-#pos2:checked~ul{margin-left:-100%;}
-#pos3:checked~ul{margin-left:-200%;}
 #pos1:checked~.pos>label:nth-child(1){background:#469fbb;}
 #pos2:checked~.pos>label:nth-child(2){background:#469fbb;}
 #pos3:checked~.pos>label:nth-child(3){background:#469fbb;}

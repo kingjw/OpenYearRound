@@ -5,6 +5,7 @@
  * Copyright 2014 RecoPick
  * Released under the MIT license
  */
+ var pageNumber=1;
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD
@@ -46,7 +47,7 @@
 
     var $el = $(this),
         $target = options.$target || $el,
-        p = 1, offset = 0, total = options.total,
+        p = 1,offset = 0, total = options.total,
         curr_px = 0, t, disabled_touch = false;
 
     $el.addClass('recopick-swipe-stage');
@@ -77,22 +78,25 @@
     var swipePrev = function () { p--; animate(); };
     var swipeNext = function () { p++; animate(); };
     var animate = function () {
-      if (curr_px > 30) p--;
-      else if (curr_px < -30) p++;
+      if (curr_px > 30) {p--;pageNumber--;}
+      else if (curr_px < -30){p++;pageNumber++;}
 
       if (p === 0) {
         if (options.infinite) {
           p = total;
+          pageNumber =total;
           offset--;
           $target.each(function (idx) {
             $(this).css('left', total * (offset + idx) * 100 + '%');
           });
         } else {
           p = 1;
+          pageNumber=1;
         }
       } else if (p === total + 1) {
         if (options.infinite) {
           p = 1;
+          pageNumber=1;
           offset++;
           // fixed coordinates after transition
           setTimeout(function () {
@@ -102,6 +106,7 @@
           }, options.transition_ms);
         } else {
           p = total;
+          pageNumber=total;
         }
       }
 
@@ -204,7 +209,7 @@
     }).on('swipe_total', function (e, new_total) {
       if (total === new_total) return;
       total = new_total;
-      if (p > total) p = total;
+      if (p > total){ p = total;pageNumber=total;}
       getWidth(true);
       offset = 0;
       animate();
@@ -214,6 +219,7 @@
     }).on('swipe_page', function (e, new_page) {
       if (new_page > total) return;
       p = new_page;
+      pageNumber=new_page;
       animate();
     });
 

@@ -21,8 +21,16 @@ $(window).scroll(function() {
     moveTop.style.display='block';
   }
 });
-
-
+$('input:radio[name="gender"]').change(
+    function(){
+        if (this.checked && this.value == '남') {
+        // $('.army').css('display','block');
+        $(".army").fadeIn(400);
+        }
+        else{
+        $(".army").fadeOut(400);
+        }
+    });
 actButton.onclick=function(){
   $('html').css('overflow','visible');
   act.style.display="block";
@@ -68,15 +76,7 @@ applyMenu.onclick=function(){
   apply.style.display="block";
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
-// $("input").focus(function(){
-//   $(this).animate({borderColor: '#3899EC'},'slow');
-//   this._placeholder = this.placeholder;
-//   $(this).removeAttr('placeholder');
-// });
-// $("input").focusout(function(){
-//   $(this).animate({borderColor: '#EEEEEE'},'slow');
-//   this.placeholder = this._placeholder;
-// });
+
 $('#goboard').click(function(){
   $(window).attr('location','/board/1');
 });

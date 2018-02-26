@@ -29,7 +29,6 @@
         <form id='search' method='get' action='/board/1/search'><!-- 키워드 추가 -->
           <input type="text" class='form-control' name='search_input' value='<%= keyword %>'  id="searchForm" placeholder="검색어를 입력하세요."/ >
           <button  style="font:'LotteMartHappy', sans-serif;"type='submit' id="searchButton">검색</button>
-          <button  style="font:'LotteMartHappy', sans-serif;"type='submit' id="searchResetButton">초기화</button>
         </form>
 
         <div class="box" id="note1">
@@ -56,22 +55,20 @@
                         <tr class='board_set'>
                           <td><%= i+1 %> </td>
                           <td id="titleBoard">
-                            <a target = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" data-toggle = "modal" style="text-decoration:none"><%=item.title%></a>
+                            <a target = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" style="text-decoration:none"><%=item.title%></a>
                           </td>
                           <td><%= item.date%></td>
+                        </tr>
+                        <div class = "modal fade" id= "board_content_view_modal<%=item.id%>"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                         <div class="vertical-alignment-helper">
+                            <div class="modal-dialog vertical-align-center">
+                          <!-- <span class="contentClose">&times;</span> -->
+                            <div class = "modal-content" id = "modal-boardview-content">
 
-                          <div class = "modal fade" id= "board_content_view_modal<%=item.id%>"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                           <div class="vertical-alignment-helper">
-                              <div class="modal-dialog vertical-align-center">
-                            <!-- <span class="contentClose">&times;</span> -->
-                              <div class = "modal-content" id = "modal-boardview-content">
-
-                              </div>
-                          </div>
+                            </div>
                         </div>
                       </div>
-
-                        </tr>
+                    </div>
                         <script>
                         $('#board_content_view_title<%=item.id%>').click('show.bs.modal',function(event){
                             $('#board_content_view_modal<%=item.id%>').modal({
@@ -84,7 +81,6 @@
                         $('#board_content_view_modal<%=item.id%>').on('hidden.bs.modal', function () {
                             $(this).removeData('bs.modal');
                         });
-
                           </script>
                         <%
                       }
@@ -121,23 +117,27 @@
                 </div>
 
                 <div id="textUpload">
+                  <div class="verticalHelper">
+                  <div class="vertical">
                   <div class="modal-content">
                     <span id="uploadClose"class="Close">&times;</span>
                     <div class="form-group">
                       <label class="control-label col-sm-3">제목</label>
                       <div class="col-sm-12">
-                        <textarea class='form-control' rows='1' id='title_name' placeholder="제목을 적어주세요."></textarea>
+                        <textarea class='form-control' rows='1' id='title_name' placeholder=""></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="control-label col-sm-5">내용</label>
                       <div class="col-sm-12">
-                        <textarea class='form-control' rows='7' id='contents' placeholder="200자 내외로 작성해주세요."></textarea>
+                        <textarea class='form-control' rows='12' id='contents' placeholder=""></textarea>
                       </div>
                     </div>
                     <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
                   </div>
                 </div>
+              </div>
+            </div>
               </table>
               <input type='button' name='write' value='글쓰기' id='writeButton'class="form-control"></input>
 
