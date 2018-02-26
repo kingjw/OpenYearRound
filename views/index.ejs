@@ -1,7 +1,8 @@
 <html>
 <head>
   <mete charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content=" initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css"></link>
     <link rel="stylesheet" href="/stylesheets/webService.css"></link>
@@ -13,12 +14,16 @@
     <!-- 익스플로우 8이하에는 html5와 css3를 지원하지 않기 때문에 우리가 사용하는 부트스트랩이 적용이 안되기 때문에 익스플로우 9
     미만일시 부트스트랩을 사용할수 있게 해주는 js파일들을 연결 -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <link rel="stylesheet" href="/stylesheets/swipe.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/swipe.css"> -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="/javascripts/swipe.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type='text/javascript' src='/javascripts/apply_javascript.js'></script>
-
+    <script type="text/javascript">
+    window.addEventListener('load', function(){
+    setTimeout(scrollTo, 0, 0, 1);
+    }, false);
+    </script>
     <title><%= title %></title>
   </head>
   <body ondragstart = "return false">
