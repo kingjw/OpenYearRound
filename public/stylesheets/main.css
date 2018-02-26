@@ -277,9 +277,9 @@ footer{
   width: 100%;
   margin-left: 1%;
 }
-.WebMente{
+.webMente{
   margin-left: 1%;
-  font-size: 12px;
+  font-size: 10px;
   color: gray;
 
 }
@@ -466,8 +466,8 @@ table{
   .titleContent{
     font-size: 20px;
   }
-  .WebMente{
-    font-size: 15px;
+  .webMente{
+    font-size: 12px;
   }
   .buttonMobile{
     font-size: 28px;
@@ -526,8 +526,8 @@ table{
   .titleContent{
     font-size: 23px;
   }
-  .WebMente{
-    font-size: 18px;
+  .webMente{
+    font-size: 15px;
   }
   .buttonMobile{
     font-size: 32px;
@@ -588,8 +588,8 @@ table{
   .titleContent{
     font-size: 27px;
   }
-  .WebMente{
-    font-size: 20px;
+  .webMente{
+    font-size: 17px;
   }
   .buttonMobile{
     font-size: 50px;
@@ -714,8 +714,8 @@ table{
   .titleContent{
     font-size: 50px;
   }
-  .WebMente{
-    font-size: 38px;
+  .webMente{
+    font-size: 33px;
   }
   .menu{
     font-size: 26px;
