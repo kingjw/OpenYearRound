@@ -1,24 +1,24 @@
 
 $(".logoClick").click(function(){
   var index = $(".logoClick").index(this);
-    $(".webServiceModal:eq(" + index + ")").fadeIn(600);
+  $(".webServiceModal:eq(" + index + ")").fadeIn(600);
 });
 
 $(".webServiceClose").click(function(){
   var index = $(".webServiceClose").index(this);
-    $(".webServiceModal:eq(" + index + ")").fadeOut(600);
+  $(".webServiceModal:eq(" + index + ")").fadeOut(600);
 });
 
 $(".left").click(function(){
   var index = $(".left").index(this);
-if (index==0) {
-  var before=6;
-}
-else{
-  var before= index-1;
-}
-    $(".webServiceModal:eq(" + index + ")").css('display','none');
-    $(".webServiceModal:eq(" + before + ")").css('display','block')
+  if (index==0) {
+    var before=6;
+  }
+  else{
+    var before= index-1;
+  }
+  $(".webServiceModal:eq(" + index + ")").css('display','none');
+  $(".webServiceModal:eq(" + before + ")").css('display','block')
 });
 $(".right").click(function(){
   var index = $(".right").index(this);
@@ -26,10 +26,10 @@ $(".right").click(function(){
     var next=0
   }
   else{
-  var next = index+1;
-}
-    $(".webServiceModal:eq(" + index + ")").css('display','none');
-    $(".webServiceModal:eq(" + next + ")").css('display','block')
+    var next = index+1;
+  }
+  $(".webServiceModal:eq(" + index + ")").css('display','none');
+  $(".webServiceModal:eq(" + next + ")").css('display','block')
 });
 
 moveTop.onclick=function(){
@@ -39,9 +39,27 @@ moveTop.onclick=function(){
 $('#allLogo').recopickSwipe({
   $target: $('ul'),
   total: 3, // total 3 pages
-  $curr: $('#pageN')
+  $curr: $('#pageN'),
 });
-var pageN=document.getElementById('pageN').innerText;
-if (pageN=="2"){
-  alert("323");
-}
+$('input:radio[name="pos"]').change(function(){
+    if (this.checked && this.value == '1') {
+      $('#allLogo').trigger('swipe_page', 1);
+    }
+    else if(this.checked && this.value == '2'){
+      $('#allLogo').trigger('swipe_page', 2);
+    }
+    else{
+      $('#allLogo').trigger('swipe_page', 3);
+    }
+  });
+  setInterval(function() {
+    if(pageNumber==1){
+    $("#pos1").prop("checked", true);
+    }
+    if(pageNumber==2){
+    $("#pos2").prop("checked", true);
+    }
+    if(pageNumber==3){
+    $("#pos3").prop("checked", true);
+    }
+  }, 10);

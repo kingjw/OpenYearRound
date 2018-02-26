@@ -21,8 +21,16 @@ $(window).scroll(function() {
     moveTop.style.display='block';
   }
 });
-
-
+$('input:radio[name="gender"]').change(
+    function(){
+        if (this.checked && this.value == '남') {
+        // $('.army').css('display','block');
+        $(".army").fadeIn(400);
+        }
+        else{
+        $(".army").fadeOut(400);
+        }
+    });
 actButton.onclick=function(){
   $('html').css('overflow','visible');
   act.style.display="block";

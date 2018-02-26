@@ -191,8 +191,7 @@ a:hover{
   font-family: 'LotteMartDream', sans-serif;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 2%; /* Location of the box */
+  z-index: 1; /* Sit on top */ /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -201,7 +200,15 @@ a:hover{
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 }
-
+.verticalHelper{
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.vertical{
+  display: table-cell;
+  vertical-align: middle;
+}
 .check_Content{
   font-family: 'LotteMartDream', sans-serif;
   text-align: center;
@@ -221,7 +228,7 @@ a:hover{
 }
 #searchForm{
   width: 40%;
-  margin-left: 19%;
+  margin-left: 24%;
   font-family: 'LotteMartDream', sans-serif;
   margin-right:0.5%;
   height: 38px;
@@ -237,19 +244,8 @@ a:hover{
   color: white;
   border-style: none;
 }
-#searchResetButton{
-  height: 38px;
-  font-family: 'LotteMartDream', sans-serif;
-  border-radius: 2px;
-  text-align: center;
-  width: 10%;
-  background-color: #469fbb;
-  border-color: #469fbb;
-  color: white;
-  border-style: none;
-  margin-left: 0.5%;
-}
-#searchButton:hover,#searchResetButton:hover{
+
+#searchButton:hover{
   font-family: 'LotteMartDream', sans-serif;
   cursor: pointer;
 }
@@ -346,10 +342,7 @@ tr{
   }
   #searchButton{
     font-family: 'LotteMartDream', sans-serif;
-    width: 19%;
-  }
-  #searchResetButton{
-    width: 19%;
+    width: 17%;
   }
   #writeButton{
     font-family: 'LotteMartDream', sans-serif;
@@ -359,7 +352,7 @@ tr{
     font-family: 'LotteMartDream', sans-serif;
     width: 50%;
     height: 38px;
-    margin-left: 4.7%;
+    margin-left: 14.5%;
   }
   #numberCheck,.numberCheck2,.numberCheck3 {
     font-family: 'LotteMartDream', sans-serif;
@@ -367,7 +360,7 @@ tr{
   }
   #textUpload,.textUpload2 {
     font-family: 'LotteMartDream', sans-serif;
-    padding-top: 5%; /* Location of the box */
+  /* Location of the box */
   }
   .close,.checkClose2,.checkClose3,.uploadClose2,.contentClose {
     margin-left: 90%;
