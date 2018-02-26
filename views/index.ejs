@@ -111,12 +111,12 @@
       </div>
       <div class="actTitle" id="webServices">
         <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
-        <span class="titleContent">Web Services </span><span class="WebMente">로고를 클릭하면 상세내용이 보입니다.</span>
+        <span class="titleContent">Web Services </span><span class="webMente">로고를 클릭하면 상세내용이 보입니다.</span>
       </div>
       <div id="allLogo">
-        <input type="radio" name="pos" id="pos1"checked>
-        <input type="radio" name="pos" id="pos2">
-        <input type="radio" name="pos" id="pos3">
+        <input type="radio" name="pos" value="1"id="pos1"checked>
+        <input type="radio" name="pos" value="2"id="pos2">
+        <input type="radio" name="pos" value="3"id="pos3">
         <ul>
           <div class="webLogo"id="webLogo1">
             <img class="logoClick"src="/images/dawson.jpg"width="30%"height="auto"></img>
@@ -409,15 +409,22 @@
                 </div>
               </div>
             </div> <!-- /.form-group -->
-            <div class="form-group">
-              <label class="control-label col-sm-9">군필여부 (해당사항이 없으신 분들은 체크 안해주시면 됩니다.)</label>
-              <div class="col-sm-9">
-                <div class="checkbox">
+            <div class="army form-group" style="display:none">
+              <label class="control-label col-sm-9">군필여부</label>
+              <div class="col-sm-6">
+              <div class="row">
+                <div class="checkbox col-sm-3">
                   <label>
                     <input type="checkbox" id="milcheck" value="Low calorie">군필
                   </label>
                 </div>
+                <div class="checkbox col-sm-3">
+                  <label>
+                    <input type="checkbox" id="milcheck" value="Low calorie">미필
+                  </label>
+                </div>
               </div>
+            </div>
             </div> <!-- /.form-group -->
             <div class="form-group">
               <label class="control-label col-sm-3">지원 동기</label>
