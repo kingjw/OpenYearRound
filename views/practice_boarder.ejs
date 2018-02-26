@@ -55,33 +55,11 @@
                         <tr class='board_set'>
                           <td><%= i+1 %> </td>
                           <td id="titleBoard">
-                            <a target = "#board_content_view_modal<%=item.id%>" id = "board_content_view_title<%=item.id%>" style="text-decoration:none"><%=item.title%></a>
+                            <a href="/board/detail/<%= item.id %>" id = "board_content_view_title<%=item.id%>" style="text-decoration:none"><%=item.title%></a>
                           </td>
                           <td><%= item.date%></td>
                         </tr>
-                        <div class = "modal fade" id= "board_content_view_modal<%=item.id%>"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                         <div class="vertical-alignment-helper">
-                            <div class="modal-dialog vertical-align-center">
-                          <!-- <span class="contentClose">&times;</span> -->
-                            <div class = "modal-content" id = "modal-boardview-content">
 
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                        <script>
-                        $('#board_content_view_title<%=item.id%>').click('show.bs.modal',function(event){
-                            $('#board_content_view_modal<%=item.id%>').modal({
-                              remote : '/board/title_content/<%=item.id%>'
-                            });
-                          });
-                        $('#board_content_view_modal<%=item.id%>').on('loaded.bs.modal',function(event){
-                          $('#board_content_view_modal<%=item.id%>').modal('show');
-                        });
-                        $('#board_content_view_modal<%=item.id%>').on('hidden.bs.modal', function () {
-                            $(this).removeData('bs.modal');
-                        });
-                          </script>
                         <%
                       }
                     }

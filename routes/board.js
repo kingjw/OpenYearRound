@@ -102,6 +102,24 @@ router.get('/:page/search', function(req, res){
   });
 });
 
+router.get('/detail/:id', function(req, res, next){
+  var detail = req.params.id;
+  var sql = 'select * from postboard where id=?;';
+  conn.query(sql, [detail], function(error, result){
+    if(error){
+      console.log(error);
+      console.log('board detail error');
+    }
+    else{
+      console.log('render board detail');
+      res.render('board_detail', {
+        result: result,
+      });
+    }
+
+  });
+});
+
 router.post('/reBoard/:id',function(req,res,next){
   var title = req.body.title;
   var contents = req.body.contents;
