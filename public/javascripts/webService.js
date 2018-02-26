@@ -52,6 +52,7 @@ $('input:radio[name="pos"]').change(function(){
       $('#allLogo').trigger('swipe_page', 3);
     }
   });
+
   setInterval(function() {
     if(pageNumber==1){
     $("#pos1").prop("checked", true);
@@ -62,4 +63,4 @@ $('input:radio[name="pos"]').change(function(){
     if(pageNumber==3){
     $("#pos3").prop("checked", true);
     }
-  }, 10);
+  }, 400);
