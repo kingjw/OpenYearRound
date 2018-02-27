@@ -32,7 +32,7 @@ router.get('/:page', function(req, res, next) {
       console.log('get postboard information failed');
     }
     else{//화면 렌더링 할 때 보내는 값
-        res.render('practice_boarder',{
+        res.render('boarder',{
               title:'openyearround', // 사이트 제목
               result : result,
               page : page,
@@ -87,7 +87,7 @@ router.get('/:page/search', function(req, res){
       console.log('work search func');
       console.log(result);
       res.render(
-        'practice_boarder',
+        'boarder',
         {
           title:'openyearround',
           result: result,
