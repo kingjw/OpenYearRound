@@ -18,13 +18,16 @@
 
     <title><%= title %></title>
   </head>
-  <body ondragstart = "return false" font-family: 'LotteMartHappy', sans-serif;>
+  <body ondragstart = "return false" >
     <div class="notice_Container container-fluit">
       <div id="noticeTop">
         <img id="noticeImage"src='/images/mainNoticeImage.png' width="100%" height="auto"></img>
         <img id="noticeImageM"src='/images/mainNoticeImageM.png' width="100%" height="auto"></img>
       </div>
       <div class="container"><!--게시판 div-->
+
+<div class="a">
+</div>
 
         <form id='search' method='get' action='/board/1/search'><!-- 키워드 추가 -->
           <input type="text" class='form-control' name='search_input' value='<%= keyword %>'  id="searchForm" placeholder="검색어를 입력하세요."/ >
@@ -157,5 +160,7 @@
   </div>
 </div>
   <script src="/javascripts/board.js"></script>
+  <script>
+  </script>
 </body>
 </html>
