@@ -101,7 +101,7 @@
   margin: 0; /* To remove default bottom margin */
   padding: 0; /* To remove default left padding */
 }
-#allLogo div{float:left;width:33.33%;}
+#allLogo div{float:left;width:33.333%;}
 #allLogo input{display:none;}
 #allLogo label{display:inline-block;vertical-align:middle;transition:0.3s;border-radius:50%;cursor:pointer;}
 #allLogo .pos{
