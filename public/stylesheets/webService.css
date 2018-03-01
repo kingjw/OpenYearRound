@@ -1,10 +1,14 @@
-.webServiceModal_Content {
+.webServiceModal_Content{
   background-color: #fefefe;
   margin: auto;
   padding: 1%;
   border: 1px solid #888;
   width: 60%;
   border-radius: 10px;
+}
+.memberModal_Content{
+  width: 70%;
+  margin-left: 15%;
 }
 .verticalHelp {
   display:table;
@@ -15,7 +19,12 @@
   display: table-cell;
   vertical-align: middle;
 }
-.webServiceModal {
+.memberVertiArrange{
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom:3%;
+}
+.webServiceModal,.memberModal {
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -33,9 +42,15 @@
   font-size: 20px;
   font-weight: bold;
 }
+.memberClose{
+  color: #aaaaaa;
+  margin-left: 95%;
+  font-size: 30px;
+  font-weight: bold;
+}
 
-.webServiceClose:hover,
-.webServiceClose:focus {
+.webServiceClose:hover,.memberClose:hover,
+.webServiceClose:focus ,.memberClose:focus{
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -152,6 +167,13 @@
   .right{
     left: 93%;
     top:46%;
+  }
+  .memberModal_Content{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .memberVertiArrange{
+    padding-bottom:10%;
   }
 }
 
