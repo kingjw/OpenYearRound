@@ -27,9 +27,35 @@ html,body{
   width: 100%;
   height: 100%;
   font-weight: 900;
+}
+.introduceContent{
+  width: 70%;
+  padding-left: 7%;
+  font-size: 10px;
+  line-height: 150%;
+}
+.logoImg{
+  width: 30%;
+  text-align: center;
+}
+#introduce{
+  width: 100%;
 
 }
-
+.introTable{
+  width: 100%;
+}
+#goalDiv,#cirDiv{
+  text-align: center;
+  margin-bottom: 10%;
+}
+#cirImage{
+  margin-top: 5%;
+  margin-left: 7%;
+}
+#goalImage{
+  margin-top: 5%;
+}
 img {
    max-width: 100%;
 }
@@ -162,13 +188,23 @@ nav{
   display:table-cell;
 }
 
-.applyWirteButton:hover {
+.applyWirteButton:hover,.logoClick:hover {
   transform: scale(1.05);
   transition: all .5s;
   cursor: pointer;
 }
-.applyWirteButton:not(:hover) {
+.tableImg:hover{
+  transform: scale(1.02);
+  transition: all .5s;
+  cursor: pointer;
+}
+.applyWirteButton:not(:hover),.logoClick:not(:hover) {
   transform: scale(0.95);
+  transition: all .5s;
+  cursor: pointer;
+}
+.tableImg:not(:hover){
+  transform: scale(0.98);
   transition: all .5s;
   cursor: pointer;
 }
@@ -235,11 +271,7 @@ nav{
   z-index: 1;
   display: none;
 }
-.logoClick:hover{
-  cursor: pointer;
-  -webkit-transform: scale(1.08);
-  transform: scale(1.08);
-}
+
 .supportForm{
   outline: none;
 }
@@ -499,6 +531,9 @@ table{
       font-size: 12px;
       line-height: 20px;
   }
+  .introduceContent{
+    font-size: 20px;
+  }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   #aboutOYR{
@@ -560,6 +595,9 @@ table{
   .awardContent{
       font-size: 16px;
         line-height: 20px;
+  }
+  .introduceContent{
+    font-size: 25px;
   }
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
@@ -625,6 +663,9 @@ table{
     width: 17px;
     height: 17px;
   }
+  .introduceContent{
+    font-size: 33px;
+  }
 }
 
 @media screen and (min-width:1921px) and (max-width:2560px){
@@ -687,6 +728,9 @@ table{
     width: 22px;
     height: 22px;
   }
+  .introduceContent{
+    font-size: 42px;
+  }
 }
 @media screen and (min-width:2561px){
   #aboutOYR{
@@ -748,5 +792,8 @@ table{
   #allLogo label{
     width: 24px;
     height: 24px;
+  }
+  .introduceContent{
+    font-size: 46px;
   }
 }

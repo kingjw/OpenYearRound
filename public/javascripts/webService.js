@@ -3,11 +3,24 @@ $(".logoClick").click(function(){
   var index = $(".logoClick").index(this);
   $(".webServiceModal:eq(" + index + ")").fadeIn(600);
 });
+$(".tableImg").click(function(){
+  var index = $(".tableImg").index(this);
+  $(".memberModal:eq(" + index + ")").fadeIn(600);
+});
+$(".tableImgM").click(function(){
+  var index = $(".tableImgM").index(this);
+  $(".memberModal:eq(" + index + ")").fadeIn(600);
+});
 
 $(".webServiceClose").click(function(){
   var index = $(".webServiceClose").index(this);
   $(".webServiceModal:eq(" + index + ")").fadeOut(600);
 });
+$(".memberClose").click(function(){
+  var index = $(".memberClose").index(this);
+  $(".memberModal:eq(" + index + ")").fadeOut(600);
+});
+
 
 $(".left").click(function(){
   var index = $(".left").index(this);
