@@ -56,7 +56,6 @@
       margin-left: 39%;
       /* margin-left: 39%; */
     }
-
     .deleteButton{
       font-family: 'LotteMartDream', sans-serif;
       width: 10%;
@@ -94,7 +93,6 @@
     .verticalCenter-Middle{
         display: table-cell;
       vertical-align: middle;
-
     }
     @media all and (orientation:portrait){
       .deleteButton,.reformButton{
@@ -133,6 +131,48 @@
             <input type='button' onclick="btn2();" name='write' value='삭제' class="deleteButton form-control"></input>
         </div>
   </div>
+
+
+<!-- ************************************************** -->
+<tbody id='board_body'>
+
+  <%
+    for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
+      if(i < 0) {
+        break;
+      } else {
+        var item = rows[i];
+        %>
+        <tr class='board_set'>
+          <td><%= i+1 %> </td>
+          <td id="titleBoard">
+            <a href="/board/1/detail/<%= item.id %>" id = "board_content_view_title<%=item.id%>" style="text-decoration:none"><%=item.title%></a>
+          </td>
+          <td><%= item.date%></td>
+        </tr>
+
+        <%
+      }
+    }
+    %>
+
+
+    <tr>
+      <td id="pageBoard"colspan = "5">
+        <%
+        for(var j = 0; j < rows.length/10; j++) {
+          %>
+          [ <a href="/board/<%= j+1 %>/detail/<%= result[0].id %>"><%= j+1 %></a> ]
+          <%
+        }
+        %>
+      </td>
+    </tr>
+
+  </tbody>
+<!-- ************************************************** -->
+
+
   <div id="footerC">
     <div class="footerContent">
       <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
@@ -204,11 +244,9 @@ function btn2(){
     location.reload();
     $('.numberCheck2').css('display','none');
   });
-
   // if (event.target == numberCheck2) {
   //   numberCheck2.style.display="none";
   // };
-
   $('.numberCheck2').keypress(function(event){
     console.log('ok');
     if ( event.which == 13 ) {
@@ -216,12 +254,10 @@ function btn2(){
       return false;
     }
   });
-
   $('.okay_btn2').click(function(){
     var index=$('.okay_btn2').index(this);
     var passwordCheck2=document.getElementsByClassName("checkPassword2")[index];
     var password2=passwordCheck2.value;
-
     var data = {
       'Password': password2
       // 'title' : title
@@ -239,7 +275,6 @@ function btn2(){
         if(result['results']==100){
           alert('삭제완료');
           $(window).attr('location','/board/goCheckk/<%=result[0].id%>');
-
         }else {
           alert('비밀번호가 일치하지 않습니다.');
           passwordCheck2.value="";
@@ -252,22 +287,18 @@ function btn2(){
 };
 var isRun = false;
 function btn1(){
-
   $('.numberCheck3').css('display','block');
   $('.checkClose3').click(function(){
      location.reload();
     // $('.numberCheck3').css('display','none');
   });
-
   $('.uploadClose2').click(function(){
     location.reload();
     // $('.textUpload2').css('display','none');
-
   });
   // if (event.target == numberCheck3) {
   //   numberCheck3.style.display="none";
   // };
-
   $('.numberCheck3').keypress(function(event){
     if ( event.which == 13 ) {
       $('.okay_btn3').click();
@@ -309,12 +340,10 @@ function btn1(){
     })
   });
 };
-
 $('#reform_btn').click(function(){
   var re_title = $('#re_title').val();
   var re_contents = $('#re_contens').val();
   var re_now = new Date();
-
   function leadingZeros(n, digits){
     var zero='';
     n = n.toString();
@@ -328,10 +357,6 @@ $('#reform_btn').click(function(){
   var re_post_date = leadingZeros(re_now.getYear()-100,2)+ '-'+
   leadingZeros(re_now.getMonth()+1,2)+'-' +
   leadingZeros(re_now.getDate(),2);
-
-
-
-
   if(re_title=='')
   alert("제목을 입력하세요");
   else if(re_contents == '')
@@ -361,7 +386,6 @@ $('#reform_btn').click(function(){
       },
       error : function(error){
         alert('등록실패2');
-
       }
     });
   }
