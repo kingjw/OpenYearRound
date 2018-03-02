@@ -63,27 +63,29 @@ img {
   width: 100%;
   height: 100%;
 }
-.menu{
+.menu,.menuLogin{
   color: black;
   width: 25%;
   font-size: 12px;
 }
 nav{
+    position: absolute;
+    margin-left: 45%;
   width: 50%;
   float: right;
-  margin-right: 5%;
   margin-top: 1.5%;
   display: inline-flex;
+  text-align: right;
 }
-.menu:hover{
+.menu:hover,.menuLogin:hover{
   cursor: pointer;
   color: gray;
 }
 #mainPagePhoto{
   margin-top: 1%;
   text-align: center;
-  width: 34%;
-  margin-left: 30%;
+  width: 31%;
+  margin-left: 34.5%;
   margin-bottom: 2%;
 }
 #loginDiv{
@@ -101,6 +103,7 @@ nav{
   background-image: url("/images/main.png");
   background-repeat: no-repeat;
   background-size: cover;
+  display: inline-flex;
 }
 .notice_Container{
   display: none;
@@ -152,7 +155,8 @@ nav{
   display: none;
 }
 .logo{
-  position: absolute;
+  position: relative;
+  width: 15%;
 }
 #logo{
   display: none;
@@ -414,12 +418,14 @@ table{
   right: 5%;
   width: 4%;
 }
+
 @media all and (orientation:portrait){
-  nav{
+  .menu{
     display: none;
   }
-  #login{
-    display: block;
+  .menuLogin{
+    width: 100%;
+    margin-top: 3%;
   }
   #actImage{
     display: none;
@@ -462,6 +468,7 @@ table{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    display: inline-flex;
   }
   .button{
     height: 50%;
@@ -543,6 +550,9 @@ table{
   width: 10%;
   top: 75%;
   }
+  .logo{
+    width: 30%;
+  }
 }
 @media screen and (min-width:750px) and (max-width:1080px){
   #aboutOYR{
@@ -572,17 +582,8 @@ table{
   .buttonMobile{
     font-size: 28px;
   }
-  .menu{
-    font-size: 16px;
-  }
-  #logoM{
-    display: none;
-  }
-  #logo{
-    display: block;
-  }
-  #logoBig{
-    display: none;
+  .menu,.menuLogin{
+    font-size: 12px;
   }
   .footerBigContent{
     font-size: 16px;
@@ -635,17 +636,8 @@ table{
   .buttonMobile{
     font-size: 32px;
   }
-  .menu{
+  .menu,.menuLogin{
     font-size: 16px;
-  }
-  #logoM{
-    display: none;
-  }
-  #logo{
-    display: block;
-  }
-  #logoBig{
-    display: none;
   }
   .footerBigContent{
     font-size: 20px;
@@ -700,17 +692,8 @@ table{
   .buttonMobile{
     font-size: 50px;
   }
-  .menu{
+  .menu,.menuLogin{
     font-size: 18px;
-  }
-  #logoM{
-    display: none;
-  }
-  #logo{
-    display: none;
-  }
-  #logoBig{
-    display: block;
   }
   .footerBigContent{
     font-size: 23px;
@@ -765,17 +748,8 @@ table{
   .applyWirteButton{
     font-size: 30px;
   }
-  .menu{
+  .menu,.menuLogin{
     font-size: 23px;
-  }
-  #logoM{
-    display: none;
-  }
-  #logo{
-    display: none;
-  }
-  #logoBig{
-    display: block;
   }
   .footerBigContent{
     font-size: 30px;
@@ -829,17 +803,8 @@ table{
   .webMente{
     font-size: 33px;
   }
-  .menu{
+  .menu,.menuLogin{
     font-size: 26px;
-  }
-  #logoM{
-    display: none;
-  }
-  #logo{
-    display: none;
-  }
-  #logoBig{
-    display: block;
   }
 
   .footerBigContent{
