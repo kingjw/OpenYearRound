@@ -101,7 +101,6 @@ router.get('/:page/search', function(req, res){
   });
 });
 
-
 router.get('/:page/detail/:id', function(req, res, next){
   var detail = req.params.id;
   var page = req.params.page;
