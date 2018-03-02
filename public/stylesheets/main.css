@@ -88,10 +88,7 @@ nav{
   margin-left: 34.5%;
   margin-bottom: 2%;
 }
-#loginDiv{
-  margin-top: 5%;
-  margin-bottom:10%;
-}
+
 #subActContent{
   margin-top: 1%;
   margin-bottom: 0;
@@ -114,37 +111,7 @@ nav{
 .introduce_Container{
   display:none;
 }
-#loginContentDiv{
-  width: 20%;
-  padding-left: 35%;
-}
-#loginButtonDiv{
-  width: 10%;
-}
-#loginButton{
-  width: 100%;
-  margin-top: 1%;
-  height: 78px;
-  background-color: #469fbb;
-  border-color: #469fbb;
-  border-radius: 3px;
-  border-style: none;
-  color: white;
-}
-#loginButton:hover{
-  cursor: pointer;
-}
-#loginForm{
 
-  display: inline-flex;
-  width: 100%;
-}
-.loginInput{
-  height: 38px;
-  display: block;
-  width: 95%;
-  margin-top: 1%;
-}
 .apply_Container{
   display:none;
 }
@@ -527,24 +494,6 @@ table{
   }
   #moveTopDiv{
     display: none;
-  }
-  #loginContentDiv{
-    width: 40%;
-    padding-left: 20%;
-  }
-  #loginButtonDiv{
-    width: 20%;
-  }
-  #loginDiv{
-    margin-top: 15%;
-    margin-bottom:30%;
-  }
-  #loginTitle{
-    margin-top: 10%;
-  }
-  #loginFooter{
-    position: fixed;
-    top: 85%;
   }
   .moveHome{
   width: 10%;
