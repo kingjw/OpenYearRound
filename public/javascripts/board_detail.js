@@ -13,14 +13,6 @@ window.onclick = function(event) {
   }
 }
 
-
-
-// $("body").keydown(function(e){
-//     if(e.which==116){
-//         e.preventDefault();
-//         window.location.assign("/board/1/");
-//     }
-// });
 $('#searchResetButton').click(function(e){
   e.preventDefault();
   window.location.assign("/board/1/");
@@ -34,7 +26,6 @@ writebtn.onclick=function(){
     var data = {
       'Password': password
     }
-    // console.log(data);
     $.ajax({
       type: "POST",
       url: "/check/goCheck",
@@ -72,6 +63,7 @@ window.onclick = function(event) {
     numberCheck.style.display="none";
   }
 }
+
 $('.moveTop').click(function(){
   $(window).attr('location','/');
 });

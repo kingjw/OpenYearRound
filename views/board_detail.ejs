@@ -131,8 +131,6 @@
             <input type='button' onclick="btn2();" name='write' value='삭제' class="deleteButton form-control"></input>
         </div>
 
-
-        <!-- ************************************************** -->
         <form id='search' method='get' action='/board/1/search' style='margin-bottom: 5%; margin-top: 5%;'>
           <input type="text" class='form-control' name='search_input' value='<%= keyword %>'  id="searchForm" placeholder="검색어를 입력하세요."/ >
           <button  style="font:'LotteMartHappy', sans-serif;"type='submit' id="searchButton">검색</button>
@@ -222,8 +220,6 @@
           </table>
           <input type='button' name='write' value='글쓰기' id='writeButton'class="form-control"></input>
 
-
-        <!-- ************************************************** -->
   </div>
 
 
@@ -298,12 +294,9 @@ function btn2(){
   console.log('deleteButton click');
   $('.numberCheck2').css('display','block');
   $('.checkClose2').click(function(){
-    // location.reload();
     $('.numberCheck2').css('display','none');
   });
-  // if (event.target == numberCheck2) {
-  //   numberCheck2.style.display="none";
-  // };
+
   $('.numberCheck2').keypress(function(event){
     console.log('ok');
     if ( event.which == 13 ) {
@@ -346,16 +339,12 @@ var isRun = false;
 function btn1(){
   $('.numberCheck3').css('display','block');
   $('.checkClose3').click(function(){
-     // location.reload();
     $('.numberCheck3').css('display','none');
   });
   $('.uploadClose2').click(function(){
-    // location.reload();
     $('.textUpload2').css('display','none');
   });
-  // if (event.target == numberCheck3) {
-  //   numberCheck3.style.display="none";
-  // };
+
   $('.numberCheck3').keypress(function(event){
     if ( event.which == 13 ) {
       $('.okay_btn3').click();
@@ -366,10 +355,6 @@ function btn1(){
     var index=$('.okay_btn3').index(this);
     var passwordCheck3=document.getElementsByClassName("checkPassword3")[index];
     var password3=passwordCheck3.value;
-    // if(isRun == true) {
-    //         return;
-    //     }
-    //     isRun = true;
     var data = {
       'Password': password3
     }
@@ -377,7 +362,6 @@ function btn1(){
     $.ajax({
       type: "POST",
       url: "/check/goCheck?"+ Math.random(),
-      // async:false,
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       cache: false,
       datatype: "json", // expecting JSON to be returnedzz
@@ -387,11 +371,9 @@ function btn1(){
           $('.numberCheck3').css('display','none');
           $('.textUpload2').css('display','block');
           passwordCheck3.value="";
-          // isRun  = false;
         }else {
           alert('비밀번호가 일치하지 않습니다.');
           passwordCheck3.value="";
-          // isRun  = false;
         }
       },
     })
