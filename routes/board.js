@@ -102,9 +102,11 @@ router.get('/:page/search', function(req, res){
   });
 });
 
+
 router.get('/detail/:id', function(req, res, next){
   var detail = req.params.id;
   var sql = 'select * from postboard where id=?;';
+
   conn.query(sql, [detail], function(error, result){
     if(error){
       console.log(error);
@@ -116,8 +118,55 @@ router.get('/detail/:id', function(req, res, next){
         result: result,
       });
     }
-
   });
+
+});
+
+
+router.get('/:page/detail/:id', function(req, res, next){
+  var detail = req.params.id;
+  var page = req.params.page;
+  var sql = 'select * from postboard where id=?;';
+  var all_sql = 'select * from postboard;';
+
+  conn.query(all_sql, function(error, rows){
+    if(error){
+      console.log(error);
+      console.log('first sql error');
+    }
+    else{
+      console.log('first sql success');
+      conn.query(sql, [detail], function(err, result){
+        console.log('second sql success');
+        console.log('board list');
+        console.log(rows);
+        res.render('board_detail',{
+          result: result,
+          rows : rows,
+          page : page,
+          leng : Object.keys(rows).length-1,
+          page_num : 10,
+          search: false,
+          keyword: ''
+          }
+        );
+      });
+    }
+  });
+
+  // conn.query(sql, [detail], function(error, result){
+  //   if(error){
+  //     console.log(error);
+  //     console.log('board detail error');
+  //   }
+  //   else{
+  //     console.log('render board detail');
+  //     res.render('board_detail', {
+  //       result: result,
+  //     });
+  //   }
+  // });
+
 });
 
 router.post('/reBoard/:id',function(req,res,next){
