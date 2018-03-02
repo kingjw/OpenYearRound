@@ -1,0 +1,52 @@
+<html>
+<head>
+  <mete charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <link rel="stylesheet" href="/stylesheets/main.css"></link>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="login_Container container-fluit">
+      <div id="actTop">
+        <img id="actImage"src='/images/mainIntroImage2.png' width="100%" height="auto"></img>
+        <img id="actImageM"src='/images/mainIntroImageM.png' width="100%" height="auto"></img>
+      </div>
+      <div class="actTitle"id="loginTitle">
+        <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
+        <span class="titleContent">Login</span>
+      </div>
+
+      <div id="loginDiv">
+        <form>
+          <div id="loginForm">
+            <div id="loginContentDiv">
+              <input class="loginInput" name="idV"type="text"placeholder="아이디를 입력하세요."></input>
+              <input class="loginInput" name="pwV"type="password"placeholder="비밀번호를 입력하세요."></input>
+            </div>
+            <div id="loginButtonDiv">
+              <button id="loginButton" type="submit">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <footer id="loginFooter">
+        <div class="footerContent">
+          <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
+          <p class="footerSmallContent">@openyearround</p>
+          <p class="footerSmallContent">세종대학교 다산관 205호</p>
+        </div>
+      </footer>
+      <div id="moveHomeDiv">
+        <img class="moveHome" src="/images/home.png"></img>
+      </div>
+    </div>
+    <script>
+    $('.moveHome').click(function(){
+      $(window).attr('location','/');
+    });
+    </script>
+  </body>
+  </html>
