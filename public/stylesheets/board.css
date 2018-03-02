@@ -148,7 +148,6 @@ a:hover{
   top: 85%;
   right: 5%;
   width: 4%;
-
 }
 .checkbtn{
   font-family: 'LotteMartDream', sans-serif;
@@ -320,7 +319,6 @@ tr{
 
 @media all and (orientation:portrait){
   .moveTop{
-    font-family: 'LotteMartDream', sans-serif;
   width: 10%;
   }
   .check_Content{
