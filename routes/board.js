@@ -46,7 +46,6 @@ router.get('/:page', function(req, res, next) {
       }//else
 
   });//query
-  //res.render('applyadmin',{title:'apply admin page'});
 });
 
 
@@ -95,31 +94,11 @@ router.get('/:page/search', function(req, res){
           leng : Object.keys(result).length-1,
           page_num : 10,
           search: true,
-          keyword: req.query.search_input  // 키워드 잘 되나요?
+          keyword: req.query.search_input
         }
       );
     }//else
   });
-});
-
-
-router.get('/detail/:id', function(req, res, next){
-  var detail = req.params.id;
-  var sql = 'select * from postboard where id=?;';
-
-  conn.query(sql, [detail], function(error, result){
-    if(error){
-      console.log(error);
-      console.log('board detail error');
-    }
-    else{
-      console.log('render board detail');
-      res.render('board_detail', {
-        result: result,
-      });
-    }
-  });
-
 });
 
 
@@ -138,8 +117,6 @@ router.get('/:page/detail/:id', function(req, res, next){
       console.log('first sql success');
       conn.query(sql, [detail], function(err, result){
         console.log('second sql success');
-        console.log('board list');
-        console.log(rows);
         res.render('board_detail',{
           result: result,
           rows : rows,
@@ -153,20 +130,6 @@ router.get('/:page/detail/:id', function(req, res, next){
       });
     }
   });
-
-  // conn.query(sql, [detail], function(error, result){
-  //   if(error){
-  //     console.log(error);
-  //     console.log('board detail error');
-  //   }
-  //   else{
-  //     console.log('render board detail');
-  //     res.render('board_detail', {
-  //       result: result,
-  //     });
-  //   }
-  // });
-
 });
 
 router.post('/reBoard/:id',function(req,res,next){
