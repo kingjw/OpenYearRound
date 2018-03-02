@@ -38,7 +38,6 @@ router.get('/:page', function(req, res, next) {
               page : page,
               leng : Object.keys(result).length-1,
               page_num : 10,
-              search: false,
               keyword: ''
              }
            );//render
@@ -93,7 +92,6 @@ router.get('/:page/search', function(req, res){
           page: page,
           leng : Object.keys(result).length-1,
           page_num : 10,
-          search: true,
           keyword: req.query.search_input
         }
       );
@@ -122,7 +120,6 @@ router.get('/:page/detail/:id', function(req, res, next){
           page : page,
           leng : Object.keys(rows).length-1,
           page_num : 10,
-          search: false,
           keyword: ''
           }
         );
