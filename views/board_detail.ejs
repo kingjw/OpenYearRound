@@ -130,49 +130,60 @@
             <input type='button' onclick="btn1();" name='write' value='수정'class="reformButton form-control" ></input>
             <input type='button' onclick="btn2();" name='write' value='삭제' class="deleteButton form-control"></input>
         </div>
+
+
+        <!-- ************************************************** -->
+          <table class="board">
+            <thead>
+              <tr>
+                <td id="first_td"><b>글번호</b></td>
+                <td id="second_td"><b>제목</b></td>
+                <td id="third_td"><b>작성일자</b></td>
+              </tr>
+            </thead>
+            <tbody id='board_body'>
+
+              <%
+                for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
+                  if(i < 0) {
+                    break;
+                  } else {
+                    var item = rows[i];
+                    %>
+                    <tr class='board_set'>
+                      <td><%= i+1 %> </td>
+                      <td id="titleBoard">
+                        <a href="/board/1/detail/<%= item.id %>" id = "board_content_view_title<%=item.id%>" style="text-decoration:none"><%=item.title%></a>
+                      </td>
+                      <td><%= item.date%></td>
+                    </tr>
+
+                    <%
+                  }
+                }
+                %>
+
+
+                <tr>
+                  <td id="pageBoard"colspan = "5">
+                    <%
+                    for(var j = 0; j < rows.length/10; j++) {
+                      %>
+                      [ <a href="/board/<%= j+1 %>/detail/<%= result[0].id %>"><%= j+1 %></a> ]
+                      <%
+                    }
+                    %>
+                  </td>
+                </tr>
+
+              </tbody>
+          </table>
+        <!-- ************************************************** -->
+
+
   </div>
 
 
-<!-- ************************************************** -->
-  <table class="board">
-    <tbody id='board_body'>
-
-      <%
-        for(var i = leng-((page*page_num)-page_num); i > leng-(page*page_num); i--) {
-          if(i < 0) {
-            break;
-          } else {
-            var item = rows[i];
-            %>
-            <tr class='board_set'>
-              <td><%= i+1 %> </td>
-              <td id="titleBoard">
-                <a href="/board/1/detail/<%= item.id %>" id = "board_content_view_title<%=item.id%>" style="text-decoration:none"><%=item.title%></a>
-              </td>
-              <td><%= item.date%></td>
-            </tr>
-
-            <%
-          }
-        }
-        %>
-
-
-        <tr>
-          <td id="pageBoard"colspan = "5">
-            <%
-            for(var j = 0; j < rows.length/10; j++) {
-              %>
-              [ <a href="/board/<%= j+1 %>/detail/<%= result[0].id %>"><%= j+1 %></a> ]
-              <%
-            }
-            %>
-          </td>
-        </tr>
-
-      </tbody>
-  </table>
-<!-- ************************************************** -->
 
 
   <div id="footerC">
