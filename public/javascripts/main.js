@@ -9,9 +9,11 @@ var applyMenu=document.getElementsByClassName('menu')[3];
 var act=document.getElementsByClassName('act_Container')[0];
 var intro=document.getElementsByClassName('introduce_Container')[0];
 var apply=document.getElementsByClassName('apply_Container')[0];
-
+var login=document.getElementById('login');
 var moveTop=document.getElementsByClassName('moveTop')[0];
-
+login.onclick=function(){
+    $(window).attr('location','/login/');
+}
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll==0){
