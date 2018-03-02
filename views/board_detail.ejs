@@ -178,9 +178,46 @@
 
               </tbody>
           </table>
+
+
+          <div id="numberCheck">
+            <div class="check_Content">
+              <span id="checkClose"class="Close">&times;</span>
+              <label></label>
+              <div class="formModal">
+                <div class="col-sm-12">
+                  <input type="password"class='form-control' rows='1' id="checkPassword" placeholder="비밀번호를 입력해주세요."></input>
+                </div>
+              </div>
+              <button type="button" class="checkbtn" id="okay_btn">확인</button>
+            </div>
+          </div>
+
+            <div id="textUpload">
+              <div class="verticalHelper">
+              <div class="vertical">
+              <div class="modal-content">
+                <span id="uploadClose"class="Close">&times;</span>
+                <div class="form-group">
+                  <label class="control-label col-sm-3">제목</label>
+                  <div class="col-sm-12">
+                    <textarea class='form-control' rows='1' id='title_name' placeholder=""></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-5">내용</label>
+                  <div class="col-sm-12">
+                    <textarea class='form-control' rows='12' id='contents' placeholder=""></textarea>
+                  </div>
+                </div>
+                <button type="button" class="uploadbtn btn-primary btn-block" id='ok_button_on_board'>올리기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          <input type='button' name='write' value='글쓰기' id='writeButton'class="form-control"></input>
+
         <!-- ************************************************** -->
-
-
   </div>
 
 
@@ -248,6 +285,9 @@
   </div>
 </div>
 </div>
+</div>
+<div id="moveTopDiv">
+  <img class="moveTop" src="/images/home.png"></img>
 </div>
 <script>
 function btn2(){
@@ -404,5 +444,6 @@ $('#reform_btn').click(function(){
   }
 });
 </script>
+<script src="/javascripts/board_detail.js"></script>
   </body>
 </html>
