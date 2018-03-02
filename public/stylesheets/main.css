@@ -83,10 +83,13 @@ nav{
   margin-top: 1%;
   text-align: center;
   width: 34%;
-  margin-left: 33%;
+  margin-left: 30%;
   margin-bottom: 2%;
 }
-
+#loginDiv{
+  margin-top: 5%;
+  margin-bottom:10%;
+}
 #subActContent{
   margin-top: 1%;
   margin-bottom: 0;
@@ -107,6 +110,37 @@ nav{
 }
 .introduce_Container{
   display:none;
+}
+#loginContentDiv{
+  width: 20%;
+  padding-left: 35%;
+}
+#loginButtonDiv{
+  width: 10%;
+}
+#loginButton{
+  width: 100%;
+  margin-top: 1%;
+  height: 78px;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  border-radius: 3px;
+  border-style: none;
+  color: white;
+}
+#loginButton:hover{
+  cursor: pointer;
+}
+#loginForm{
+
+  display: inline-flex;
+  width: 100%;
+}
+.loginInput{
+  height: 38px;
+  display: block;
+  width: 95%;
+  margin-top: 1%;
 }
 .apply_Container{
   display:none;
@@ -150,7 +184,6 @@ nav{
 
 #actButton{
   width: 31%;
-  /* padding: 2%; */
   display: table;
   background-color:#469fbb;
 }
@@ -288,7 +321,7 @@ footer{
   background-color: black;
   color: white;
   width: 100%;
-  height: 20%;
+  height: 25%;
   display: table;
   text-align: center;
 }
@@ -370,9 +403,23 @@ table{
   border-color: #5a95b1;
   height: 50px;
 }
+.moveHome:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.moveHome {
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  width: 4%;
+}
 @media all and (orientation:portrait){
   nav{
     display: none;
+  }
+  #login{
+    display: block;
   }
   #actImage{
     display: none;
@@ -407,7 +454,6 @@ table{
   }
   .awardContent{
     width: 70%;
-
   }
   .introduce{
     height: 65%;
@@ -438,7 +484,6 @@ table{
     margin-left: 0;
     text-align: center;
   }
-
   .mainAct{
     font-size: 12px;
     text-align: center;
@@ -476,8 +521,29 @@ table{
   #moveTopDiv{
     display: none;
   }
+  #loginContentDiv{
+    width: 40%;
+    padding-left: 20%;
+  }
+  #loginButtonDiv{
+    width: 20%;
+  }
+  #loginDiv{
+    margin-top: 15%;
+    margin-bottom:30%;
+  }
+  #loginTitle{
+    margin-top: 10%;
+  }
+  #loginFooter{
+    position: fixed;
+    top: 85%;
+  }
+  .moveHome{
+  width: 10%;
+  top: 75%;
+  }
 }
-
 @media screen and (min-width:750px) and (max-width:1080px){
   #aboutOYR{
     font-size: 20px;
