@@ -1,0 +1,166 @@
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 800;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 200;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
+html,body{
+  font-family: 'LotteMartDream', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+}
+
+#vertical-helper{
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+#vertical-middle-helper{
+  display: table-cell;
+  vertical-align: middle;
+}
+#loginDiv{
+width: 45%;
+height: 80%;
+background: #fcfcfc;
+margin-left: 27.5%;
+}
+#loginContentDiv{
+  width: 60%;
+  padding-left: 20%;
+}
+#loginButtonDiv{
+  width: 80%;
+  padding-left: 20%;
+}
+#loginButton{
+  width: 30%;
+  margin-top: 5%;
+  height: 38px;
+  background-color: #469fbb;
+  border-color: #469fbb;
+  border-radius: 3px;
+  border-style: none;
+  color: white;
+}
+#loginButton:hover{
+  cursor: pointer;
+}
+#loginForm{
+
+  display: inline-flex;
+  width: 100%;
+}
+.loginInput{
+  height: 38px;
+  display: block;
+  width: 100%;
+  margin-top: 1%;
+}
+.login_Container{
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/loginBackImage1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+label{
+  color: #444444;
+  margin-top: 2%;
+}
+input{
+  margin-bottom: 2%;
+}
+#mainWelcom{
+  font-size: 40px;
+  padding-left: 20%;
+  padding-top: 15%;
+}
+#subWelcom{
+  color: gray;
+    padding-left: 20%;
+    margin-bottom: 8%;
+    margin-top: -8%;
+}
+@media all and (orientation:portrait){
+  #loginContentDiv{
+    width: 40%;
+    padding-left: 20%;
+  }
+  #loginButtonDiv{
+    width: 20%;
+  }
+
+  #loginTitle{
+    margin-top: 10%;
+  }
+  #loginFooter{
+    position: fixed;
+    top: 85%;
+  }
+  #loginDiv{
+  width: 80%;
+  height: 60%;
+  margin-left: 10%;
+  }
+  #loginContentDiv{
+    width: 60%;
+    padding-left: 20%;
+  }
+  #loginButtonDiv{
+    width: 60%;
+    padding-left: 20%;
+  }
+  #loginButton{
+    margin-top: 8%;
+    width: 60%;
+
+  }
+}
+@media screen and (min-width:750px) and (max-width:1080px){
+
+  #mainWelcom{
+    font-size: 50px;
+  }
+  #subWelcom{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width:1081px) and (max-width:1600px){
+#mainWelcom{
+  font-size: 70px;
+}
+#subWelcom{
+  font-size: 20px;
+}
+}
+@media screen and (min-width:1601px) and (max-width:1920px){
+
+}
+
+@media screen and (min-width:1921px) and (max-width:2560px){
+
+}
+@media screen and (min-width:2561px){
+
+}
