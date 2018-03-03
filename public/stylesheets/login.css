@@ -30,12 +30,13 @@ html,body{
   font-weight: 900;
 }
 
-#vertical-helper{
+.vertical-Helper{
   width: 100%;
   height: 100%;
   display: table;
 }
-#vertical-middle-helper{
+
+.vertical-Middle-Helper{
   display: table-cell;
   vertical-align: middle;
 }
@@ -56,7 +57,7 @@ margin-left: 27.5%;
 #loginButton{
   width: 30%;
   margin-top: 5%;
-  height: 38px;
+  height: 8%;
   background-color: #469fbb;
   border-color: #469fbb;
   border-radius: 3px;
@@ -72,7 +73,7 @@ margin-left: 27.5%;
   width: 100%;
 }
 .loginInput{
-  height: 38px;
+  height: 8%;
   display: block;
   width: 100%;
   margin-top: 1%;
@@ -92,15 +93,29 @@ input{
   margin-bottom: 2%;
 }
 #mainWelcom{
+  height: 30%;
   font-size: 40px;
   padding-left: 20%;
-  padding-top: 15%;
+  margin: 0;
+  position: relative;
+  top: 13%;
 }
 #subWelcom{
+  font-size: 16px;
   color: gray;
+  height: 10%;
     padding-left: 20%;
-    margin-bottom: 8%;
-    margin-top: -8%;
+    margin-bottom: 10%;
+    margin: 0;
+}
+#bottomText{
+  color: gray;
+  position: absolute;
+  top: 80%;
+  height: 10%;
+  width: 45%;
+  text-align: center;
+  font-size: 13px;
 }
 @media all and (orientation:portrait){
   #loginContentDiv{
@@ -134,7 +149,12 @@ input{
   #loginButton{
     margin-top: 8%;
     width: 60%;
-
+  }
+  #bottomText{
+    top: 70%;
+    height: 10%;
+    width: 80%;
+    text-align: center;
   }
 }
 @media screen and (min-width:750px) and (max-width:1080px){
@@ -145,6 +165,9 @@ input{
   #subWelcom{
     font-size: 15px;
   }
+  #bottomText{
+    font-size: 12px;
+  }
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
 #mainWelcom{
@@ -153,14 +176,38 @@ input{
 #subWelcom{
   font-size: 20px;
 }
+#bottomText{
+  font-size: 15px;
+}
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
-
+  #mainWelcom{
+    font-size: 90px;
+  }
+  #subWelcom{
+    font-size: 30px;
+  }
+  #bottomText{
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width:1921px) and (max-width:2560px){
-
+  #mainWelcom{
+    font-size: 110px;
+  }
+  #subWelcom{
+    font-size: 40px;
+  }
+  #bottomText{
+    font-size: 30px;
+  }
 }
 @media screen and (min-width:2561px){
-
+  #mainWelcom{
+    font-size: 140px;
+  }
+  #subWelcom{
+    font-size: 50px;
+  }
 }
