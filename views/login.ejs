@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/stylesheets/login.css"></link>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/javascripts/login.js"></script>
     <title><%= title %></title>
   </head>
   <body ondragstart = "return false">
@@ -18,9 +19,9 @@
         <form>
             <div id="loginContentDiv">
               <label>ID</label>
-              <input class="loginInput" name="idV"type="text"></input>
+              <input class="loginInput" name="idV"type="text" id="login_id"></input>
               <label>PASSWORD</label>
-              <input class="loginInput" name="pwV"type="password"></input>
+              <input class="loginInput" name="pwV"type="password" id="login_password"></input>
             </div>
             <div id="loginButtonDiv">
               <button id="loginButton" type="submit">Login</button>
