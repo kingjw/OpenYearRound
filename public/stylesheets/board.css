@@ -21,6 +21,9 @@
 
 html,body{
   font-family: 'LotteMartDream', sans-serif;
+  -ms-overflow-style: none;
+  -ms-autohiding-scrollbar:none;
+   -ms-overflow-style: none;
 }
 #main_area{
   font-family: 'LotteMartDream', sans-serif;
