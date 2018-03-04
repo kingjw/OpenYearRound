@@ -6,9 +6,14 @@ var dbconfig = require('../database.js');
 var conn = mysql.createConnection(dbconfig);
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('login',{
-    title:'openyearround', // 사이트 제목
-  });//render
+  if(req.session.authId){
+    res.redirect('/');
+  }
+  else{
+    res.render('login',{
+      title:'openyearround', // 사이트 제목
+    });//render
+  }
 });
 
 router.post('/gologin',function(req,res,next){
@@ -27,9 +32,10 @@ router.post('/gologin',function(req,res,next){
         res.send({result:'error'});
       } else if(password == user.password){
         req.session.authId = id;
-req.session.save(function() {
+        req.session.author = user.authorize;
+        req.session.save(function() {
           res.send({result:'success'});
-});
+        });
       } else {
         res.send({result:'error'});
       }
