@@ -11,27 +11,27 @@
   <body ondragstart = "return false">
     <div class="login_Container container-fluit">
 
-        <div class="vertical-Helper">
-          <div class="vertical-Middle-Helper">
-                <div id="loginDiv" class="bgBlur">
-                  <p id="mainWelcom">Welcome!</p>
-                  <p id="subWelcom">Login to OYR site</p>
-
-            <div id="loginContentDiv">
-              <label>ID</label>
-              <input class="loginInput" name="idV"type="text" id="login_id"></input>
-              <label>PASSWORD</label>
-              <input class="loginInput" name="pwV"type="password" id="login_password"></input>
+      <div class="vertical-Helper">
+        <div class="vertical-Middle-Helper">
+          <div id="loginDiv" class="bgBlur">
+            <p id="mainWelcom">Welcome!</p>
+            <p id="subWelcom">Login to OYR site</p>
+            <div class="loginForm">
+              <div id="loginContentDiv">
+                <label>ID</label>
+                <input class="loginInput" name="idV"type="text" id="login_id"></input>
+                <label>PASSWORD</label>
+                <input class="loginInput" name="pwV"type="password" id="login_password"></input>
+              </div>
+              <div id="loginButtonDiv">
+                <button id="loginButton">로그인</button>
+              </div>
             </div>
-            <div id="loginButtonDiv">
-              <input id="loginButton" type="button" style="margin-top : -50px;" value="Login">Login</button>
-            </div>
 
-
-        <p id="bottomText">@openyearround</p>
+            <p id="bottomText">@openyearround</p>
+          </div>
+        </div>
       </div>
-</div>
-</div>
 
       <div id="moveHomeDiv">
         <img class="moveHome" src="/images/home.png"></img>
@@ -43,9 +43,9 @@
     });
     </script>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <filter id="blur">
+      <filter id="blur">
         <feGaussianBlur stdDeviation="6" />
-    </filter>
-</svg>
+      </filter>
+    </svg>
   </body>
   </html>
