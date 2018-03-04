@@ -18,7 +18,7 @@ router.get('/admin', function(req, res, next) {
         title:'apply admin page', // 사이트 제목
         applicant : results // 지원자 정보
       });//render
-    }
+  }
   });//query
   //res.render('applyadmin',{title:'apply admin page'});
 });
