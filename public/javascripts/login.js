@@ -22,20 +22,24 @@ $(document).ready(function(){
       success : function(result){
       if (result['result']=='success'){
         console.log('성공');
-        alert('성공');
-        $(window).attr('location','/board/1');
+        alert(id+'님 로그인 성공');
+        $(window).attr('location','/');
       }
       else if(result['result']=='error'){
-        alert('로그인실패1');
+        alert('입력하신 정보가 맞지 않습니다.');
       }
       },
       error: function(error){
-        alert('로그인실패2');
+        alert('로그인실패');
         location.reload();
         console.log(results);
         console.log(data);
       }
     })
   }
+});
+
+$('#Logout').click(function(){
+
 });
 });

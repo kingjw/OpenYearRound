@@ -52,7 +52,7 @@ html,body{
   width: 4%;
   z-index: 1;
 }
-form{
+.loginForm{
   height: 40%;
 }
 

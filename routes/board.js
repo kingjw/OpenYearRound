@@ -33,7 +33,7 @@ router.get('/:page', function(req, res, next) {
     }
     else{//화면 렌더링 할 때 보내는 값
         res.render('boarder',{
-              title:'openyearround',
+              title:'openyearround', // 사이트 제목
               result : result,
               page : page,
               leng : Object.keys(result).length-1,

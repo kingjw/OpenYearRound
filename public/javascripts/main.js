@@ -2,15 +2,15 @@ var introButton=document.getElementById('introButton');
 var supportButton=document.getElementById('supportButton');
 var actButton=document.getElementById('actButton');
 
-var introMenu=document.getElementsByClassName('menu')[0];
-var actMenu=document.getElementsByClassName('menu')[1];
-var applyMenu=document.getElementsByClassName('menu')[3];
+var introMenu=document.getElementsByClassName('menuBotton')[0];
+var actMenu=document.getElementsByClassName('menuBotton')[1];
+var applyMenu=document.getElementsByClassName('menuBotton')[3];
 
 var act=document.getElementsByClassName('act_Container')[0];
 var intro=document.getElementsByClassName('introduce_Container')[0];
 var apply=document.getElementsByClassName('apply_Container')[0];
 var moveTop=document.getElementsByClassName('moveTop')[0];
-$('.menuLogin').click(function(){
+$('.menuLoginBotton').click(function(){
       $(window).attr('location','/login/');
 })
 $(window).scroll(function() {
