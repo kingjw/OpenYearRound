@@ -37,8 +37,18 @@
             <div class="menu"><p class="menuBotton">주요 활동</p></div>
             <div class="menu"><p class="menuBotton" id="goboard">공지 사항</p></div>
             <div class="menu"><p class="menuBotton">지원 하기</p></div>
-            <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
-        
+            <% if (user === undefined){ %>
+              <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
+
+            <% } else{ %>
+              <div class="menuLogin" id="Logout"><p><%= user %></p>
+                <div class="dropdown-content">
+                  <p id="auth">권한: <%= author %></p>
+                  <a href="/login/logout">로그아웃</a>
+                </div>
+              </div>
+            <% } %>
+
           </nav>
         </div>
       </div>
