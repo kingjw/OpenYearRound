@@ -103,7 +103,8 @@ a{
 .menuLogin:hover .dropdown-content {
   display: block;
 }
-gin p:hover,a:hover{
+
+.menu p:hover,.menuLogin p:hover,a:hover{
   cursor: pointer;
   color: gray;
   text-decoration: none;
