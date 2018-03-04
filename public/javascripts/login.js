@@ -19,18 +19,19 @@ $(document).ready(function(){
       cache: false,
       datatype : "json",
       data : data,
-      success : function(results){
-        if(results == 'success'){
+      success : function(result){
+      if (result['result']=='success'){
         console.log('성공');
         alert('성공');
         $(window).attr('location','/board/1');
       }
-      if(results == 'error'){
+      else if(result['result']=='error'){
         alert('로그인실패1');
       }
       },
       error: function(error){
-        alert('로그인 실패2');
+        alert('로그인실패2');
+        location.reload();
         console.log(results);
         console.log(data);
       }

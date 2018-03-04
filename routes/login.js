@@ -24,13 +24,13 @@ router.post('/gologin',function(req,res,next){
       var user = results[0];
       if(!user){
         console.log('id fail');
-        res.send({results:'error'});
+        res.send({result:'error'});
       } else if(password == user.password){
         console.log('okokok');
-        res.send({results:'success'});
+        res.send({result:'success'});
       } else {
         console.log('fail');
-        res.send({results:'error'});
+        res.send({result:'error'});
       }
     }
   });
