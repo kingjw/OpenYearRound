@@ -26,13 +26,19 @@ router.post('/gologin',function(req,res,next){
         console.log('id fail');
         res.send({result:'error'});
       } else if(password == user.password){
-        console.log('okokok');
-        res.send({result:'success'});
+        req.session.authId = id;
+req.session.save(function() {
+          res.send({result:'success'});
+});
       } else {
-        console.log('fail');
         res.send({result:'error'});
       }
     }
   });
+});
+
+router.get('/logout',function(req,res){
+  delete req.session.authId;
+  res.redirect('/');
 });
 module.exports = router;

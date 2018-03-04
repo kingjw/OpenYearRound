@@ -6,8 +6,15 @@ var dbconfig = require('../database.js');
 var conn = mysql.createConnection(dbconfig);
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index',{
-    title:'openyearround', // 사이트 제목
-  });//render
+  if (req.session.authId) {
+  res.render('indexLogin', {
+    user : req.session.authId,
+    title:'openyearround'
+  });
+} else {
+  res.render('index', {
+    title:'openyearround'
+  });
+}
 });
 module.exports = router;
