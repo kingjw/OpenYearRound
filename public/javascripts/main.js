@@ -25,7 +25,6 @@ $(window).scroll(function() {
 $('input:radio[name="gender"]').change(
     function(){
         if (this.checked && this.value == '남') {
-        // $('.army').css('display','block');
         $(".army").fadeIn(400);
         }
         else{

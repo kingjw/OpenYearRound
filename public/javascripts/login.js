@@ -1,3 +1,4 @@
+var a;
 $(document).ready(function(){
   $('#loginButton').click(function(){
     var id = $('#login_id').val();
@@ -20,13 +21,13 @@ $(document).ready(function(){
       datatype : "json",
       data : data,
       success : function(result){
+
       if (result['result']=='success'){
-        console.log('성공');
         alert(id+'님 로그인 성공');
         $(window).attr('location','/');
       }
       else if(result['result']=='error'){
-        alert('입력하신 정보가 맞지 않습니다.');
+        alert('아이디나 비밀번호가 틀렸습니다.');
       }
       },
       error: function(error){
