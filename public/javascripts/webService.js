@@ -76,4 +76,9 @@ $('input:radio[name="pos"]').change(function(){
     if(pageNumber==3){
     $("#pos3").prop("checked", true);
     }
+    if(name==1)
+    {
+      $('.menuLogin').css('display','none');
+      $('#Logout').css('display','block');
+    }
   }, 400);
