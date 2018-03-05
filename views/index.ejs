@@ -41,10 +41,10 @@
               <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
 
             <% } else{ %>
-              <div class="menuLogin" id="Logout"><p><%= user %></p>
+              <div class="menuLogin" id="Logout"><button id="logoutButton"><%= user %></button>
                 <div class="dropdown-content">
                   <p id="auth">권한: <%= author %></p>
-                  <a href="/login/logout">로그아웃</a>
+                <a href="/login/logout">로그아웃</a>
                 </div>
               </div>
             <% } %>
