@@ -129,7 +129,7 @@ a{
 .introduce{
   width: 100%;
   height: 67%;
-  background-image: url("/images/main.png");
+  background-image: url("/images/main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-flex;
@@ -216,7 +216,7 @@ a{
 .supportImage{
   width: 100%;
   height: 100%;
-  background-image: url('/images/applyImage.png');
+  background-image: url('/images/applyImage.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.0;
@@ -424,6 +424,7 @@ table{
   .menuLogin{
     width: 100%;
     margin-top: 3%;
+    margin-right:2%; 
   }
   #actImage{
     display: none;
