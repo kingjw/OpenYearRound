@@ -1,13 +1,5 @@
 var a;
 $(document).ready(function(){
-
-  ///////prevent backspace////////
-  history.pushState(null,null,'/');
-  window.onpopstate = function(event){
-    history.go(1);
-  };
-  ////////////////////////////////
-
   $('#loginButton').click(function(){
     var id = $('#login_id').val();
     var password = $('#login_password').val();
@@ -20,6 +12,7 @@ $(document).ready(function(){
       'id' : id,
       'password' : password
     }
+    console.log(data);
     $.ajax({
       type : "POST",
       url : "/login/gologin",
