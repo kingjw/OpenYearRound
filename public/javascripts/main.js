@@ -77,6 +77,7 @@ applyMenu.onclick=function(){
   $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
 }
 
+
 $('#goboard').click(function(){
   $(window).attr('location','/board/1');
 });
