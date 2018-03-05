@@ -169,8 +169,8 @@
     top:46%;
   }
   .memberModal_Content{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 0;
   }
   .memberVertiArrange{
     padding-bottom:10%;
