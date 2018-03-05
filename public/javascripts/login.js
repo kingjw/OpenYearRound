@@ -40,7 +40,5 @@ $(document).ready(function(){
   }
 });
 
-$('#Logout').click(function(){
 
-});
 });
