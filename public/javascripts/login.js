@@ -1,4 +1,3 @@
-var a;
 $(document).ready(function(){
   $('#loginButton').click(function(){
     var id = $('#login_id').val();
