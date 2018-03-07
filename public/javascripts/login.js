@@ -41,3 +41,10 @@ $(document).ready(function(){
 
 
 });
+$('.loginForm').keypress(function(event){
+ if ( event.which == 13 ) {
+   console.log('okok');
+     $('#loginButton').click();
+     return false;
+ }
+});

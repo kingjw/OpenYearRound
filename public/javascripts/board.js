@@ -38,7 +38,7 @@ writebtn.onclick=function(){
           textUpload.style.display = "block";
         }
         else
-        alert('글쓰기가 불가능 합니다.');
+        alert('글쓰기 권한이 없습니다.');
       },
     })
   }
