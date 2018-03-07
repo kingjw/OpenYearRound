@@ -11,17 +11,14 @@ router.post('/goBoard',function(req,res,next){//올리기 버튼 클릭 시 ajax
   var date = req.body.date;
   var sql = 'insert into `postboard` (`title`,`text`,`date`) values (?,?,?);';
   //입력한 정보를 테이블에 저장하는 쿼리문
-
   conn.query(sql,[title,contents,date],function(error,results,fields){
     if(error){
       console.log(error);
       console.log('postboard insert failed');
     }//if
-    else if(req.session.authId){
+    else{
       console.log(date);
       res.send({result:'success'});//ajax 통신이 성공하면 다시 success 메세지를 보냅니다.
-    } else {
-      console.log('else error');
     }
   });//query
 });//router post
@@ -65,10 +62,17 @@ router.get('/goCheckk/:id', function(req,res){
       console.log(error);
       console.log('delete error');
     }
-    else{
+    else if(req.session.authId){
       console.log('삭제');
       console.log(req.param.id);
       res.render('index',{
+        user : req.session.authId,
+        author : req.session.author,
+        title:'openyearround'
+      });
+    } else {
+      res.render('index', {
+        user: undefined,
         title:'openyearround'
       });
     }
