@@ -42,9 +42,9 @@ router.post('/gologin',function(req,res,next){
     }
   });
 });
-
 router.get('/logout',function(req,res){
   delete req.session.authId;
   res.redirect('/');
 });
+
 module.exports = router;

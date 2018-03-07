@@ -185,7 +185,16 @@ a{
   background-color: black;
   opacity: 0.7;
 }
+#aboutOYR_all{
+  width: 95%;
+  margin-left:2.5%;
+text-align: center;
+padding-top: 1%
 
+}
+#aboutOYR_all img{
+  float: left;
+}
 #actButton:hover{
   cursor: pointer;
   background-color: black;
@@ -263,13 +272,14 @@ a{
 }
 #aboutOYR{
   font-size: 12px;
-  margin-left: 5%;
+  text-align: center;
 }
 #aboutOYR_content{
-  display: table;
   margin-left: 5%;
-  font-size: 7px;
+  font-size: 8px;
+  padding-top: 5%;
 }
+
 .mainAct{
   font-size: 12px;
   margin-left: 5%;
@@ -496,10 +506,6 @@ table{
     margin-left: 0;
     text-align: center;
   }
-  #aboutOYR_content{
-    margin-left: 0;
-    text-align: center;
-  }
   .mainAct{
     font-size: 12px;
     text-align: center;
@@ -550,7 +556,7 @@ table{
     font-size: 20px;
   }
   #aboutOYR_content{
-    font-size: 12px;
+    font-size: 14px;
   }
   #writebtn_Board{
     font-size: 21px;
@@ -598,8 +604,9 @@ table{
     font-size: 23px;
   }
   #aboutOYR_content{
-    font-size: 14px;
+    font-size: 18px;
   }
+
   #writebtn_Board{
     font-size: 23px;
   }
@@ -654,7 +661,7 @@ table{
     font-size: 27px;
   }
   #aboutOYR_content{
-    font-size: 22px;
+    font-size: 26px;
   }
   #writebtn_Board{
     font-size: 27px;
@@ -713,7 +720,7 @@ table{
     font-size: 35px;
   }
   #aboutOYR_content{
-    font-size: 28px;
+    font-size: 31px;
   }
   #writebtn_Board{
     font-size: 35px;
@@ -768,7 +775,7 @@ table{
     font-size: 50px;
   }
   #aboutOYR_content{
-    font-size: 40px;
+    font-size: 43px;
   }
   #writebtn_Board{
     font-size: 50px;
