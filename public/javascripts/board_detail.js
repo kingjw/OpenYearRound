@@ -20,31 +20,23 @@ $('#searchResetButton').click(function(e){
 
 
 writebtn.onclick=function(){
-  numberCheck.style.display = "block";
-  checkbtn.onclick=function(){
-    var password=passwordCheck.value;
-    var data = {
-      'Password': password
-    }
+
     $.ajax({
       type: "POST",
       url: "/check/goCheck",
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       cache: false,
       datatype: "json", // expecting JSON to be returned
-      data: data,
       success: function(result) {
         if(result['results']==100){
-          numberCheck.style.display = "none";
           textUpload.style.display = "block";
         }
         else
-        alert('비밀번호가 일치 하지 않습니다.');
-        passwordCheck.value="";
+        alert('글쓰기가 불가능 합니다.');
       },
     })
   }
-}
+
 
 uploadClose.onclick=function(){
   textUpload.style.display="none";
