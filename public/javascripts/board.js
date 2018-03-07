@@ -1,10 +1,10 @@
-var checkbtn=document.getElementsByClassName('checkbtn')[0];
+var checkbtn=document.getElementsByClassName('checkbtn')[0];//모달관련
 var textUpload = document.getElementById('textUpload');
-var numberCheck = document.getElementById('numberCheck');
+var numberCheck = document.getElementById('numberCheck');//모달관련
 var writebtn = document.getElementById('writeButton');
 var uploadClose = document.getElementById('uploadClose');
-var checkClose = document.getElementById('checkClose');
-var passwordCheck=document.getElementById("checkPassword");
+var checkClose = document.getElementById('checkClose');//모달관련
+var passwordCheck=document.getElementById("checkPassword");//모달관련
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -26,38 +26,26 @@ $('#searchResetButton').click(function(e){
 
 
 writebtn.onclick=function(){
-  numberCheck.style.display = "block";
-  checkbtn.onclick=function(){
-    var password=passwordCheck.value;
-    var data = {
-      'Password': password
-    }
-    // console.log(data);
+
     $.ajax({
       type: "POST",
       url: "/check/goCheck",
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       cache: false,
       datatype: "json", // expecting JSON to be returned
-      data: data,
       success: function(result) {
         if(result['results']==100){
-          numberCheck.style.display = "none";
           textUpload.style.display = "block";
         }
         else
-        alert('비밀번호가 일치 하지 않습니다.');
-        passwordCheck.value="";
+        alert('글쓰기가 불가능 합니다.');
       },
     })
   }
-}
+
 
 uploadClose.onclick=function(){
   textUpload.style.display="none";
-}
-checkClose.onclick=function(){
-  numberCheck.style.display="none";
 }
 //모달 밖을 클릿했을떄 닫히는것
 window.onclick = function(event) {
@@ -74,13 +62,6 @@ $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
 
-$('#numberCheck').keypress(function(event){
-  console.log('ok');
- if ( event.which == 13 ) {
-     $('#okay_btn').click();
-     return false;
- }
-});
 $('#textUpload').keypress(function(event){
   console.log('okok');
  if ( event.which == 13 ) {
