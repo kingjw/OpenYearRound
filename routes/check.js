@@ -8,9 +8,11 @@ var conn = mysql.createConnection(dbconfig);
 router.post('/goCheck', function(req, res, next) {
 
   if(req.session.author == 'all'){
+    console.log('user');
     res.send({results:100});
   }
   else{
+    console.log('no user');
     res.send({results:200});
   }
 });
