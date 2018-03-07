@@ -45,6 +45,7 @@ router.post('/gologin',function(req,res,next){
 
 router.get('/logout',function(req,res){
   delete req.session.authId;
+  delete req.session.author;
   res.redirect('/');
 });
 module.exports = router;
