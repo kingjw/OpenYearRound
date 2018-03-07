@@ -122,9 +122,15 @@
             <td class="boardContentTitle" style='padding: 2%; border-top: #469fbb;'><b><%= result[0].title %></b></td>
             <td class="boardContentDate" style='padding: 2%; border-top: #469fbb;'><%= result[0].date %></td>
           </tr>
-          <tr>
-            <td colspan="2" style='padding: 2%;'><%= result[0].text %></td>
-          </tr>
+          <% if(user === undefined){ %>
+            <tr>
+              <td colspan="2" style='padding: 2%;'>게시물 접근 권한이 없습니다.</td>
+            </tr>
+          <% } else{ %>
+            <tr>
+              <td colspan="2" style='padding: 2%;'><%= result[0].text %></td>
+            </tr>
+          <% } %>
         </table>
         <div class="boardContentButtons">
             <input type='button' onclick="btn1();" name='write' value='수정'class="reformButton form-control" ></input>
@@ -143,9 +149,7 @@
                 <td id="third_td"><b>작성일자</b></td>
               </tr>
             </thead>
-            <% if (user == undefined) { %>
-              <tbody>게시물 접근 권한이 없습니다.</tbody>
-            <% } else {%>
+
             <tbody id='board_body'>
 
               <%
@@ -182,7 +186,6 @@
                 </tr>
 
               </tbody>
-              <% } %>
 
               <div id="numberCheck">
                 <div class="check_Content">
