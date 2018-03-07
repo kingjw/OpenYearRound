@@ -7,12 +7,12 @@ var conn = mysql.createConnection(dbconfig);
 
 router.post('/goCheck', function(req, res, next) {
 
-  if(req.session.author == 'all'){
-    console.log('user');
+  if(req.session.author == 'boarder_Admin' || req.session.author == 'superior_Admin'){
+    console.log('boarder or superior admin');
     res.send({results:100});
   }
   else{
-    console.log('no user');
+    console.log('not admin');
     res.send({results:200});
   }
 });
