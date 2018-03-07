@@ -66,11 +66,4 @@ window.onload=function(){
           }
     });//ajax
   }//apply button click
-  $('.form-group').keypress(function(event){
-   if ( event.which == 13 ) {
-     console.log('okok');
-       $('#applyButton').click();
-       return false;
-   }
-});
 }//onload
