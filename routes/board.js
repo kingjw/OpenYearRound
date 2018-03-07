@@ -128,11 +128,27 @@ router.get('/:page/detail/:id', function(req, res, next){
       console.log(error);
       console.log('first sql error');
     }
-    else{
+    else if(req.session.authId){
       console.log('first sql success');
       conn.query(sql, [detail], function(err, result){
-        console.log('second sql success');
+        console.log('second sql success with user');
         res.render('board_detail',{
+          user: req.session.authId,
+          result: result,
+          rows : rows,
+          page : page,
+          leng : Object.keys(rows).length-1,
+          page_num : 10,
+          keyword: ''
+          }
+        );
+      });
+    }
+    else{
+      conn.query(sql, [detail], function(err, result){
+        console.log('second sql success with no user');
+        res.render('board_detail',{
+          user: undefined,
           result: result,
           rows : rows,
           page : page,
