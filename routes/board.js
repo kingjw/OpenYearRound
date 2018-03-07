@@ -31,8 +31,9 @@ router.get('/:page', function(req, res, next) {
       console.log(error);
       console.log('get postboard information failed');
     }
-    else{//화면 렌더링 할 때 보내는 값
+    else if(req.session.authId){//화면 렌더링 할 때 보내는 값
         res.render('boarder',{
+              user : req.session.authId,
               title:'openyearround', // 사이트 제목
               result : result,
               page : page,
@@ -42,7 +43,17 @@ router.get('/:page', function(req, res, next) {
              }
            );//render
 
-      }//else
+      }else {
+        res.render('boarder', {
+          user: undefined,
+          title:'openyearround',
+          result : result,
+          page : page,
+          leng : Object.keys(result).length-1,
+          page_num : 10,
+          keyword: ''
+        });
+      }
 
   });//query
 });
