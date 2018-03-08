@@ -204,7 +204,7 @@
                   <div class="verticalHelper">
                   <div class="vertical">
                   <div class="modal-content">
-                    <span id="uploadClose"class="Close">&times;</span>
+                    <span id="uploadClose"class="close">&times;</span>
                     <div class="form-group">
                       <label class="control-label col-sm-3">제목</label>
                       <div class="col-sm-12">
@@ -296,52 +296,51 @@
   <img class="moveTop" src="/images/home.png"></img>
 </div>
 <script>
-function btn2(){
-  console.log('deleteButton click');
-  $('.numberCheck2').css('display','block');
-  $('.checkClose2').click(function(){
-    $('.numberCheck2').css('display','none');
-  });
-
-  $('.numberCheck2').keypress(function(event){
-    console.log('ok');
-    if ( event.which == 13 ) {
-      $('.okay_btn2').click();
-      return false;
-    }
-  });
-  $('.okay_btn2').click(function(){
-    var index=$('.okay_btn2').index(this);
-    var passwordCheck2=document.getElementsByClassName("checkPassword2")[index];
-    var password2=passwordCheck2.value;
-    var data = {
-      'Password': password2
-      // 'title' : title
-    }
-    // console.log(data);
-    $.ajax({
-      type: "POST",
-      url: "/check/goCheck",
-      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-      cache: false,
-      datatype: "json", // expecting JSON to be returnedzz
-      data: data,
-      success: function(result) {
-        console.log(data);
-        if(result['results']==100){
-          alert('삭제완료');
-          $(window).attr('location','/board/goCheckk/<%=result[0].id%>');
-        }else {
-          alert('비밀번호가 일치하지 않습니다.');
-          passwordCheck2.value="";
-        }
-        //     }
-        // })
-      },
-    })
-  });
-};
-var isRun = false;
+// function btn2(){
+//   console.log('deleteButton click');
+//   $('.numberCheck2').css('display','block');
+//   $('.checkClose2').click(function(){
+//     $('.numberCheck2').css('display','none');
+//   });
+//
+//   $('.numberCheck2').keypress(function(event){
+//     console.log('ok');
+//     if ( event.which == 13 ) {
+//       $('.okay_btn2').click();
+//       return false;
+//     }
+//   });
+//   $('.okay_btn2').click(function(){
+//     var index=$('.okay_btn2').index(this);
+//     var passwordCheck2=document.getElementsByClassName("checkPassword2")[index];
+//     var password2=passwordCheck2.value;
+//     var data = {
+//       'Password': password2
+//       // 'title' : title
+//     }
+//     // console.log(data);
+//     $.ajax({
+//       type: "POST",
+//       url: "/check/goCheck",
+//       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+//       cache: false,
+//       datatype: "json", // expecting JSON to be returnedzz
+//       data: data,
+//       success: function(result) {
+//         console.log(data);
+//         if(result['results']==100){
+//           alert('삭제완료');
+//           $(window).attr('location','/board/goCheckk/<%=result[0].id%>');
+//         }else {
+//           alert('비밀번호가 일치하지 않습니다.');
+//           passwordCheck2.value="";
+//         }
+//         //     }
+//         // })
+//       },
+//     })
+//   });
+// };
 // function btn1(){
 //   $('.numberCheck3').css('display','block');
 //   $('.checkClose3').click(function(){
@@ -385,6 +384,10 @@ var isRun = false;
 //     });
 //   });
 // };
+
+$('.uploadClose2').click(function(){
+  $('.textUpload2').css('display','none');
+});
 
 $('#reformButton').click(function(){
   $.ajax({
