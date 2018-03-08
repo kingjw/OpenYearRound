@@ -62,13 +62,13 @@ $('.moveTop').click(function(){
   $(window).attr('location','/');
 });
 
-$('#textUpload').keypress(function(event){
-  console.log('okok');
- if ( event.which == 13 ) {
-     $('#ok_button_on_board').click();
-     return false;
- }
-});
+// $('#textUpload').keypress(function(event){
+//   console.log('okok');
+//  if ( event.which == 13 ) {
+//      $('#ok_button_on_board').click();
+//      return false;
+//  }
+// });
 
 // $('#numberCheck').keypress(function(event){
 //   console.log('ok');
