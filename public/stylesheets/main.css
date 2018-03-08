@@ -94,8 +94,8 @@ a{
   position: absolute;
   background-color: #f9f9f9;
   opacity: 0.9;
-  width: 80%;
-  margin-left: 20%;
+  width: 100%;
+  margin-left: 5%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
@@ -111,7 +111,7 @@ a{
   background: none;
   border-style: none;
 }
-.menu p:hover,.menuLogin p:hover,a:hover{
+.menu p:hover,#logoutButton:hover,a:hover,.menuLoginBotton:hover{
   cursor: pointer;
   color: gray;
   text-decoration: none;
@@ -185,16 +185,7 @@ a{
   background-color: black;
   opacity: 0.7;
 }
-#aboutOYR_all{
-  width: 95%;
-  margin-left:2.5%;
-text-align: center;
-padding-top: 1%
 
-}
-#aboutOYR_all img{
-  float: left;
-}
 #actButton:hover{
   cursor: pointer;
   background-color: black;
@@ -272,12 +263,12 @@ padding-top: 1%
 }
 #aboutOYR{
   font-size: 12px;
-  text-align: center;
+  margin-left: 5%;
 }
 #aboutOYR_content{
   margin-left: 5%;
-  font-size: 8px;
-  padding-top: 5%;
+  font-size: 7px;
+  padding-top: 2%;
 }
 
 .mainAct{
@@ -506,6 +497,10 @@ table{
     margin-left: 0;
     text-align: center;
   }
+  #aboutOYR_content{
+    margin-left: 0;
+    text-align: center;
+  }
   .mainAct{
     font-size: 12px;
     text-align: center;
@@ -549,6 +544,14 @@ table{
   }
   .logo{
     width: 30%;
+  }
+  .dropdown-content {
+    width: 85%;
+    margin-left: 17.5%;
+  }
+  .menuLoginBotton{
+    margin-top: 3%;
+    margin-right: 2%;
   }
 }
 @media screen and (min-width:750px) and (max-width:1080px){
@@ -604,7 +607,7 @@ table{
     font-size: 23px;
   }
   #aboutOYR_content{
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #writebtn_Board{
@@ -661,7 +664,7 @@ table{
     font-size: 27px;
   }
   #aboutOYR_content{
-    font-size: 26px;
+    font-size: 24px;
   }
   #writebtn_Board{
     font-size: 27px;
@@ -720,7 +723,7 @@ table{
     font-size: 35px;
   }
   #aboutOYR_content{
-    font-size: 31px;
+    font-size: 29px;
   }
   #writebtn_Board{
     font-size: 35px;
@@ -775,7 +778,7 @@ table{
     font-size: 50px;
   }
   #aboutOYR_content{
-    font-size: 43px;
+    font-size: 41px;
   }
   #writebtn_Board{
     font-size: 50px;
