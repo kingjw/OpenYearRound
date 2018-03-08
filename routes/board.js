@@ -13,11 +13,8 @@ router.post('/goBoard',function(req,res,next){//올리기 버튼 클릭 시 ajax
   //입력한 정보를 테이블에 저장하는 쿼리문
   conn.query(sql,[title,contents,date],function(error,results,fields){
     if(error){
-      console.log(error);
-      console.log('postboard insert failed');
     }//if
     else{
-      console.log(date);
       res.send({result:'success'});//ajax 통신이 성공하면 다시 success 메세지를 보냅니다.
     }
   });//query
@@ -28,8 +25,6 @@ router.get('/:page', function(req, res, next) {
 
   conn.query(sql,function(error,result,fields){
     if(error){//데이터베이스에서 불러올 때 오류 메세지 띄워줌
-      console.log(error);
-      console.log('get postboard information failed');
     }
     else if(req.session.authId){//화면 렌더링 할 때 보내는 값
         res.render('boarder',{
@@ -70,12 +65,8 @@ router.get('/goCheckk/:id', function(req,res){
   var sql = "delete from `postboard` where id = ?;";
   conn.query(sql, [req.params.id], function(error,results){
     if(error){
-      console.log(error);
-      console.log('delete error');
     }
     else if(req.session.authId){
-      console.log('삭제');
-      console.log(req.param.id);
       res.render('index',{
         user : req.session.authId,
         author : req.session.author,
@@ -96,12 +87,8 @@ router.get('/:page/search', function(req, res){
   var page = req.params.page;
   conn.query(sql, [like], function(error, result){
     if(error){
-      console.log('search error');
-      console.log(error);
     }
     else{
-      console.log('work search func');
-      console.log(result);
       res.render(
         'boarder',
         {
@@ -125,13 +112,9 @@ router.get('/:page/detail/:id', function(req, res, next){
 
   conn.query(all_sql, function(error, rows){
     if(error){
-      console.log(error);
-      console.log('first sql error');
     }
     else if(req.session.authId){
-      console.log('first sql success');
       conn.query(sql, [detail], function(err, result){
-        console.log('second sql success with user');
         res.render('board_detail',{
           user: req.session.authId,
           result: result,
@@ -146,7 +129,6 @@ router.get('/:page/detail/:id', function(req, res, next){
     }
     else{
       conn.query(sql, [detail], function(err, result){
-        console.log('second sql success with no user');
         res.render('board_detail',{
           user: undefined,
           result: result,
@@ -171,10 +153,7 @@ router.post('/reBoard/:id',function(req,res,next){
 
   conn.query(sql,[title,date,contents,id], function(error,results, fields){
     if(error){
-      console.log(id);
-      console.log('postboard update failded');
     } else {
-      console.log('success');
       res.send({result : 'success'});
     }
   });
