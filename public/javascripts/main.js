@@ -49,8 +49,9 @@ supportButton.onclick=function(){
   $('html').css('overflow','visible');
   intro.style.display="none";
   act.style.display="none";
-  apply.style.display="block";
-  $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
+  // apply.style.display="block";
+  // $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
+  alert('지원 기간이 마감되었습니다.');
 }
 
 
@@ -73,8 +74,9 @@ applyMenu.onclick=function(){
   $('html').css('overflow','visible');
   intro.style.display="none";
   act.style.display="none";
-  apply.style.display="block";
-  $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
+  // apply.style.display="block";
+  // $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
+  alert('지원 기간이 마감되었습니다.');
 }
 writebtn.onclick=function(){
   numberCheck.style.display = "block";
