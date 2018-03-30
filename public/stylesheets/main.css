@@ -1,0 +1,831 @@
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 800;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 200;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
+html,body{
+  font-family: 'LotteMartDream', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  -ms-overflow-style: none;
+  -ms-autohiding-scrollbar:none;
+  -ms-overflow-style: none;
+}
+.introduceContent{
+  width: 70%;
+  padding-left: 7%;
+  font-size: 10px;
+  line-height: 150%;
+}
+.logoImg{
+  width: 30%;
+  text-align: center;
+}
+#introduce{
+  width: 100%;
+
+}
+.introTable{
+  width: 100%;
+}
+#goalDiv,#cirDiv{
+  text-align: center;
+  margin-bottom: 10%;
+}
+#cirImage{
+  margin-top: 5%;
+  padding-left: 7%;
+}
+#goalImage{
+  margin-top: 5%;
+}
+img {
+  max-width: 100%;
+}
+.header{
+  width: 100%;
+  height: 100%;
+}
+.menu,.menuLogin{
+  color: black;
+  width: 25%;
+  font-size: 12px;
+}
+nav{
+  position: relative;
+  margin-left: 30%;
+  width: 50%;
+  float: right;
+  margin-top: 1.5%;
+  display: inline-flex;
+  text-align: right;
+  height: 10%;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+#Logout{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  opacity: 0.9;
+  width: 100%;
+  margin-left: 5%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.menuLogin:hover .dropdown-content {
+  display: block;
+}
+.menuLogin:focus .dropdown-content {
+  display: block;
+}
+
+.menuLogin Button{
+  background: none;
+  border-style: none;
+}
+.menu p:hover,#logoutButton:hover,a:hover,.menuLoginBotton:hover{
+  cursor: pointer;
+  color: gray;
+  text-decoration: none;
+}
+#auth{
+  cursor: default;
+  color: black;
+}
+#mainPagePhoto{
+  margin-top: -3%;
+  text-align: center;
+  width: 27%;
+  margin-left: 36.5%;
+  margin-bottom: 2%;
+}
+
+#subActContent{
+  margin-top: 1%;
+  margin-bottom: 0;
+  text-align: center;
+}
+.introduce{
+  width: 100%;
+  height: 67%;
+  background-image: url("/images/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-flex;
+}
+.notice_Container{
+  display: none;
+}
+.act_Container{
+  display:none;
+}
+.introduce_Container{
+  display:none;
+}
+
+.apply_Container{
+  display:none;
+}
+.writebtn_Container{
+  display:none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.logo{
+  position: relative;
+  width: 15%;
+}
+#logo{
+  display: none;
+}
+#logoBig{
+  display: none;
+}
+.button{
+  height: 100.5%;
+  color: white;
+}
+.allButtonDiv{
+  height: 33%;
+}
+.header_Button{
+  overflow:hidden;
+}
+#introButton:hover{
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
+}
+
+#actButton:hover{
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
+}
+#actVertical-Helper{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+#actButton{
+  width: 31%;
+  background-color:#469fbb;
+}
+.act-Content{
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+#introButton{
+  width: 38%;
+  padding: 2%;
+  background-color:#5a95b1;
+}
+#noticeButtonM{
+  display: none;
+}
+#supportButton{
+  text-align: center;
+  width: 31%;
+  display: table;
+  overflow: hidden;
+}
+#actImageM{
+  display: none;
+}
+.supportImage{
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/applyImage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.0;
+  vertical-align: middle;
+  display:table-cell;
+}
+
+.applyWirteButton:hover,.logoClick:hover {
+  transform: scale(1.05);
+  transition: all .5s;
+  cursor: pointer;
+}
+.tableImg:hover{
+  transform: scale(1.02);
+  transition: all .5s;
+  cursor: pointer;
+}
+.applyWirteButton:not(:hover),.logoClick:not(:hover) {
+  transform: scale(0.95);
+  transition: all .5s;
+  cursor: pointer;
+}
+.tableImg:not(:hover){
+  transform: scale(0.98);
+  transition: all .5s;
+  cursor: pointer;
+}
+#supportButton:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+#writebtnButton{
+  display: none;
+}
+#aboutOYR{
+  font-size: 12px;
+  margin-left: 5%;
+}
+#aboutOYR_content{
+  margin-left: 5%;
+  font-size: 7px;
+  padding-top: 2%;
+}
+
+.mainAct{
+  font-size: 12px;
+  margin-left: 5%;
+}
+#writebtn_Board{
+  display: table;
+  font-size: 12px;
+  margin-left: 3%;
+}
+#subActContent{
+  font-size: 7px;
+}
+#applyDate{
+  font-size: 7px;
+  margin-bottom: 2%;
+}
+.applyWirteButton{
+  font-size: 10px;
+  color: white;
+  border-color: white;
+  background: none;
+  border-style: solid;
+  padding: 3%;
+  width: 50%;
+}
+.applyText{
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 2%;
+}
+.buttonMobile{
+  display: none;
+}
+.moveTop:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.moveTop {
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  width: 4%;
+  z-index: 1;
+  display: none;
+}
+
+.supportForm{
+  outline: none;
+}
+
+.actTitle{
+  display: inline-flex;
+  display: table;
+  width: 100%;
+  height: 8%;
+  margin-top: 5%;
+  padding-left: 5%;
+}
+footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 25%;
+  display: table;
+  text-align: center;
+}
+.footerContent{
+  display: table-cell;
+  vertical-align: middle;
+  padding: 2%;
+}
+.footerBigContent{
+  font-size: 9px;
+  margin-bottom: 1%;
+}
+.footerSmallContent{
+  margin-bottom: 0;
+  font-size: 7px;
+  color:#c9c9c9;
+}
+.titleContent{
+  font-size: 15px;
+  width: 100%;
+  padding-left: 1%;
+}
+.webMente{
+  margin-left: 1%;
+  font-size: 10px;
+  color: gray;
+
+}
+#webLogo1{
+  margin-top: -1%;
+}
+#bar{
+  height: 100%;
+}
+#award{
+  padding: 6%;
+}
+table{
+  border-spacing: 20px;
+  border-collapse: separate;
+}
+.year{
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+  width: 15%;
+  font-size: 13px;
+  border-right: solid;
+  border-color: #cecfd1;
+}
+.awardContent{
+  position: relative;
+  left: 1%;
+  font-size: 8px;
+  color: gray;
+  vertical-align: top;
+  width: 60%;
+  line-height: 10px;
+}
+#applyTop{
+  margin-bottom: 2%;
+  width: 100%;
+}
+#applyImageM{
+  display: none;
+}
+#images{
+  width: 25%;
+}
+#tableImageM{
+  display: none;
+}
+#actImageM{
+  display: none;
+}
+#applyButton{
+  margin-bottom: 5%;
+  background-color: #5a95b1;
+  border-color: #5a95b1;
+  height: 50px;
+}
+.moveHome:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.moveHome {
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  width: 4%;
+}
+
+@media all and (orientation:portrait){
+  .menu{
+    display: none;
+  }
+  .menuLogin{
+    width: 100%;
+    margin-top: 3%;
+    margin-right:2%;
+  }
+  #actImage{
+    display: none;
+  }
+  #applyImage{
+    display: none;
+  }
+  #actImageM{
+    display: block;
+  }
+  #applyImageM{
+    display: block;
+  }
+  .allButtonDiv{
+    height: 37%;
+  }
+  .actTitle{
+    height: 5%;
+  }
+  .titleContent{
+    padding-left: 2%;
+  }
+  .WebMente{
+    padding-left: 2%;
+
+  }
+  .tableImg{
+    display: none;
+  }
+  #tableImageM{
+    display: block;
+  }
+  .awardContent{
+    width: 70%;
+  }
+  .introduce{
+    height: 63%;
+    text-align: center;
+    background-image: url("/images/mainMobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: inline-flex;
+  }
+  .button{
+    height: 51%;
+  }
+  #actButton{
+    width: 50%;
+  }
+
+  .buttonMobile{
+    display: block;
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 18px;
+  }
+  #aboutOYR{
+    margin-left: 0;
+    text-align: center;
+  }
+  #aboutOYR_content{
+    margin-left: 0;
+    text-align: center;
+  }
+  .mainAct{
+    font-size: 12px;
+    text-align: center;
+    margin-left: 0;
+  }
+  #writebtn_Board{
+    display: none;
+  }
+  #noticeButtonM{
+    text-align: center;
+    display: block;
+    display: table;
+    width: 50%;
+    background-color:#508bc5;
+  }
+  .applyWirteButton{
+    display: none;
+  }
+  #introButton{
+    width: 50%;
+    padding-left: 5%;
+  }
+  #supportButton{
+    width: 50%;
+  }
+  #writebtnButtonM{
+    display: table;
+    text-align: center;
+    padding: 0%;
+    width: 50%;
+  }
+  footer{
+    height: 15%;
+  }
+  #moveTopDiv{
+    display: none;
+  }
+  .moveHome{
+    width: 10%;
+    top: 75%;
+  }
+  .logo{
+    width: 30%;
+  }
+  .dropdown-content {
+    width: 85%;
+    margin-left: 17.5%;
+  }
+  .menuLoginBotton{
+    margin-top: 3%;
+    margin-right: 2%;
+  }
+}
+@media screen and (min-width:750px) and (max-width:1080px){
+  #aboutOYR{
+    font-size: 20px;
+  }
+  #aboutOYR_content{
+    font-size: 14px;
+  }
+  #writebtn_Board{
+    font-size: 21px;
+  }
+  .mainAct{
+    font-size: 20px;
+  }
+  #subActContent{
+    font-size: 12px;
+  }
+  .applyText{
+    font-size: 18px;
+  }
+  .titleContent{
+    font-size: 20px;
+  }
+  .webMente{
+    font-size: 12px;
+  }
+  .buttonMobile{
+    font-size: 28px;
+  }
+  .menu,.menuLogin{
+    font-size: 12px;
+  }
+  .footerBigContent{
+    font-size: 16px;
+  }
+  .footerSmallContent{
+    font-size: 10px;
+  }
+  .year{
+    font-size: 19px;
+  }
+  .awardContent{
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .introduceContent{
+    font-size: 20px;
+  }
+}
+@media screen and (min-width:1081px) and (max-width:1600px){
+  #aboutOYR{
+    font-size: 23px;
+  }
+  #aboutOYR_content{
+    font-size: 15px;
+  }
+
+  #writebtn_Board{
+    font-size: 23px;
+  }
+  .mainAct{
+    font-size: 23px;
+  }
+  #subActContent{
+    font-size: 15px;
+  }
+  .applyText{
+    font-size: 21px;
+  }
+  #applyDate{
+    font-size: 15px;
+  }
+  .applyWirteButton{
+    font-size: 16px;
+  }
+  .titleContent{
+    font-size: 23px;
+  }
+  .webMente{
+    font-size: 15px;
+  }
+  .buttonMobile{
+    font-size: 32px;
+  }
+  .menu,.menuLogin{
+    font-size: 16px;
+  }
+  .footerBigContent{
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+  .footerSmallContent{
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+  .year{
+    font-size: 22px;
+  }
+  .awardContent{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .introduceContent{
+    font-size: 25px;
+  }
+}
+@media screen and (min-width:1601px) and (max-width:1920px){
+  #aboutOYR{
+    font-size: 27px;
+  }
+  #aboutOYR_content{
+    font-size: 24px;
+  }
+  #writebtn_Board{
+    font-size: 27px;
+  }
+  .mainAct{
+    font-size: 27px;
+  }
+  #subActContent{
+    font-size: 22px;
+  }
+  .applyText{
+    font-size: 30px;
+  }
+  #applyDate{
+    font-size: 18px;
+  }
+  .applyWirteButton{
+    font-size: 22px;
+  }
+  .titleContent{
+    font-size: 27px;
+  }
+  .webMente{
+    font-size: 17px;
+  }
+  .buttonMobile{
+    font-size: 50px;
+  }
+  .menu,.menuLogin{
+    font-size: 18px;
+  }
+  .footerBigContent{
+    font-size: 23px;
+  }
+  .footerSmallContent{
+    font-size: 18px;
+  }
+  .year{
+    font-size: 25px;
+  }
+  .awardContent{
+    font-size: 19px;
+    line-height: 20px;
+  }
+  #allLogo label{
+    width: 17px;
+    height: 17px;
+  }
+  .introduceContent{
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width:1921px) and (max-width:2560px){
+  #aboutOYR{
+    font-size: 35px;
+  }
+  #aboutOYR_content{
+    font-size: 29px;
+  }
+  #writebtn_Board{
+    font-size: 35px;
+  }
+  .mainAct{
+    font-size: 35px;
+  }
+  #subActContent{
+    font-size: 28px;
+  }
+  .applyText{
+    font-size: 37px;
+  }
+  #applyDate{
+    font-size: 25px;
+  }
+  .titleContent{
+    font-size: 35px;
+  }
+  .nte{
+    font-size: 29px;
+  }
+  .applyWirteButton{
+    font-size: 30px;
+  }
+  .menu,.menuLogin{
+    font-size: 23px;
+  }
+  .footerBigContent{
+    font-size: 30px;
+  }
+  .footerSmallContent{
+    font-size: 24px;
+  }
+  .year{
+    font-size: 32px;
+  }
+  .awardContent{
+    font-size: 25px;
+    line-height: 20px;
+  }
+  #allLogo label{
+    width: 22px;
+    height: 22px;
+  }
+  .introduceContent{
+    font-size: 42px;
+  }
+}
+@media screen and (min-width:2561px){
+  #aboutOYR{
+    font-size: 50px;
+  }
+  #aboutOYR_content{
+    font-size: 41px;
+  }
+  #writebtn_Board{
+    font-size: 50px;
+  }
+  .mainAct{
+    font-size: 50px;
+  }
+  #subActContent{
+    font-size: 40px;
+  }
+  .applyText{
+    font-size: 55px;
+  }
+  #applyDate{
+    font-size: 30px;
+  }
+  .applyWirteButton{
+    font-size: 40px;
+  }
+  .titleContent{
+    font-size: 50px;
+  }
+  .webMente{
+    font-size: 33px;
+  }
+  .menu,.menuLogin{
+    font-size: 26px;
+  }
+
+  .footerBigContent{
+    font-size: 42px;
+  }
+  .footerSmallContent{
+    font-size: 36px;
+  }
+  .year{
+    font-size: 46px;
+  }
+  .awardContent{
+    font-size: 38px;
+    line-height: 20px;
+  }
+  #allLogo label{
+    width: 24px;
+    height: 24px;
+  }
+  .introduceContent{
+    font-size: 46px;
+  }
+}
