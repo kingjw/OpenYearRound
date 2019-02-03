@@ -33,19 +33,25 @@
             <div class="menu"><p class="menuBotton">주요 활동</p></div>
             <div class="menu"><p class="menuBotton" id="goboard">공지 사항</p></div>
             <div class="menu"><p class="menuBotton">지원 하기</p></div>
-            <% if (user === undefined){ %>
-              <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
+            <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
+        
+          </nav>
+        </div>
+      </div>
+      <div class="a container-fluit">
+        <div class="header_Button">
+          <div class="allButtonDiv button_Row row">
+            <div class="button" id="introButton">
+              <p id="aboutOYR">About OYR</p>
+              <p id="aboutOYR_content">한 학기만에 내가 만들고 싶은 웹 서비스를 같이 공부해서 직접 개발한다</p>
+            </div>
 
-              <% } else{ %>
-                <div class="menuLogin" id="Logout"><button id="logoutButton"><%= user %></button>
-                  <div class="dropdown-content">
-                    <p id="auth">권한: <%= author %></p>
-                    <a href="/login/logout">로그아웃</a>
-                  </div>
-                </div>
-                <% } %>
-
-              </nav>
+            <div class="button" id="actButton">
+  <div class="act-Content">
+              <p class="mainAct">주요 활동</p>
+              <img id="mainPagePhoto"src="/images/all.JPG"></img>
+              <p id="subActContent">2014-2017동아리 연혁</br>Open Year Round에서 개발 된 Web Services</p>
+            </div>
             </div>
           </div>
           <div class="a container-fluit">
@@ -82,6 +88,17 @@
 
           <div id="moveTopDiv">
             <img class="moveTop" src="/images/up2.png"></img>
+          </div>
+        </div>
+
+        <div class="act_Container container-fluit" id="act_Container_Id">
+          <div id="actTop">
+            <img id="actImage"src='/images/mainActImage2.png' width="100%" height="auto"></img>
+            <img id="actImageM"src='/images/mainActImage.png' width="100%" height="auto"></img>
+          </div>
+          <div class="actTitle"id="history">
+            <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
+            <span class="titleContent">동아리 연혁</span><span class="webMente">사진을 클릭하시면 확대됩니다.</span>
           </div>
         </div>
 
