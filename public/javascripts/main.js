@@ -78,77 +78,11 @@ applyMenu.onclick=function(){
   // $('html,body').animate({'scrollTop':$(apply).offset().top}, 500);
   alert('지원 기간이 마감되었습니다.');
 }
-writebtn.onclick=function(){
-  numberCheck.style.display = "block";
-  checkbtn.onclick=function(){
-    var password=passwordCheck.value;
-    var data = {
-      'Password': password
-    }
-    console.log(data);
-    $.ajax({
-      type: "POST",
-      url: "/check/goCheck",
-      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-      cache: false,
-      datatype: "json", // expecting JSON to be returned
-      data: data,
-      success: function(result) {
-        if(result['results']==100){
-          numberCheck.style.display = "none";
-          textUpload.style.display = "block";
 
-        }
-        else
-        alert('비밀번호가 일치하지 않습니다.');
-        passwordCheck.value="";
-      },
-    })
-  }
-}
-uploadClose.onclick=function(){
-  textUpload.style.display="none";
-}
-checkClose.onclick=function(){
-  numberCheck.style.display="none";
-}
-//모달 밖을 클릿했을떄 닫히는것
-window.onclick = function(event) {
-  if (event.target == textUpload) {
-    textUpload.style.display = "none";
-  }
-}
-document.getElementById('ok_button_on_board').onclick=function(){
-  var title = $('#title').val();
-  var contents = $('#contents').val();
-  var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  if (title == '')
-    alert("제목을 입력하세요");
-  else if (contents == '')
-    alert('내용을 적어주세요');
 
-    var data={
-      'title':title,
-      'contents' : contents,
-      'date' : date
-    };
-  console.log(data);
-  $.ajax({ // ajax 통신으로 지원자 입력한 정보를 서버에 보낸다.
-        type:'POST',
-        url:'/goBoard',
-        contentType:'application/x-www-form-urlencoded; charset=UTF-8',
-        cache:false,
-        dataType:'json',
-        data:data,
-        success:function(result){
-          if(result['result']=='success'){
-            alert('등록완료');
-            location.reload();//지원 완료 했으면 페이지 새로고침
-          }//result if
-        },
-        error:function(error){
-          alert('등록실패')
-        }
-  });//ajax
-}
+$('#goboard').click(function(){
+  $(window).attr('location','/board/1');
+});
+$('#noticeButtonM').click(function(){
+  $(window).attr('location','/board/1');
+});

@@ -412,7 +412,8 @@ tr{
 }
 @media screen and (min-width:1081px) and (max-width:1600px){
   .check_Content{
-    width: 30%;
+    font-family: 'LotteMartDream', sans-serif;
+    width: 25%;
   }
   .footerBigContent{
     font-family: 'LotteMartDream', sans-serif;
@@ -436,7 +437,8 @@ tr{
 }
 @media screen and (min-width:1601px) and (max-width:1920px){
   .check_Content{
-    width: 30%;
+    font-family: 'LotteMartDream', sans-serif;
+    width: 25%;
   }
   .footerBigContent{
     font-family: 'LotteMartDream', sans-serif;
