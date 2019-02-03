@@ -33,19 +33,25 @@
             <div class="menu"><p class="menuBotton">주요 활동</p></div>
             <div class="menu"><p class="menuBotton" id="goboard">공지 사항</p></div>
             <div class="menu"><p class="menuBotton">지원 하기</p></div>
-            <% if (user === undefined){ %>
-              <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
+            <div class="menuLogin"><p class="menuLoginBotton">로그인</p></div>
+        
+          </nav>
+        </div>
+      </div>
+      <div class="a container-fluit">
+        <div class="header_Button">
+          <div class="allButtonDiv button_Row row">
+            <div class="button" id="introButton">
+              <p id="aboutOYR">About OYR</p>
+              <p id="aboutOYR_content">한 학기만에 내가 만들고 싶은 웹 서비스를 같이 공부해서 직접 개발한다</p>
+            </div>
 
-              <% } else{ %>
-                <div class="menuLogin" id="Logout"><button id="logoutButton"><%= user %></button>
-                  <div class="dropdown-content">
-                    <p id="auth">권한: <%= author %></p>
-                    <a href="/login/logout">로그아웃</a>
-                  </div>
-                </div>
-                <% } %>
-
-              </nav>
+            <div class="button" id="actButton">
+  <div class="act-Content">
+              <p class="mainAct">주요 활동</p>
+              <img id="mainPagePhoto"src="/images/all.JPG"></img>
+              <p id="subActContent">2014-2017동아리 연혁</br>Open Year Round에서 개발 된 Web Services</p>
+            </div>
             </div>
           </div>
           <div class="a container-fluit">
@@ -82,6 +88,17 @@
 
           <div id="moveTopDiv">
             <img class="moveTop" src="/images/up2.png"></img>
+          </div>
+        </div>
+
+        <div class="act_Container container-fluit" id="act_Container_Id">
+          <div id="actTop">
+            <img id="actImage"src='/images/mainActImage2.png' width="100%" height="auto"></img>
+            <img id="actImageM"src='/images/mainActImage.png' width="100%" height="auto"></img>
+          </div>
+          <div class="actTitle"id="history">
+            <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
+            <span class="titleContent">동아리 연혁</span><span class="webMente">사진을 클릭하시면 확대됩니다.</span>
           </div>
         </div>
 
@@ -142,6 +159,10 @@
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f54260aa9c0652c0d762aa7ce83f914510f774b
           </div>
           <div class="actTitle" id="webServices">
             <img id="bar"style="vertical-align:middle" src="/images/bar.jpg">
@@ -321,9 +342,10 @@
                   <label></label>
                   <div class="formModal">
                     <div class="webTop">
-                      <p class="mainService"><b>자신만의 웹 노트 서비스</b></p>
-                      <p class="webTitle"><b>MY NOTE</b></p>
+                      <p class="mainService"><b>더 편한 쇼핑을 위한 나만의 쇼핑카트</b></p>
+                      <p class="webTitle"><b>SHOP IN</b></p>
                     </div>
+                    <div class="webImage">
                       <img class="left"src="/images/left.png" width="4%"height="auto"></img>
                       <img src="/images/shopIn1.png" class="firstImage"width="43%" height="auto"></img>
                       <img src="/images/shopIn2.png" width="43%" height="auto"></img>
@@ -398,119 +420,6 @@
           <div id="cirDiv">
             <img id="cirImage"src="/images/cir.jpg" style="width:70%"></img>
           </div>
-          <div id='body_container'>
-            <div class="container">
-              <form class="form-horizontal" role="form">
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">이름</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="name" placeholder="ex) 홍길동" class="supportForm form-control" >
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">학과</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="major" placeholder="ex) 컴퓨터공학과" class="supportForm form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">학번</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="student_number" placeholder="ex) 18011234" class="supportForm form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">학년-학기</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="grade" placeholder="ex) 3-2" class="supportForm form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">연락처</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="phone_number" placeholder="ex) 010 1111 1111" class="supportForm form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">이메일</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="email" placeholder="ex) abcd@naver.com" class="supportForm form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="firstName" class="col-sm-3 control-label">거주지</label>
-                  <div class="col-sm-9">
-                    <input type="text" id="home" placeholder="ex) 서울시 광진구" class="supportForm form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="control-label col-sm-3">성별</label>
-                  <div class="col-sm-6">
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <label class="radio-inline">
-                          <input type="radio" name='gender' value="남">남
-                        </label>
-                      </div>
-                      <div class="col-sm-3">
-                        <label class="radio-inline">
-                          <input type="radio" name='gender'value="여">여
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div> <!-- /.form-group -->
-                <div class="army form-group" style="display:none">
-                  <label class="control-label col-sm-9">군필여부</label>
-                  <div class="col-sm-6">
-                    <div class="row">
-                      <div class="checkbox col-sm-3">
-                        <label>
-                          <input type="radio" id="milcheck1" name='milcheck' value="군필">군필
-                        </label>
-                      </div>
-                      <div class="checkbox col-sm-3">
-                        <label>
-                          <input type="radio" id="milcheck2" name='milcheck' value="미필">미필
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                  <label class="control-label col-sm-3">지원 동기</label>
-                  <div class="col-sm-12">
-                    <textarea class='form-control' rows='7' id='apply_reason' placeholder="300자 내외로 작성해주세요."></textarea>
-                  </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                  <label class="control-label col-sm-3">프로젝트 경험</label>
-                  <div class="col-sm-12">
-                    <textarea class='form-control' rows='7' id='project' placeholder="큰 프로젝트가 아니라 수업시간을 통한 사소하고 작은 경험도 괜찮습니다. 프로젝트 경험이 없으면 없다고 적어주세요. 300자 내외로 적어주세요."></textarea>
-                  </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                  <label class="control-label col-sm-5">만들고 싶은 서비스</label>
-                  <div class="col-sm-12">
-                    <textarea class='form-control' rows='7' id='want_service' placeholder="300자 내외로 작성해주세요."></textarea>
-                  </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                  <div class="col-sm-12 col-sm-offset-3">
-                    <button type="button" class="btn btn-primary btn-block" id='applyButton'>지원하기</button>
-                  </div>
-                </div>
-              </form> <!-- /form -->
-            </div> <!-- ./container -->
-          </div>
-          <footer>
-            <div class="footerContent">
-              <p class="footerBigContent"><b>OPEN YEAR ROUND</b></p>
-              <p class="footerSmallContent">@openyearround</p>
-              <p class="footerSmallContent">세종대학교 다산관 205호</p>
-            </div>
-          </footer>
-        </div>
 
 
           <footer>

@@ -88,8 +88,6 @@ $('.moveTop').click(function(){
 
 
 
-
-
 $('#ok_button_on_board').click(function(){
   var title = $('#title_name').val();
   var contents = $('#contents').val();
@@ -108,9 +106,7 @@ $('#ok_button_on_board').click(function(){
                   leadingZeros(now.getMonth()+1,2)+'-' +
                   leadingZeros(now.getDate(),2);
 
-
   var date = post_date.toString();
-
 
 
   if(title=='')
